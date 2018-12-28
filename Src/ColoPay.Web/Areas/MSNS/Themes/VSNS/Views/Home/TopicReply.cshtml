@@ -1,0 +1,44 @@
+﻿@model   YSWL.MALL.ViewModel.SNS.TopicReply
+
+    @if (null != Model)
+    {<div class="topicBox" id="t_@(Model.Topic.TopicID)" tid="@(Model.Topic.TopicID)">
+        <div class="topicCon pd15">
+            <p class="personImgDate">
+                <span class="perImg db"><a href="@(ViewBag.BasePath)Profile/Index/@(Model.Topic.CreatedUserID)">
+                                            <img src="/Upload/User/Gravatar/@(Model.Topic.CreatedUserID).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" class="bImg usergravator" width="38" height="38" style="display: block;">
+                                        </a>@*<i class="admin"></i>*@ <span class="timeT">@Model.Topic.CreatedNickName <i>@YSWL.MALL.Web.Components.DateTimeHelper.ConvertDateToTime(Model.Topic.CreatedDate) </i></span>
+                </span>
+                <span class="perDate db @(ViewBag.Activity)" tid="@(Model.Topic.TopicID)" >
+                    <a href="javascript:;"  class="PerPopBtn incoA db"></a>
+                </span>
+                <span class="perPop" tid="@(Model.Topic.TopicID)" style="display: none;">
+                                                            <a class="perBCon db banThread" href="javascript:;" tid="@(Model.Topic.TopicID)">删除</a>
+                                                    </span>
+            </p>
+            <div class="detailCon hideDiv" attr="@Model.Topic.TopicID">
+                <p  cid="content_@(Model.Topic.TopicID)" tid="6"  author="@Model.Topic.CreatedNickName " class="contentDet">
+                    @Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(Model.Topic.Description))
+                </p>
+                <a cid="content_@(Model.Topic.TopicID)" href="javascript:;" class="viewBtn db fl" style="display: none;">全文</a>
+                <a cid="content_@(Model.Topic.TopicID)" href="javascript:;" class="db fl shouqi" style="line-height: 28px;display: none;">收起</a>
+                @if (!string.IsNullOrWhiteSpace(Model.Topic.ImageUrl))
+                {
+                    <div id="slidebox_@(Model.Topic.TopicID)" class="view-photo slideBox hideDiv"  attr="@Model.Topic.TopicID" style="text-align: center;">
+                        <a href="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(Model.Topic.ImageUrl, "T225x350_")" rel="external" >
+                        <img src="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(Model.Topic.ImageUrl, "T180X120_")" itid="@Model.Topic.TopicID"  style="display: inline;cursor: pointer;height: 100px;" class="topImg" ref="@Model.Topic.ImageUrl">
+                        </a>
+                    </div>
+                }
+                <input type="hidden" class="supportValue" value="@ViewBag.support" itemid="@Model.Topic.TopicID"/>               
+                <span class="replyShare db fr"><a href="javascript:;" class="like" tid="6"><i class="noPraise support" itemid="@Model.Topic.TopicID">
+                </i><span class="likecount" itemid="@Model.Topic.TopicID">@Model.Topic.FavCount</span></a> <a href="javascript:;" class="addFav" topicid="@Model.Topic.TopicID"><i class="incoS  spr"></i>收藏</a>
+                    <a href="javascript:;" class="threadReply "  itemid="@Model.Topic.TopicID"><i
+                        class="incoR spr support"></i>评论</a> </span>
+            </div>
+        </div>
+    
+        @Html.Partial("~/Areas/MSNS/Themes/VSNS/Views/Home/TopicReplyList.cshtml", Model)
+    </div>
+    }
+
+

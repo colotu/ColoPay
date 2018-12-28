@@ -1,0 +1,14 @@
+﻿@using System.Web.Mvc.Html
+@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_SiteLayout.cshtml";
+    @*网站前台模版*@
+}
+@section head{
+    @RenderSection("head", false)
+}
+@*@Html.Action("Header","Partial")*@
+@RenderBody()
+
+@section foot{
+    @RenderSection("foot", false)
+}

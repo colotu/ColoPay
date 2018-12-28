@@ -1,0 +1,119 @@
+﻿@model   YSWL.MALL.ViewModel.SNS.TopicReply
+@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+<style type="text/css">
+    body {
+        margin-bottom: 0;
+    }
+</style>
+    @if (null != Model)
+    {<div class="topicBox" id="t_@(Model.Topic.TopicID)" tid="@(Model.Topic.TopicID)">
+         <div class="topicCon pd15">
+             <p class="personImgDate">
+                 <span class="perImg db"><a href="@(ViewBag.BasePath)Profile/Index/@(Model.Topic.CreatedUserID)">
+                                             <img src="/Upload/User/Gravatar/@(Model.Topic.CreatedUserID).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" class="bImg usergravator" width="38" height="38" style="display: block;">
+                                         </a>@*<i class="admin"></i>*@ <span class="timeT">@Model.Topic.CreatedNickName <i>@YSWL.MALL.Web.Components.DateTimeHelper.ConvertDateToTime(Model.Topic.CreatedDate) </i></span>
+                 </span>
+                 <span class="perDate db @(ViewBag.Activity)" tid="@(Model.Topic.TopicID)" >
+                     <a href="javascript:;"  class="PerPopBtn incoA db"></a>
+                 </span>
+                 <span class="perPop" tid="@(Model.Topic.TopicID)" style="display: none;">
+                     <a class="perBCon db banThread" href="javascript:;" tid="@(Model.Topic.TopicID)">删除</a>
+                 </span>
+
+             </p>
+             <div class="detailCon hideDiv" attr="@Model.Topic.TopicID">
+                 <p  cid="content_@(Model.Topic.TopicID)" tid="6"  author="@Model.Topic.CreatedNickName " >
+                     @Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(Model.Topic.Description))
+                 </p>
+                 @if (!string.IsNullOrWhiteSpace(Model.Topic.ImageUrl))
+                 {
+                     <div id="slidebox_@(Model.Topic.TopicID)" class="view-photo slideBox hideDiv"  attr="@Model.Topic.TopicID" style="text-align: center;">
+                         <a href="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(Model.Topic.ImageUrl, "T225x350_")" rel="external" >
+                             <img src="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(Model.Topic.ImageUrl, "T180X120_")" itid="@Model.Topic.TopicID"  style="display: inline;cursor: pointer;height: 100px;" class="topImg" ref="@Model.Topic.ImageUrl">
+                         </a>
+                     </div>
+                 }
+             </div>
+         </div>
+         <fieldset>
+             <legend>回复此话题：</legend>
+             <div   id="fwin_dialog_replyForm" style="margin-top: 10px;">
+    <div class="popLayer" style="width: 86%">
+        <form method="post" id="replyForm">
+        <div class="sendBorder">
+            <textarea maxlength="140" id="content" name="content" cols="" rows="" class="sInput"
+                placeholder="回两句吧..."></textarea>
+        </div>
+        <div class="sendOperate">
+            <a href="javascript:;" class="expreSelect expreSelects" title=""></a>
+            <div class="operBtn db fr">
+                <span class="pText" id="pText">140</span> <a href="javascript:;" id="cBtn" class="cancelBtn db close"
+                    title="">取消</a> <a href="javascript:;" id="comBtn" class="sendBtn c1 db sendReplyBtn" to=""
+                        title="">发送</a>
+            </div>
+        </div>
+        <div class="tipLayer mt10" style="display: none;">
+            <div class="expreList">
+                <div class="expressionTab">
+                    <a href="javascript:;" class="on" id="emo0" title="默认">默认</a>
+                </div>
+                @RenderPage("~/Areas/MSNS/Themes/VSNS/Views/Partial/_biaoqing.cshtml")
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+         </fieldset>
+
+         
+
+    </div>
+    }
+<script type="text/javascript">
+    $(function () {
+        $(".expreSelect").click(function () {
+            $(this).toggleClass("expreSelected");
+            $(".tipLayer").toggle();
+        });
+        $(".cancelBtn").die("click").live("click", function () {
+            $("#content").val('');
+            window.parent.$.colorbox.close();
+        });
+        $("#comBtn").die("click").live("click", function () {
+            var tid = $(".perPop").attr("tid"); //获取此帖子ID
+            var Des = $("#content").val();
+            if (Des == "") {
+                ShowFailTip("请填写内容！");
+                return;
+            }
+            $.ajax({
+                url: $YSWL.BasePath + "profile/AJaxCreateTopicReply",
+                type: 'post',
+                dataType: 'json',
+                timeout: 10000,
+                data: { Des: Des, TopicId: tid },
+                success: function (resultData) {
+                    if (resultData.status == "ok") {//评论成功
+                        $("#content").val('');
+                        ShowSuccessTip("评论成功！");
+                        setTimeout(function () {
+                            window.parent.$.colorbox.close();
+                        }, 3000); 
+                    } else if (resultData.status == "no") {//评论失败
+                        ShowFailTip("操作失败，请稍候重试！");
+                    } else {
+                        ShowServerBusyTip("服务器忙，请重试！");
+                    }
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    ShowFailTip("操作失败：" + errorThrown);
+                }
+            });
+        });
+    });
+</script>
+
+

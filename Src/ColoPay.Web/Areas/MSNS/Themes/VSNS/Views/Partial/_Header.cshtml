@@ -1,0 +1,19 @@
+﻿<div class="topBar">
+    <div class="bottomBarCon">
+        <a href="javascript:;" class="qBackBtn" id="goback">返回</a>
+        <!--<a href="javascript:;" class="qBackBtn qOn"><i class="upBtn db"></i>返回</a>-->
+        <h2 class="qTitle" ><a href="@(ViewBag.BasePath)" style="font-size: 18px;color: #fff;">商家社区</a></h2>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        if ($("#index").length==1) {//首页隐藏返回按钮
+            $("#goback").hide();
+        }
+        $("#goback").click(function () {
+            if ($("#index").length < 1) { //不是首页
+                window.history.go(-1);
+            } 
+        });
+    });
+</script>

@@ -1,0 +1,1620 @@
+发生时间：2017/11/29 9:36:11
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:11
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:13
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:13
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:14
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:15
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:16
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:16
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:17
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:17
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:18
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:19
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:21
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:21
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:22
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:22
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:23
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:24
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:25
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:25
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:26
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:26
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:27
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:28
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:29
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:29
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:30
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:30
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:31
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:32
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:39
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:39
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:40
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:40
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:41
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:42
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:43
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:43
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:44
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:44
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:45
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 9:36:46
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:06
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:06
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:07
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:07
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:08
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:09
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:10
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:10
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:11
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:11
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:12
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:13
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:16
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:16
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:17
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:17
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:18
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:19
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:20
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:20
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:21
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:21
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:22
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:22
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:23
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:23
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:24
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:25
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:26
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:27
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:28
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:28
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:29
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:29
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:30
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:30
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:31
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:31
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:32
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:33
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:34
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:35
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:36
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:36
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:37
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:37
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:38
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:38
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:39
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:39
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:40
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:41
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:42
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:43
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:43
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:44
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:44
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:45
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:45
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:46
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:46
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:47
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:48
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:48
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:49
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:55
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:55
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:10:56
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:00
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:06
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:07
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:09
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:09
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:10
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:11
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:11
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:12
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:12
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:13
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:13
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:15
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:15
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:16
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:17
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:18
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:19
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:20
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:24
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:24
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:27
+事件级别：Error
+事件来源：could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:27
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.GetValue[T](String key)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:30
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------
+发生时间：2017/11/29 10:11:34
+事件级别：Error
+事件来源：RedisClientPool|could not connect to redis Instance at 127.0.0.1:9379
+事件操作人信息：()
+事件内容：   在 ServiceStack.Redis.RedisNativeClient.Connect()
+   在 ServiceStack.Redis.RedisNativeClient.AssertConnectedSocket()
+   在 ServiceStack.Redis.RedisNativeClient.SendCommand(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.SendExpectSuccess(Byte[][] cmdWithBinaryArgs)
+   在 ServiceStack.Redis.RedisNativeClient.set_Db(Int32 value)
+   在 YSWL.RedisClient.PoolRedisClientManagerExt.GetClient()
+   在 YSWL.RedisClient.RedisClientPool.SetValue[T](String key, T t, DateTime endTime)
+---------------------------------------------------------

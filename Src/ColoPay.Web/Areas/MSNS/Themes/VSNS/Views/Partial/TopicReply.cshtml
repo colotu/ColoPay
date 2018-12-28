@@ -1,0 +1,15 @@
+﻿@model List<YSWL.MALL.Model.SNS.GroupTopicReply>
+           <div class="topicList">       
+   @if (null != Model&&Model.Count>0)
+   {
+       <ul id="replyList_6" class="replyUl" itemid="@ViewBag.Id">
+            @foreach (YSWL.MALL.Model.SNS.GroupTopicReply item in Model)
+            {
+               <li author="@(item.ReplyNickName)" id="r_@(item.ReplyID)"   class="replyLi" replyId="@(item.ReplyID)"  uid="@(item.ReplyUserID)" tid="@(item.TopicID)" author="@(item.ReplyNickName)">
+                <img src="/Upload/User/Gravatar/@(item.ReplyUserID).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" class="sImg db fl" width="25" height="25" style="display: block;">
+                <a href="javascript:;" class="sW fl" style="margin-left: 25px;"><span>@(item.ReplyNickName)：</span>
+                   @Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(item.Description))</a></li>  
+            }
+        </ul>
+   }
+   </div>

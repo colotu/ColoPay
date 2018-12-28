@@ -1,0 +1,341 @@
+﻿@using Webdiyer.WebControls.Mvc
+@model YSWL.MALL.ViewModel.SNS.GroupInfo
+@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "微社区";
+}
+<link href="/Scripts/PhotoSwipe/photoswipe.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/PhotoSwipe/klass.min.js" type="text/javascript"></script>
+<script src="/Scripts/PhotoSwipe/photoswipe.jquery.min.js" type="text/javascript"></script>
+<script src="/Areas/MSNS/Themes/VSNS/Content/Scripts/TopicReply.js" type="text/javascript"></script>
+ @if (null != Model && null != Model.Group)
+ {
+     <input id="groupid" value="@Model.Group.GroupID" type="hidden" />
+     <input id="q" value="@(ViewBag.q)" type="hidden" />
+     <input type="hidden" id="index" />
+     <input type="hidden" id="join" value="@(ViewBag.joined)"/>
+     <div class="warp" style="">
+             <input type="hidden" id="groupId" value="@Model.Group.GroupID"/>
+             <div class="header">
+                 <i class="topicLogo fl db">
+                     <img src="@Model.Group.GroupLogo" class="tImg1"  height="78" alt="logo"></i>
+                 <h3>
+                     @Model.Group.GroupName</h3>
+                 <p class="subTitle">
+                     <span><em>@(ViewBag.toalcount)</em>话题</span> <span><em id="likeCount">@(Model.Group.GroupUserCount > 1 ? Model.Group.GroupUserCount - 1 : 0)</em>@Html.ActionLink("成员", "UserList", "Home")
+                                                                  </span>
+                 </p>
+             </div>
+         
+         <div class="container">
+             <img style="display: inline; cursor: pointer;" />
+             <div id="replyList">
+                 @if (Model.TopicList != null && Model.TopicList.Count > 0)
+                 {
+                     <div id="allThreadList">
+                         <input type="hidden" id="allpage" value="@(ViewBag.page)"/>
+                         @{ Html.RenderPartial("_ReplyList", Model); }
+                     </div>
+                     <div class="loading" id="loadNext" style="display: none;">
+                         <div class="loadInco">
+                             <span class="blockG" id="rotateG_01"></span><span class="blockG" id="rotateG_02">
+                                                                         </span><span class="blockG" id="rotateG_03"></span><span class="blockG" id="rotateG_04">
+                                                                                                                            </span><span class="blockG" id="rotateG_05"></span><span class="blockG" id="rotateG_06">
+                                                                                                                                                                               </span><span class="blockG" id="rotateG_07"></span><span class="blockG" id="rotateG_08">
+                                                                                                                                                                                                                                  </span>
+                         </div>
+                         正在加载...
+                     </div>
+
+                 }
+                 else
+                 {
+                     <div>
+                         暂无话题</div>
+                 }
+             </div>
+         </div>
+     </div>
+     <div class="bottomBar">
+         <div class="bottomBarCon">
+             @*<a href="javascript:;" class="backBtn" id="goback"><i class=" back db"></i></a>*@
+             <a href="@(ViewBag.BasePath)Home/NewTopic?GroupId=@(ViewBag.GroupId)"class="publish db" style="margin-left: 10%;">
+                 <i class="incoP"><span class="postTopic"></span></i>发话题</a> <a href="javascript:;"
+                                                                                class="attention db" id="followButton" style="display: none;"><i class="iInco"><span
+                                                                                                                                                                   class="join"></span></i>加入小组</a> <a href="@(ViewBag.BasePath)Profile/Index" class="moreC db"id="mqOption" style="text-align: center; width: auto;">
+                                                                                                                                                                                                        我的社区 <i class="db numP" id="navMsgNum" style="display: none;">0</i>
+                                                                                                                                                                                                    </a>
+         </div>
+     </div>
+     <div id="fwin_mask_replyForm" style="display: none;">
+     </div>
+     <div class="replyForm" style="display: none;" id="fwin_dialog_replyForm">
+         <div class="popLayer" style="width: 86%">
+             <form method="post" id="replyForm">
+                 <input type="hidden" name="CSRFToken" value="137c14b9">
+                 <input type="hidden" name="sId" value="181870738">
+                 <input type="hidden" name="tId" value="39">
+                 <input type="hidden" name="pId" value="0">
+                 <div class="sendBorder">
+                     <textarea maxlength="140" id="content" name="content" cols="" rows="" class="sInput"
+                               placeholder="回两句吧..."></textarea>
+                 </div>
+                 <div class="sendOperate">
+                     <a href="javascript:;" class="expreSelect expreSelects" title=""></a>
+                     <div class="operBtn db fr">
+                         <span class="pText" id="pText">140</span> <a href="javascript:;" id="cBtn" class="cancelBtn db close"
+                                                                      title="">取消</a> <a href="javascript:;" id="comBtn" class="sendBtn c1 db sendReplyBtn" to=""
+                                                                                         title="">发送</a>
+                     </div>
+                 </div>
+                 <div class="tipLayer mt10" style="display: none;">
+                     <div class="expreList">
+                         <div class="expressionTab">
+                             <a href="javascript:;" class="on" id="emo0" title="默认">默认</a>
+                         </div>
+                         @RenderPage("~/Areas/MSNS/Themes/VSNS/Views/Partial/_biaoqing.cshtml")
+                     </div>
+                 </div>
+             </form>
+         </div>
+     </div>
+     <div style="min-width: 96%; position: fixed; z-index: 10011; top: 144.778px; left: 2%; display: none;"
+          id="fwin_dialog_confirmBox">
+         <span class="close"></span>
+         <div class="popLayer pSpace" style="width: 80%">
+             <p class="editTCon">
+                 您确定删除此话题？</p>
+             <div class="editArea">
+                 <a href="javascript:;" class="editBtn1 db deleteTopic" title="">确定</a>
+                 <a href="javascript:;" class="editBtn2 db cancelDelete" title="">取消</a></div>
+         </div>
+     </div>
+     <div style="min-width: 96%; position: fixed; z-index: 10011; top: 144.778px; left: 2%; display: none;"
+          id="confirmBox">
+         <span class="close"></span>
+         <div class="popLayer pSpace" style="width: 80%">
+             <p class="editTCon">
+                 您确定删除此评论？</p>
+             <div class="editArea">
+                 <a href="javascript:;" class="editBtn1 db deleteReply" title="">确定</a>
+                 <a href="javascript:;" class="editBtn2 db cancelReply" title="">取消</a></div>
+         </div>
+     </div>
+ }
+  else
+ {
+     <p><h1 style="margin: 20px;text-align: center;">请先在后台设置小组参数</h1></p>
+ }
+<script type="text/javascript">
+    $(function () {
+        var width = $(window).width();
+        var height = $(window).height();
+        if ($("#join").val() == "error" || $("#join").val() == '') {//登录加入小组失败或者注册未加入小组
+            $("#followButton").show();
+        }
+
+        $(".expreSelect").click(function () {
+            $(this).toggleClass("expreSelected");
+            $(".tipLayer").toggle();
+        });
+        $("#followButton").click(function () {
+            $.post("@(ViewBag.BasePath)Home/AjaxJoinGroup", { GroupId: $("#groupId").val() }, function (result) {
+                if (result == "Yes") {
+                    ShowSuccessTip("加入成功");
+                    $("#followButton").hide();
+                } else if (result == "No") {
+                    ShowFailTip("加入失败，请稍后重试");
+                } else if (result == "joined") {
+                    ShowServerBusyTip("请不要重复加入!");
+                } else if (result == "notLogin") {
+                    ShowServerBusyTip("请您先登录再进小组……");
+                    setTimeout(function () {
+                        window.location = "@(ViewBag.BasePath)Account/Login";
+                    }, 3000);
+                }
+            });
+        });
+
+
+        $('#content').bind('input propertychange', function () {
+            if (this.value.length) {
+                var inputValue = $(this).val().length;
+                var stillCount = 140 - inputValue; //textareastrlen(inputValue);
+                if (stillCount < 0) {
+                    // $("#pText").text('超过' + (-stillCount) + '个字');
+                    $("#pText").text(0);
+                    $('#content').val().slice(0, 140);
+                    // $(this).attr("readonly", "readonly");
+                    return false;
+                }
+                if (stillCount == 0) {
+                    //$(this).attr("readonly", "readonly");
+                    $("#pText").text(0);
+                    return false;
+                }
+                $("#pText").text(stillCount);
+
+
+                //                if (stillCount < 1) {
+                //                    $(this).attr("readonly", "readonly");
+                //                }
+                //                $("#pText").text(stillCount);
+            }
+        });
+        //        $(".topImg").die('click').live('click', function () {//用PhotoSwipe后自写的特效没有启用
+        //            });
+        //            var aid = $(this).attr('itid');
+        //            $('div[attr="' + aid + '"]').removeClass("hideDiv");
+        //            $("#fwin_mask_replyForm").toggleClass("img-mask");
+        //            $(this).parents(".slideBox").toggleClass("pic-parent");
+        //            if ($("#fwin_mask_replyForm").hasClass("img-mask")) {//添加遮罩
+        //                $(this).attr('src', $(this).attr('ref').format("T225x350_")).addClass('viewPic'); // $(this).css("height", "auto");
+        //                var left = parseInt((width - $(this).width()) / 2);
+        //                var top = parseInt((height - $(this).height()) / 2);
+        //                $(this).css({ 'left': left + 'px', 'top': top + 'px' });
+        //                $("#fwin_mask_replyForm").height($("#body").height() + 100);
+        //                document.body.addEventListener('touchmove', xPreventDefault, false);
+
+        //            } else {//去掉遮罩
+        //                $('div[attr="' + aid + '"]').addClass("hideDiv");
+        //                $("#fwin_mask_replyForm").height(0);
+        //                //  $(this).css("height", "100");
+        //                $(this).attr('src', $(this).attr('ref').format("T180x120_")).removeClass('viewPic');
+        //                document.body.removeEventListener('touchmove', xPreventDefault, false);
+        //            }
+        //            $("#fwin_mask_replyForm").toggle();
+        //  });
+    });
+
+
+
+
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".supportValue").each(function () {
+            if ($(this).val() == "support") {
+                $("i[itemid='" + $(this).attr("itemid") + "']").addClass("Praise");
+            }
+        });
+        $(".contentDet").each(function () {
+            var height = $(this).height();
+            var cid = $(this).attr("cid");
+            if (height == 155) {
+                $(".viewBtn[cid='" + cid + "']").show();
+            }
+        });
+
+        $(".viewBtn").die('click').live('click', function () {
+            $(this).prev().removeClass('contentDet');
+            $(this).hide();
+            $(this).next().show();
+        });
+        $(".shouqi").die('click').live('click', function () {
+            var cid = $(this).attr("cid");
+            $("p[cid='" + cid + "']").addClass("contentDet");
+            $("a[cid='" + cid + "']").show();
+            $(this).hide();
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        var page = 1;
+        var pageTotal = parseInt($("#allpage").val());
+        //判断每个UL的最后一个LI，是否进入可视区域 
+        function see(objLiLast) {
+            //浏览器可视区域的高度 
+            var see = document.documentElement.clientHeight;
+            //滚动条滑动的距离 
+            var winScroll = $(this).scrollTop();
+            //每个UL的最后一个LI，距离浏览器顶部的 
+            var lastLisee = $(objLiLast).offset().top;
+            return lastLisee < (see + winScroll) ? true : false;
+        }
+        //是否请求出AJAX的“开关”； 
+        var onOff = true;
+        $(window).scroll(function () {
+            //拖动滚条时，是否发送AJAX的一个“开关” 
+            $(".topicBox").each(function (index, element) {
+                //引用最后一个LI 
+                var lastLi = $(".topicBox:last");
+                //调用是否进入可视区域函数 
+                var isSee = see(lastLi);
+                if (isSee && onOff && page < pageTotal) {//最底部元素可见，开关开启而且还有下拉
+                    $("#loadNext").show(); //显示正在加载图标
+                    onOff = false;
+                    $.ajax({
+                        url: "@(ViewBag.BasePath)Home/GetPageData",
+                        type: "POST",
+                        dataType: "Json",
+                        data: {
+                            page: page + 1
+                        },
+                        asyc: false,
+                        success: function (result) {
+                            if (result.status == "success") {
+                                var data = result.result;
+                                for (var i = 0; i < data.length; i++) {
+                                    if (data[i].imageUrl) {//有图片
+                                        $("#allThreadList").append('<div class="topicBox" id="t_' + data[i].topicId + '"><div class="topicCon pd15"><p class="personImgDate"><span class="perImg db"><a href="@(ViewBag.BasePath)Profile/Index/' + data[i].uid + '"><img src="/Upload/User/Gravatar/' + data[i].uid + '.jpg" class="bImg usergravator" width="38" height="38" style="display: block;"></a> <span class="timeT">' + data[i].nickName + '<i>' + data[i].createdDate + ' </i></span> </span><span class="perDate db"></span>  </p><div class="detailCon"><p cid="content_' + data[i].topicId + '" tid="6" author="' + data[i].nickName + '" class="contentDet">' + data[i].description + '</p><a cid="content_' + data[i].topicId + '" href="javascript:;" class="viewBtn db fl" style="display: none;">全文</a> <a cid="content_' + data[i].topicId + '" href="javascript:;" class="db fl shouqi" style="line-height: 28px;display: none;">收起</a><div class="view-photo slideBox" style="text-align: center;"><a href=' + data[i].ref.format('T225x350_') + '><img src="' + data[i].imageUrl + '" style="display: inline;cursor: pointer;height:100px;" class="topImg" ref="' + data[i].ref + '"></a></div> <input type="hidden" class="supportValue" value="' + data[i].support + '" itemid="' + data[i].topicId + '"><span class="replyShare db fr"><a href="javascript:;" class="like" tid="' + data[i].topicId + '"><i class="noPraise support" itemid="' + data[i].topicId + '"></i><span class="likecount" itemid="' + data[i].topicId + '">' + data[i].favCount + '</span></a>  <a href="javascript:;" class="addFav" topicid="' + data[i].topicId + '"><i class="incoS  spr"></i>收藏</a>   <a href="javascript:;" class="threadReply " itemid="' + data[i].topicId + '"><i class="incoR spr support"></i>评论</a> </span></div></div></div>');
+                                    } else {//无图片
+                                        $("#allThreadList").append('<div class="topicBox" id="t_' + data[i].topicId + '"><div class="topicCon pd15"><p class="personImgDate"><span class="perImg db"><a href="@(ViewBag.BasePath)Profile/Index/' + data[i].uid + '"><img src="/Upload/User/Gravatar/' + data[i].uid + '.jpg" class="bImg usergravator" width="38" height="38" style="display: block;"></a> <span class="timeT">' + data[i].nickName + '<i>' + data[i].createdDate + ' </i></span> </span><span class="perDate db"></span>  </p><div class="detailCon"><p cid="content_' + data[i].topicId + '" tid="6" author="' + data[i].nickName + '" class="contentDet">' + data[i].description + '</p><a cid="content_' + data[i].topicId + '" href="javascript:;" class="viewBtn db fl" style="display: none;">全文</a> <a cid="content_' + data[i].topicId + '" href="javascript:;" class="db fl shouqi" style="line-height: 28px;display: none;">收起</a><input type="hidden" class="supportValue" value="' + data[i].support + '" itemid="' + data[i].topicId + '"><span class="replyShare db fr"><a href="javascript:;" class="like" tid="' + data[i].topicId + '"><i class="noPraise support" itemid="' + data[i].topicId + '"></i><span class="likecount" itemid="' + data[i].topicId + '">' + data[i].favCount + '</span></a> <a href="javascript:;" class="addFav" topicid="' + data[i].topicId + '"><i class="incoS  spr"></i>收藏</a> <a href="javascript:;" class="threadReply " itemid="' + data[i].topicId + '"><i class="incoR spr support"></i>评论</a> </span></div></div></div>');
+                                    }
+
+
+                                    $("#t_" + data[i].topicId).append('<div class="topicList" id="topic_' + data[i].topicId + '"><ul id="replyList_' + data[i].topicId + '" class="replyUl" itemid="' + data[i].topicId + '"> </ul> </div>');
+                                    var replyList = data[i].replyList;
+                                    if (replyList) {
+                                        if (replyList.length > 3) {//3条评论以上
+                                            for (var j = 0; j < 3; j++) {
+                                                $("#replyList_" + data[i].topicId).append('<li id="p_6_13" uid="6419340" author="ff。"><a href="javascript:;" class="sW fl"><span>' + data[i].replyList[j].replynickName + '：</span>' + data[i].replyList[j].replyContent + '</a></li>');
+                                            }
+                                            $("#topic_" + data[i].topicId).append('<p id="rCount_6" class="more"><a href="@(ViewBag.BasePath)MSNS/Home/TopicReply/' + data[i].topicId + '?viewName=TopicDetail">更多</a>共<span class="replyCount" itemid="' + data[i].topicId + '">' + data[i].replyList[j].replyCount + '</span>条评论</p>');
+                                        } else {//评论数小于三条
+                                            for (var h = 0; h < replyList.length; h++) {
+                                                $("#replyList_" + data[i].topicId).append('<li id="p_6_13" uid="6419340" author="ff。"><a href="javascript:;" class="sW fl"><span>' + data[i].replyList[h].replynickName + '：</span>' + data[i].replyList[h].replyContent + '</a></li>');
+                                            }
+                                        }
+                                    }
+                                };
+                            }
+                            $("#loadNext").hide(); //隐藏正在加载
+                            onOff = true;
+                            $(".contentDet").each(function () {
+                                var height = $(this).height();
+                                var cid = $(this).attr("cid");
+                                if (height == 155) {
+                                    $(".viewBtn[cid='" + cid + "']").show();
+                                }
+                            });
+                            $(".supportValue").each(function () {
+                                if ($(this).val() == "support") {
+                                    $("i[itemid='" + $(this).attr("itemid") + "']").addClass("Praise");
+                                }
+                            });
+                            page++;
+                            $(".view-photo a").photoSwipe({
+                                enableMouseWheel: true,
+                                enableKeyboard: true,
+                                autoStartSlideshow: false,
+                                captionAndToolbarOpacity: 1
+                            });
+                        }
+
+                    });
+
+                }
+            });
+        });
+        var myPhotoSwipe = $(".view-photo a").photoSwipe({
+            enableMouseWheel: true,
+            enableKeyboard: true,
+            autoStartSlideshow: false,
+            captionAndToolbarOpacity: 1
+        });
+    })
+</script>
+

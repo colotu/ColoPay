@@ -1,0 +1,679 @@
+﻿* {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#ggw {
+	PADDING-LEFT: 4px; FONT-SIZE: 14px; /*WIDTH: 950px;*/ PADDING-TOP: 1px; HEIGHT: 20px; TEXT-ALIGN: left;
+	background-color: transparent; border-bottom:2px solid #ffffff; padding-top:6px; padding-bottom:-5px; color:#ffffff; height:20px;
+}
+.ggw SPAN IMG {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; VISIBILITY: hidden; POSITION: absolute; TEXT-DECORATION: none；
+}
+.ggw:hover IMG {
+	VISIBILITY: visible; TOP: 23px
+}
+#cha {
+	FLOAT: right; MARGIN-RIGHT: 28px; margin-top:-20px;
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.w950 {
+	MARGIN: 0px auto; WIDTH: 950px
+}
+.area {
+	
+}
+
+.left_part {
+	FLOAT: left
+}
+.right_part {
+	FLOAT: right
+}
+.area {
+	CLEAR: both; OVERFLOW: hidden
+}
+.item_price EM {
+	BACKGROUND: url(http://www.taofen8.com/images/tf8background.png) no-repeat -9999px -9999px
+}
+.item_num SPAN EM {
+	BACKGROUND: url(http://www.taofen8.com/images/tf8background.png) no-repeat -9999px -9999px
+}
+.hr {
+	BACKGROUND: url(http://www.taofen8.com/images/tf8background.png) no-repeat -9999px -9999px
+}
+BODY {
+	
+}
+BUTTON {
+	
+}
+INPUT {
+	
+}
+SELECT {
+	
+}
+TEXTAREA {
+	
+}
+#header {
+	PADDING-TOP: 30px
+}
+#header H1 {
+	BACKGROUND: url(http://www.taofen8.com/images/logo4.png) no-repeat 0px 0px; FLOAT: left; OVERFLOW: hidden; WIDTH: 200px; TEXT-INDENT: -999px; HEIGHT: 80px
+}
+#header H1 A {
+	BACKGROUND: url(http://www.taofen8.com/images/logo4.png) no-repeat 0px 0px; FLOAT: left; OVERFLOW: hidden; WIDTH: 250px; TEXT-INDENT: -999px; HEIGHT: 80px
+}
+BODY {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1CCRNXmRFXXXXXXXX.png) no-repeat 999em 0px
+}
+#site-nav .quick-menu LI {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1CCRNXmRFXXXXXXXX.png) no-repeat 999em 0px
+}
+#site-nav .search .menu-hd S {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1CCRNXmRFXXXXXXXX.png) no-repeat 999em 0px
+}
+#site-nav .quick-menu .cart S {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1CCRNXmRFXXXXXXXX.png) no-repeat 999em 0px
+}
+#site-nav .search .menu-bd BUTTON {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1CCRNXmRFXXXXXXXX.png) no-repeat 999em 0px
+}
+BODY {
+	BACKGROUND-POSITION: 0px -44px; BACKGROUND-REPEAT: repeat-x
+}
+#site-nav UL {
+	LIST-STYLE-TYPE: none
+}
+#site-nav .search .menu-bd BUTTON {
+	BORDER-TOP-WIDTH: 0px; BACKGROUND-POSITION: 0px -20px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 66px; CURSOR: pointer; COLOR: #fff; HEIGHT: 24px; BORDER-RIGHT-WIDTH: 0px
+}
+#site-nav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; Z-INDEX: 10000; PADDING-BOTTOM: 2px; MARGIN: 0px auto; COLOR: #000; LINE-HEIGHT: 22px; PADDING-TOP: 2px; POSITION: relative; HEIGHT: 22px
+}
+#site-nav A {
+	COLOR: #330033; TEXT-DECORATION: none
+}
+#site-nav A:hover {
+	COLOR: #f50
+}
+#site-nav .login-info {
+	FLOAT: left
+}
+#site-nav .login-info A {
+	MARGIN-RIGHT: 8px
+}
+#site-nav .login-info A.user-nick {
+	MARGIN-RIGHT: 0px
+}
+#site-nav .quick-menu {
+	RIGHT: 0px; POSITION: absolute; TOP: 1px
+}
+#site-nav .quick-menu LI {
+	PADDING-RIGHT: 10px; BACKGROUND-POSITION: right 6px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN-LEFT: -1px; PADDING-TOP: 1px
+}
+#site-nav .quick-menu LI IMG {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 1px; MARGIN-LEFT: -1px; PADDING-TOP: 1px; HEIGHT: 18px
+}
+#site-nav .quick-menu LI.last {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#site-nav .quick-menu LI.menu-item {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: relative
+}
+.tsearch_fields LABEL {
+	LEFT: 12px; TOP: 12px; HEIGHT: 16px
+}
+.tsearch {
+	FLOAT: right; WIDTH: 720px; PADDING-TOP: 16px
+}
+.tsearch-tab {
+	FLOAT: left; HEIGHT: 23px
+}
+.tsearch UL {
+	LIST-STYLE-TYPE: none
+}
+.tsearch_fields {
+	WIDTH:510PX; height:42PX; float:left;position:relative;
+
+}
+.tsearch_fields INPUT {
+	WIDTH:500PX;/* height:42PX;*/ color:#848484; font-family:微软雅黑; background:#ffeee4; border:0 none; margin-left:2px;margin-top:2px;font-size:16px; height:18px; line-height:100%; padding:9px 0px 9px 5px;
+}
+.tsearch_fields LABEL {
+	DISPLAY: block; PADDING-LEFT: 20px; Z-INDEX: 5; LEFT: 12px; POSITION: absolute; TOP: 12px; HEIGHT: 14px
+}
+.focus LABEL {
+	DISPLAY: inline
+}
+.tsearch-action {
+	PADDING-LEFT: 10px; FLOAT: left; WIDTH: 145px; HEIGHT: 34px
+}
+.tsearch-action A {
+	COLOR: #666; TEXT-DECORATION: none
+}
+.tsearch-action A:hover {
+	COLOR: #f60
+}
+.tsearch_submit {
+	width:137px; height:45px; cursor:pointer; background:none; border:none;
+
+}
+.tsearch-hot {
+	PADDING-LEFT: 8px; WIDTH: 210px; LINE-HEIGHT: 28px; POSITION: relative; HEIGHT: 60px
+}
+.tsearch-hot A {
+	FONT-SIZE: 14px; COLOR: #666; MARGIN-RIGHT: 6px; TEXT-DECORATION: none
+}
+.tsearch-hot A:hover {
+	COLOR: #f60
+}
+.tsearch-hot .more {
+	COLOR: #666
+}
+.tsearch-hot IMG {
+	HEIGHT: 16px
+}
+#top_words {
+	BORDER-RIGHT: #cfb1ab 0px solid; BORDER-TOP: #cfb1ab 0px solid; BORDER-LEFT: #cfb1ab 0px solid; PADDING-TOP: 20px; BORDER-BOTTOM: #cfb1ab 0px solid
+}
+#content {
+	MARGIN: 20px auto 0px; WIDTH: 950px; COLOR: #666; POSITION: relative
+}
+.ju-more {
+width:950px; height:auto; overflow:hidden; background:#FFF; border:#cccccc 1px solid; margin-top:0px;
+}
+.ju-more .tab-link {
+	width:950px; height:77px;
+}
+.ju-more .tab-link .linkitems {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BACKGROUND: url(http://img04.taobaocdn.com/tps/i4/T1g.lZXeFjXXXXXXXX-2-37.png) no-repeat 0px 1px; PADDING-BOTTOM: 0px; WIDTH: 100%; PADDING-TOP: 0px; HEIGHT: 37px
+}
+.ju-more .tab-link .linkitems LI {
+	BACKGROUND: url(http://img04.taobaocdn.com/tps/i4/T1g.lZXeFjXXXXXXXX-2-37.png) no-repeat right 1px; FLOAT: left; OVERFLOW: hidden; POSITION: relative; HEIGHT: 37px
+}
+.ju-more .tab-link .linkitems A {
+	PADDING-RIGHT: 30px; DISPLAY: block; PADDING-LEFT: 50px; FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 2px 0px 0px; COLOR: #818181; LINE-HEIGHT: 38px; PADDING-TOP: 0px; HEIGHT: 37px; text-shadow: 0 1px 1px #f0f0f0
+}
+.ju-more .tab-link .linkitems .on {
+	FONT-SIZE: 20px; BACKGROUND: url(http://img03.taobaocdn.com/tps/i3/T1iElZXepjXXXXXXXX-1-44.png) repeat-x 0px 0px; COLOR: #a84a04; MARGIN-RIGHT: 1px; FONT-FAMILY: '微软雅黑','宋体'; text-shadow: 0 1px 1px #C1C1C1
+}
+.ju-more .tab-link .linkitems A:hover {
+	TEXT-DECORATION: none
+}
+.ju-more .past-ico {
+	DISPLAY: block; LEFT: 26px; WIDTH: 16px; POSITION: absolute; TOP: 12px; HEIGHT: 16px
+}
+.mysubs-ico {
+	DISPLAY: block; LEFT: 26px; WIDTH: 16px; POSITION: absolute; TOP: 12px; HEIGHT: 16px
+}
+.ju-more .past-ico {
+	BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1B9tZXhhHXXXXXXXX-16-16.png) no-repeat 0px 0px
+}
+.ju-more .mysubs-ico {
+	BACKGROUND: url(http://img03.taobaocdn.com/tps/i3/T1CStZXhdHXXXXXXXX-16-16.png) no-repeat 0px 0px
+}
+.ju-more .city-slct {
+	BORDER-RIGHT: #d0d0d0 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #d0d0d0 1px solid; DISPLAY: inline; PADDING-LEFT: 6px; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND: url(http://img02.taobaocdn.com/tps/i2/T1oX8WXd4HXXXXXXXX-950-950.png) #fff no-repeat right -353px; PADDING-BOTTOM: 0px; MARGIN: 7px 0px 0px 6px; BORDER-LEFT: #d0d0d0 1px solid; CURSOR: pointer; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px solid; ZOOM: 1; HEIGHT: 20px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px
+}
+.ju-more .tab-cont {
+	width:950px; height:auto; overflow:hidden; margin-top:0px;
+}
+.ju-more .tab-cont1 {
+	width:950px; height:auto; overflow:hidden;
+}
+.ju-more .page-other {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.ju-more-space {width:950px; height:40px;}
+.ju-more-space-end {width:950px; height:50px;}
+.more-group {
+	MARGIN-BOTTOM: 35px
+}
+.group-list {
+	width:950px; height:auto; overflow:hidden;
+}
+
+.more-group UL LI {
+DISPLAY: inline; FLOAT: left;   WIDTH: 316px; POSITION: relative; HEIGHT:400px
+}
+.more-group LI .pic {
+	POSITION: relative;width:250px; height:234px;
+}
+.more-group .pic1 A {
+	BORDER-RIGHT: #d64c00 1px solid; BORDER-TOP: #d64c00 1px solid; DISPLAY: block; FONT-SIZE: 175px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; BORDER-LEFT: #d64c00 1px solid; WIDTH: 250px; LINE-HEIGHT: 1em; BORDER-BOTTOM: #d64c00 1px solid; FONT-FAMILY: Arial! important; HEIGHT: 250px; BACKGROUND-COLOR: #fff
+}
+.more-group .pic1 TABLE {
+	TEXT-ALIGN: center
+}
+.more-group .pic A {
+	width:250px; height:250px; display:block;
+	
+}
+.more-group .pic TABLE {
+	TEXT-ALIGN: center
+}
+.more-group .pic A IMG {
+	MAX-WIDTH: 250px; VERTICAL-ALIGN: middle; MAX-HEIGHT: 250px
+}
+.more-group .pprice {
+width:250px; height:20px; background:#5a554f;	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+     -moz-opacity:0.6;   
+     opacity: 0.6;
+	 position:absolute;
+	 top:271px;
+	 left:39px;
+}
+.more-group .pprice DEL {
+	MARGIN-RIGHT: 5px
+}
+.more-group .pprice STRONG {
+	FONT-WEIGHT: normal; COLOR:FFF;
+}
+.more-group .buybtn {
+
+}
+.more-group .buybtn:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.more-group .buybtn:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.more-group .buybtn .large {
+	FONT-SIZE: 33px
+}
+.more-group .notbegin {
+	BACKGROUND-POSITION: 0px -51px
+}
+.more-group .jieti {
+	MARGIN-TOP: -7px; PADDING-TOP: 12px; HEIGHT: 46px
+}
+.more-group .jt-buy {
+	BACKGROUND-POSITION: 0px -204px
+}
+.more-group .buybtn B {
+	FONT-SIZE: 25px; FONT-FAMILY: Arial; LETTER-SPACING: 0px
+}
+.more-group .buybtn SPAN {
+	FONT-SIZE: 28px
+}
+.more-group .buybtn STRONG {
+	FONT-SIZE: 35px
+}
+.more-group H3 {
+	MARGIN-TOP: 55px; FONT-SIZE: 14px; COLOR: #333; FONT-FAMILY: Arial,Verdana,'宋体',sans-serif
+}
+.more-group .buybtn DEL {
+	PADDING-RIGHT: 10px;width:130px; height:18px; float:left; line-height:18px; text-decoration:line-through; font-size:12px; font-weight:bold; color:#f5d09a;
+}
+.more-group H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-TOP: 10px; FONT-FAMILY: Arial,Verdana,'宋体',sans-serif
+}
+.more-group .end-time SPAN {
+	COLOR: #f60
+}
+
+.in_apDiv1 {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 174px; HEIGHT: 43px; BORDER-RIGHT-WIDTH: 0px
+}
+#index_kj {
+	MARGIN-TOP: -23px; FONT-WEIGHT: bold; FONT-SIZE: 15px; MARGIN-LEFT: 240px; COLOR: #a84a04; FONT-FAMILY: '微软雅黑','宋体'; LETTER-SPACING: 1px
+}
+.index_huiyuan {
+	FONT-SIZE: 16px; COLOR: #d64c00
+}
+.bokazi_img {
+	MARGIN-TOP: 6px; MARGIN-BOTTOM: -24px
+}
+.banner {
+	MARGIN-TOP: 15px
+}
+#footer {
+	PADDING-BOTTOM: 50px; COLOR: #666; LINE-HEIGHT: 22px; PADDING-TOP: 15px; TEXT-ALIGN: center
+}
+#footer P A {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#footer A:link {
+	COLOR: #29a5c9; TEXT-DECORATION: none
+}
+#footer A:visited {
+	COLOR: #29a5c9; TEXT-DECORATION: none
+}
+#footer A:hover {
+	COLOR: #29a5c9; TEXT-DECORATION: underline
+}
+#footer A:active {
+	COLOR: #29a5c9; TEXT-DECORATION: underline
+}
+#footer .foot-nav A {
+	COLOR: #29a5c9
+}
+.tixing {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: right; COLOR: #2077bc; PADDING-TOP: 5px
+}
+#textfield {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.page_mode {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 220px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; FONT-FAMILY: Tahoma; HEIGHT: 25px; background:#FFF;
+}
+.page_mode UL {
+	
+}
+.page_mode UL LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+.page_mode UL LI A {
+	PADDING-RIGHT: 5px; MIN-WIDTH: 10px; DISPLAY: block; PADDING-LEFT: 5px; FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; display:inline; LINE-HEIGHT: 23px; MARGIN-RIGHT: 10px; PADDING-TOP: 0px; FONT-FAMILY: Arial,SimSun; WHITE-SPACE: nowrap; HEIGHT: 23px; TEXT-ALIGN: center
+}
+.page_form .ww
+{
+	border:none;
+	width:49px;
+	height:21px;
+	
+}
+.page_mode UL LI SPAN {
+	PADDING-RIGHT: 5px; MIN-WIDTH: 15px; DISPLAY: block; PADDING-LEFT: 5px; FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; LINE-HEIGHT: 23px; MARGIN-RIGHT: 5px; PADDING-TOP: 0px; FONT-FAMILY: Arial,SimSun; WHITE-SPACE: nowrap; HEIGHT: 23px; TEXT-ALIGN: center
+}
+.page_mode UL LI .page_cur {
+	BORDER-RIGHT: #ed335a 1px solid; BORDER-TOP: #ed335a 1px solid; FONT-WEIGHT: 700; BORDER-LEFT: #ed335a 1px solid; COLOR: #ed335a; BORDER-BOTTOM:#ed335a 1px solid; BACKGROUND-COLOR:#ffcbd6;
+}
+.page_mode UL LI A:link {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #0063dc; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none; color:#ed335a; font-weight:bold;
+}
+.page_mode UL LI A:active {
+	BORDER-RIGHT: #ff5500 1px solid; BORDER-TOP: #ff5500 1px solid; BORDER-LEFT: #ff5500 1px solid; COLOR: #ff5500; BORDER-BOTTOM: #ff5500 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.page_mode .page_form {
+	FLOAT: left
+}
+.page_mode FORM SPAN {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 13px; PADDING-BOTTOM: 0px; COLOR: #999999; LINE-HEIGHT: 23px; PADDING-TOP: 0px
+}
+.page_mode FORM .page_input {
+	WIDTH: 30px
+}
+.page_form .page_input {
+	WIDTH: 30px
+}
+.page_form FORM SPAN {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 13px; PADDING-BOTTOM: 0px; COLOR: #999999; LINE-HEIGHT: 23px; PADDING-TOP: 0px
+}
+#search_result {
+	BACKGROUND-POSITION: -5px -98px; MARGIN-TOP: 10px; PADDING-LEFT: 18px; FONT-WEIGHT: bold; FLOAT: left; BACKGROUND-IMAGE: url(http://www.taofen8.com/images/T1owlOXe0fXXXXXXXX.png); MARGIN-BOTTOM: 5px; COLOR: #404040; LINE-HEIGHT: 18px; BACKGROUND-REPEAT: no-repeat
+}
+#search_result EM {
+	COLOR: #ba0047; FONT-STYLE: normal
+}
+
+UNKNOWN {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 1; LEFT: 5px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 700px; POSITION: absolute; TOP: 9px; HEIGHT: 400px; BACKGROUND-COLOR: #fcfcfc; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#left {
+	Z-INDEX: 6; LEFT: 25px; WIDTH: 300px; POSITION: absolute; TOP: 35px; HEIGHT: 50px
+}
+#right {
+	Z-INDEX: 7; LEFT: 359px; WIDTH: 300px; POSITION: absolute; TOP: 60px; HEIGHT: 50px
+}
+#right P {
+	COLOR: #cc3300
+}
+#footer_left {
+	FONT-SIZE: 20px; Z-INDEX: 8; LEFT: 64px; WIDTH: 371px; COLOR: #ff6600; POSITION: absolute; TOP: 351px; HEIGHT: 34px; TEXT-ALIGN: left
+}
+#footer_left A:link {
+	FONT-SIZE: 20px; COLOR: #ff6600
+}
+#footer_left A:visited {
+	FONT-SIZE: 20px; COLOR: #ff6600
+}
+#footer_left A:hover {
+	FONT-SIZE: 20px; COLOR: #ff6600
+}
+#footer_left A:active {
+	FONT-SIZE: 20px; COLOR: #ff6600
+}
+#go_img {
+	Z-INDEX: 2; LEFT: 666px; WIDTH: 25px; POSITION: absolute; TOP: -1px; HEIGHT: 25px
+}
+#img2 {
+	Z-INDEX: 3; BACKGROUND: none transparent scroll repeat 0% 0%; LEFT: -47px; WIDTH: 42px; POSITION: absolute; TOP: -4px; HEIGHT: 36px
+}
+.left_p {
+	FLOAT: left
+}
+.page_mode {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 220px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; FONT-FAMILY: Tahoma; HEIGHT: 25px
+}
+.page_mode UL {
+	
+}
+.page_mode UL LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+
+.page_mode UL LI SPAN {
+	PADDING-RIGHT: 5px; MIN-WIDTH: 10px; DISPLAY: block; PADDING-LEFT: 5px; FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; LINE-HEIGHT: 23px; MARGIN-RIGHT: 10px; display:inline; PADDING-TOP: 0px; FONT-FAMILY: Arial,SimSun; WHITE-SPACE: nowrap; HEIGHT: 23px; TEXT-ALIGN: center
+}
+
+.page_mode UL LI A:hover
+{
+	border-COLOR: #dd1b43;
+}
+.page_mode UL LI A:visited {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #0063dc; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+
+.page_mode UL LI A:active {
+	BORDER-RIGHT: #ff5500 1px solid; BORDER-TOP: #ff5500 1px solid; BORDER-LEFT: #ff5500 1px solid; COLOR: #ff5500; BORDER-BOTTOM: #ff5500 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none;
+}
+.page_mode .page_form {
+	FLOAT: left;
+}
+.page_mode FORM SPAN {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 13px; PADDING-BOTTOM: 0px; COLOR: #999999; LINE-HEIGHT: 23px; PADDING-TOP: 0px
+}
+.page_mode FORM .page_input {
+	WIDTH: 30px
+}
+#search_result {
+	BACKGROUND-POSITION: -5px -98px; MARGIN-TOP: 10px; PADDING-LEFT: 18px; FONT-WEIGHT: bold; FLOAT: left; BACKGROUND-IMAGE: url(http://www.taofen8.com/images/T1owlOXe0fXXXXXXXX.png); MARGIN-BOTTOM: 5px; COLOR: #404040; LINE-HEIGHT: 18px; BACKGROUND-REPEAT: no-repeat
+}
+#search_result EM {
+	COLOR: #ba0047; FONT-STYLE: normal
+}
+#content {
+	PADDING-TOP: 10px
+}
+#content H3 {
+	BACKGROUND: url(http://www.taofen8.com/images/miaosha.gif) no-repeat 0px 0px; OVERFLOW: hidden; WIDTH: 95px; TEXT-INDENT: -999px; HEIGHT: 35px
+}
+#content .tixing {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: right; COLOR: #0063dc; PADDING-TOP: 5px
+}
+#content .item_block {
+	BACKGROUND: url(http://www.taofen8.com/images/border.gif) no-repeat 0px 0px; OVERFLOW: hidden; WIDTH: 965px; PADDING-TOP: 2px
+}
+#content .item_block UL {
+	WIDTH: 965px; PADDING-TOP: 10px; LIST-STYLE-TYPE: none
+}
+#content .item_block UL LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 15px; WIDTH: 170px; LIST-STYLE-TYPE: none
+}
+#content .item_block UL LI .item_pic {
+	BORDER-RIGHT: #cbcbcb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cbcbcb 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cbcbcb 1px solid; WIDTH: 160px; PADDING-TOP: 5px; BORDER-BOTTOM: #cbcbcb 1px solid; HEIGHT: 160px
+}
+#content .item_block UL LI .item_pic A {
+	VERTICAL-ALIGN: middle; WIDTH: 160px; HEIGHT: 160px; TEXT-ALIGN: center
+}
+#content .item_block UL LI .item_title {
+	PADDING-RIGHT: 3px; MARGIN-TOP: 5px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; COLOR: #404040; LINE-HEIGHT: 18px; PADDING-TOP: 0px; FONT-FAMILY: Tahoma,Arial,Verdana,'宋体',sans-serif; HEIGHT: 36px
+}
+#content .item_block UL LI .item_title A:link {
+	COLOR: #404040; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_title A:visited {
+	COLOR: #404040; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_title A:hover {
+	COLOR: #0063dc; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_title A:active {
+	COLOR: #0063dc; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_shop {
+	PADDING-RIGHT: 3px; MARGIN-TOP: 5px; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; LINE-HEIGHT: 18px; PADDING-TOP: 0px; HEIGHT: 18px
+}
+#content .item_block UL LI .item_shop A:link {
+	COLOR: #0063dc; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_shop A:visited {
+	COLOR: #0063dc; TEXT-DECORATION: none
+}
+#content .item_block UL LI .item_shop A:hover {
+	COLOR: #0063dc; TEXT-DECORATION: underline
+}
+#content .item_block UL LI .item_shop A:active {
+	COLOR: #0063dc; TEXT-DECORATION: underline
+}
+#content .item_block UL LI .item_price {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; COLOR: #bd1a1d; PADDING-TOP: 5px
+}
+#content .item_block UL LI .item_price STRONG {
+	PADDING-LEFT: 2px; FONT-SIZE: 14px; COLOR: #bd1a1d; FONT-FAMILY: tahoma,arial,宋体,sans-serif
+}
+#content .item_block UL LI .item_price DEL {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 4px; FONT: 12px Arial; COLOR: #666
+}
+#content .item_block UL LI .item_num {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; COLOR: #666; PADDING-TOP: 5px; FONT-FAMILY: arial,宋体,sans-serif
+}
+#content .item_block UL LI .item_num SPAN {
+	PADDING-RIGHT: 12px
+}
+#content .item_block UL LI .item_num SPAN EM {
+	BACKGROUND-POSITION: -267px -538px; PADDING-LEFT: 12px; COLOR: #bd1a1d; FONT-STYLE: normal; FONT-FAMILY: arial,宋体,sans-serif
+}
+.q P {
+	FONT-SIZE: 16px
+}
+.q H1 {
+	FONT-SIZE: 30px
+}
+#why {
+	BACKGROUND-IMAGE: url(http://www.taofen8.com/images/tx.jpg); PADDING-BOTTOM: 50px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 100px
+}
+#q1 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q1 A {
+	FONT-SIZE: 16px; COLOR: #666666
+}
+#q1 A:hover {
+	COLOR: #00ccff; TEXT-DECORATION: underline
+}
+#q2 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q3 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q3 A {
+	FONT-SIZE: 16px; COLOR: #666666
+}
+#q3 A:hover {
+	COLOR: #00ccff; TEXT-DECORATION: underline
+}
+#q4 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q5 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q6 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q7 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q8 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q9 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q10 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q11 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q12 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#q13 {
+	BORDER-RIGHT: #d0d0d0 1px dashed; BORDER-TOP: #d0d0d0 1px dashed; BORDER-LEFT: #d0d0d0 1px dashed; PADDING-TOP: 0px; BORDER-BOTTOM: #d0d0d0 1px dashed
+}
+#content .why P {
+	FONT-SIZE: 100px
+}
+#faq {
+	BORDER-RIGHT: #d0d0d0 1px solid; BORDER-TOP: #d0d0d0 1px solid; BORDER-LEFT: #d0d0d0 1px solid; BORDER-BOTTOM: #d0d0d0 1px solid
+}
+#jc_title {
+	FONT-WEIGHT: bold; FONT-SIZE: 30px; COLOR: #ff6600; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+.jiaocheng P {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #ff6600; TEXT-ALIGN: left
+}
+.hight {
+	FONT-SIZE: 16px; TEXT-ALIGN: center
+}
+.one {FLOAT: left; WIDTH: 97px; height:36px; TEXT-ALIGN: center;}
+
+.hig_bgcolor { background:#de1b43; height:37px;}
+#middle1 {width:950;height:36px;FLOAT: right; }
+#middle1 UL {
+	FLOAT: left; PADDING-TOP: 0px; LIST-STYLE-TYPE: none;
+}
+#middle1 UL LI { 
+	FLOAT: left; PADDING-TOP: 0px; LIST-STYLE-TYPE: none;width:97px; 
+	float:left; text-align:center; font-size:14px;  font-weight:bold;
+	LINE-HEIGHT: 36px; HEIGHT: 36px;
+}
+#middle1 UL LI A {
+	MARGIN-TOP: 0px; width:97px;color:#FFF; height:36px;display:block; text-decoration:none; font-size:14px; background:url(file:///C|/Users/Administrator/Desktop/youhui/images/dz/bg00.png) no-repeat;
+}
+#middle1 UL LI A:hover {
+	background:#de1b43; height:36px; width:97px;
+}
+#middle1_a A:link {
+	MARGIN-TOP: 5px; BACKGROUND: url(http://www.taofen8.com/images/65.png) no-repeat; MARGIN-LEFT: 20px; COLOR: #dd362e; LINE-HEIGHT: 30px; TEXT-DECORATION: none
+}
+#middle1_a A:visited {
+	MARGIN-TOP: 5px; BACKGROUND: url(http://www.taofen8.com/images/65.png) no-repeat; MARGIN-LEFT: 20px; COLOR: #dd362e; LINE-HEIGHT: 30px; TEXT-DECORATION: none
+}
+#middle1_a A:hover {
+	MARGIN-TOP: 5px; BACKGROUND: url(http://www.taofen8.com/images/65.png) no-repeat; LINE-HEIGHT: 30px; TEXT-DECORATION: none
+}
+#middle1_a A:active {
+	TEXT-DECORATION: none
+}
+.toumingming{
+	
+	_background-image: none;width:92px; height:89px;
+
+}
+
+b.rtop, b.rbottom{display:block;background: #FFF}
+b.rtop b, b.rbottom b{display:block;height: 1px;overflow: hidden; background: #faf0e4;}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+

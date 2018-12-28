@@ -1,0 +1,1 @@
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MOVERESIZE_ACCESSDENIED_KB942173" /v iexplore.exe /t REG_DWORD /d 0 /f

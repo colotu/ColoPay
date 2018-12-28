@@ -1,0 +1,66 @@
+﻿@using Webdiyer.WebControls.Mvc
+@model PagedList<YSWL.MALL.ViewModel.SNS.GroupTopicsEx>
+           @if (null != Model)
+           {
+               <div class="container" id="userList">    
+               @foreach (var item in Model)
+               {
+            <div class="topicBox" id="t_@(item.GroupTopic.TopicID)">
+                <div class="topicCon">
+                    <p class="personImgDate">
+                        <span class="perImg db">
+                            <img src="/Upload/User/Gravatar/@(item.GroupTopic.CreatedUserID).jpg" class="bImg" width="38" height="38" alt="头像">
+                            <span class="timeT">@item.GroupTopic.CreatedNickName <i>@YSWL.MALL.Web.Components.DateTimeHelper.ConvertDateToTime(item.GroupTopic.CreatedDate)</i></span>
+                        </span><span class="perDate db"><a href="javascript:;" tid="181870738_44" class=" incoA db">
+                        </a></span><span class="perPop" tid="181870738_44" style="display: none"><a class="perBCon db deleteThread"
+                            href="javascript:;">删除</a> </span>
+                    </p>
+                    <div class="detailCon">
+                        <a href="javascript:;" class="threadContent">
+                            <p>@Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(item.GroupTopic.Description))</p>
+                        </a>
+                        @if (!string.IsNullOrWhiteSpace(item.GroupTopic.ImageUrl))
+                        {
+                            <div class="slideBox" style="text-align: center;">
+                                <img src="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(item.GroupTopic.ImageUrl, "T180X120_")"  style="display: inline;cursor: pointer;" class="topImg" ref="@item.GroupTopic.ImageUrl">
+                            </div>
+                        }
+                        <span class="replyShare db fr">
+                            <a href="javascript:;" class="like" tid="44">
+                                <i class="noPraise support @item.Support" itemid="@item.GroupTopic.TopicID"></i>
+                                <span class="likecount" itemid="@item.GroupTopic.TopicID">@item.GroupTopic.FavCount</span>
+                            </a> 
+                            @if (ViewBag.Fav)
+                            {
+                                <a href="javascript:;" class="cancelFav" topicid="@item.GroupTopic.TopicID"><i class="incoS  spr"></i>取消收藏</a>
+                            }
+                        </span>
+                    </div>
+                </div>
+                @Html.Action("TopicReply", "Partial", new { id = item.GroupTopic.TopicID })
+            </div>
+               }
+                              <div>
+                                       @Ajax.Pager(Model, new PagerOptions
+                                  {
+                                      ShowDisabledPagerItems = false,
+                                      AlwaysShowFirstLastPageNumber = false,
+                                      ShowPrevNext = false,
+                                      ShowFirstLast = false,
+                                      PageIndexParameterName = "pageIndex",
+                                      NumericPagerItemCount = 5,
+                                      CurrentPagerItemTemplate = "<p class=\"in_s\">{0}</p>",
+                                      NumericPagerItemTemplate = "<p>{0}</p>",
+                                      NavigationPagerItemTemplate = "<p>{0}</p>",
+                                      CssClass = "in_pages",
+                                       
+                                  }).AjaxOptions(a => a.SetUpdateTargetId("userList"))
+               </div>
+                </div>
+           }
+           else
+           {
+                   <div class="container">
+                   <span>暂无话题</span>
+                   </div>
+           }

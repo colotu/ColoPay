@@ -1,0 +1,98 @@
+﻿@model YSWL.MALL.Model.SNS.Groups
+@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+<style type="text/css">
+    .qq-upload-button {
+        padding: 0;
+    }
+</style>
+<script type="text/javascript" src="/Areas/MSNS/Themes/VSNS/Content/Scripts/NewTopic.js"></script>
+@*<script type="text/javascript" src="/Areas/MSNS/Themes/VSNS/Content/Scripts/TopicReply.js"></script>*@
+
+<script src="/Areas/MSNS/Themes/VSNS/Content/Scripts/AjaxUpload.js" type="text/javascript"></script>@*上传图片的要引用的js*@
+<div style="margin-top: 8px;">
+    <input id="groupid" value="@Model.GroupID" type="hidden" />
+    <input id="contentLength" value="@ViewBag.ContentLength"  type="hidden"/>
+<div class="sendInfo">
+            <input type="hidden" name="CSRFToken" value="4fb72f1e">
+            <input type="hidden" name="sId" value="181870738">
+            <div class="sendBorder">
+                <textarea maxlength="500"  id="content" name="content" cols="" rows="" class="sInput" placeholder="说两句吧.."></textarea>
+            </div>
+           <div class="sendOperate">
+                     <a href="javascript:;" class="photoSelect epOn" title=""></a>
+                   <a href="javascript:;" class="expreSelect" style="background: none;"><i class="noexp"></i></a>
+                <div class="operBtn db fr">
+                    <span class="pText" id="pText">500</span>
+                    <a href="javascript:window.history.go(-1);" id="cBtn" class="cancelBtn db" title="">取消</a>
+                    <a href="javascript:;" class="sendBtn c1 db" title="" id="SubmitTopic">发送</a>
+                </div>
+            </div>
+    </div>
+<div class="tipLayer">
+    
+    <div class="photoList" style="display: block;">
+        <ul>
+@*            <li  style="display: none;" class="ImgSrc">
+                <div class="photoCut">
+                    
+                </div>
+              
+            </li>*@
+@*            <li class="on"  id="addPic">
+                <input type="file" class="on needsclick" style="width: 60px;height: 60px;z-index:200;opacity:0;filter:alpha(opacity=0);-ms-filter:&#39;alpha(opacity=0)&#39;" id="UploadPhoto">
+            </li>*@
+            <li class="on"  id="addPic">
+                  <a href="javascript:;" class="cBtn spr db " title="" id="closeImg" style="display: none;z-index: 99999">关闭</a>
+                <div class="published_v1" id="UploadPhoto" >
+                    <p><a href="javascript:;"><img class="attchImg"  src="/Areas/MSNS/Themes/VSNS/Content/images/addpic.png"/></a></p>
+                </div>
+            </li>
+        </ul>
+       @* <p class="textTip">最多可上传8张图片</p>*@
+    </div>
+    
+    <div class="expreList" style="display: none;">
+    <div class="expressionTab">
+        <a href="javascript:;" class="on" id="emo0" title="默认">默认</a>
+    </div>
+       @RenderPage("~/Areas/MSNS/Themes/VSNS/Views/Partial/_biaoqing.cshtml")
+    </div>
+    
+
+</div>
+</div>
+@*    <div class="expreList" >
+        @RenderPage("~/Areas/MSNS/Themes/VSNS/Views/Partial/_biaoqing.cshtml")
+    </div>*@
+<script type="text/javascript">
+    $(function () {
+        //判断当前可输入的字数  此处如果用绑定textarea的changge事件只有在失去焦点时触发
+        $('#content').bind('input propertychange', function () {
+            if (this.value.length) {
+                var inputValue = $(this).val().length;
+                var stillCount = 500 - inputValue; //textareastrlen(inputValue);
+                if (stillCount < 0) {
+                    $("#pText").text(0);
+                    $('#content').val($('#content').val().slice(0, 500));
+                    //$(this).attr("readonly", "readonly");
+                    return false;
+                }
+                if (stillCount == 0) {
+                   // $(this).attr("readonly", "readonly");
+                    $("#pText").text(0);
+                    return false;
+                }
+                $("#pText").text(stillCount);
+            }
+        });
+        $(".expreSelect").click(function () {
+            $(this).children("i").toggleClass("exp"); // 选中效果切换
+            $(".photoList").toggle();
+            $(".expreList").toggle();
+        });
+
+    });
+</script>
+

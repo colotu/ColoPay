@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>店商互联- 家身边的微生活服务站</title>
+        <meta name="keywords" content="商超配送，社区超市，便民超市，超市配货，超市配送，网上超市">
+        <meta name="description" content="店商互联（DS365）面向所有实体商家整合提供电子商务和物流配送平台服务。">
+        
+        <script src="/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script> 
+        <script src="/Scripts/jquery/maticsoft.jquery.min.js" type="text/javascript"></script> 
+        <link href="/Scripts/msgbox/css/msgbox.css" rel="stylesheet" type="text/css" />
+        <script src="/Scripts/msgbox/js/msgbox.js" type="text/javascript"></script>
+        <script type="text/javascript" >var $YSWL = { BasePath: '/', CurrentArea: 'Shop'};</script>
+        <meta property="qc:admins" content="27413041746433656375" />
+        <meta property="wb:webmaster" content="70cb9d54dc643077" />
+        
+        
+        <link href="/Areas/Shop/Themes/DSHL/Content/css/g-v1-a.css" rel="stylesheet" type="text/css" /> 
+        
+    
+
+    </head>
+    <body>
+        <div class="LoadingImg" style="display: none"></div>
+        
+<div id="hd" style="min-width: 980px;">
+    
+    <div class="hd-qbar">
+    <div class="w980 hd-qbar-inner">
+        <ul class="fl hd-qbar-login" id="hd-login">
+        </ul>
+        <ul class="fr hd-qbar-list">
+            <li><a rel="nofollow" href="/UserCenter/Orders">我的订单</a></li>
+            <li class="hd-qbar-list-drop" id="myshop"><a rel="nofollow" href="/UserCenter" >我的商城</a>
+                <ul style="display: none;" id="ulshopconceal">
+                    <li><a rel="nofollow" href="/UserCenter/Orders">我的订单</a></li>
+                    <li style="display: none;"><a rel="nofollow" href="javascript:;">我的问答</a></li>
+                    <li><a rel="nofollow" href="/UserCenter/MyFavor">我的收藏</a></li>
+                    <li><a rel="nofollow" href="/UserCenter/PointsDetail">我的积分</a></li>
+                                    </ul>
+            </li>
+            <li class="hd-qbar-list-phone"><a rel="nofollow" target="_blank" href="/app.html">手机商城</a></li>
+            <li class="hd-qbar-list-cart" >
+                <a rel="nofollow" target="_blank" class="icon-cart" href="/ShoppingCart/CartInfo">购物车
+                <span id="hd-cart-amount" class="h fb">0</span>件</a>
+            </li>
+            <li class="hd-qbar-list-check" ><a href="/Order/SubmitOrder" class="btn-checkout">结帐</a></li>
+        </ul>
+        <div class="minicart" style="display: none;">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#hd-login').load('/Partial/Login'); //加载登录注册
+
+    $('#hd-cart-amount').load($YSWL.BasePath + 'ShoppingCart/GetCartCount');
+
+    $('#myshop').unbind('hover').hover(function () { //显示我的订单下拉列表
+        $('#ulshopconceal').show();
+    }, function () {
+        $('#ulshopconceal').hide();
+    });
+</script>
+
+
+    <script type="text/javascript">
+    $(function () {
+        $("#NavBtnSearch").click(function () {
+            var keyword = $("#NavTxtKeyWord").val();
+            if (keyword == "") {
+                ShowFailTip('请输入关键字！');
+                return;
+            }
+            location.href = "/search/0/0/default/0-0/" + keyword;
+        });
+        $('#NavTxtKeyWord').keyup(function (event) {
+            if (event.keyCode == '13') {
+                event.preventDefault();
+                $('#NavBtnSearch').click();
+            }
+        });
+    });
+</script>
+<div class="w980 cf">
+    <div class="hd-main">
+        
+        <div class="hd-main-logo">
+            <a href="/" title="店商互联">
+                <img src="/Upload/WebSiteLogo/201401040930279570000.jpg" alt="店商互联" width="270" height="62">
+            </a>
+        </div>
+
+        <div class="hd-main-search" id="hd-search">
+            <fieldset>
+                <legend>搜索</legend>
+                <label class="search-bg">
+                    <input type="text" name="keyword" id="NavTxtKeyWord" placeholder="请输入你要找的商品" class="hd-text c9"
+                           autocomplete="off" />
+                </label>
+                <input type="submit" id="NavBtnSearch" value="搜索" class="hd-sbt" />
+            </fieldset>
+            <div class="hd-search-kw" id="hdsearch-box">
+                <dl id="sKeywords" style="visibility: visible;">
+                    <dt>热门关键词：</dt>
+                          <dd>
+                        <a href="/search/0/0/default/0-0/康师傅" target="_blank">康师傅</a></dd>
+      <dd>
+                        <a href="/search/0/0/default/0-0/可口可乐" target="_blank">可口可乐</a></dd>
+      <dd>
+                        <a href="/search/0/0/default/0-0/农夫" target="_blank">农夫</a></dd>
+      <dd>
+                        <a href="/search/0/0/default/0-0/统一" target="_blank">统一</a></dd>
+      <dd>
+                        <a href="/search/0/0/default/0-0/百香果" target="_blank">百香果</a></dd>
+   
+                  
+                </dl>
+            </div>
+        </div>
+        <div id="headSlide-box" class="hd-tSlide">
+                          <a href="/"  title="店商互联微信商城" target="_blank"><img src="/Upload/AD/31/201402251408051075000.jpg" alt="店商互联微信商城" border="0"  ></a>  
+
+
+        </div>
+    </div>
+</div>
+<!--搜索关键词维护-->
+
+
+    <script src="/Areas/Shop/Themes/DSHL/Content/Scripts/comm-a.js" type="text/javascript"></script>
+<div class="hd-menu" id="hdMenu">
+    <div class="hd-menu-con w980">
+        <ul id="hd-nav">
+            <li class="home noSubmenu" cid="0"><a class="fnav" href="/">首页</a></li>
+                <li cid="295"><a class="fnav"  href="/product/295">休闲食品</a></li>
+                <li cid="558"><a class="fnav"  href="/product/558">粮油调料</a></li>
+                <li cid="560"><a class="fnav"  href="/product/560">酒水饮料</a></li>
+                <li cid="570"><a class="fnav"  href="/product/570">方便食品</a></li>
+                <li cid="572"><a class="fnav"  href="/product/572">冲调品</a></li>
+                <li cid="574"><a class="fnav"  href="/product/574">文体用品</a></li>
+        </ul>
+    </div>
+</div>
+<div id="hd-submenu" class="hd-submenu">
+    <div class="w980 rel" style="display: none">
+            <ul class="hd-submenu-con">
+            </ul>
+    </div>
+</div>
+<!--维护菜单内容-->
+<div id="menuItem2" style="visibility: hidden; left: 935px; top: 137px;">
+    <!--[if IE 6]>
+        <iframe id="selectMask" style="position:absolute; top:0;left:0;z-index:-1;" frameborder="0"></iframe>
+    <![endif]-->
+</div>
+
+
+</div>
+
+<div class="w980" style="width: 100%; margin-top: -10px;position: relative">
+        <img alt="" src="/Areas/Shop/Themes/DSHL/Content/images/App.jpg" style="width: 100%" />
+        <div style="position: absolute;width: 12%;bottom: 12%;left: 47%;cursor: pointer;"> <img alt="" src="/Areas/Shop/Themes/DSHL/Content/images/dowm.png"  style="width: 100%; height: auto"  /></div>
+    </div>
+    
+    
+<div id='ft' >
+<div class="help-center" id="help-center">
+    <div class="help-center-box">
+        <div class="w980">
+            <!--关于我们-->
+            <dl class="help-center-about" itemid="helpcenterabout" itemname="商超会员">
+                <dt>商超会员</dt>
+  
+                  <dd>
+                  <a href="/Article/Details/7" target="_blank">商家加盟  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/6" target="_blank">店商互联  </a>
+                   </dd>
+        
+        
+   
+ </dl>
+
+            <!--新手上路-->
+            <dl class="help-center-about" itemid="helpcenterabout" itemname="配送方式">
+                <dt>配送方式</dt>
+  
+                  <dd>
+                  <a href="/Article/Details/18" target="_blank">配送查询  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/17" target="_blank">配送收费标准  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/16" target="_blank">配送范围  </a>
+                   </dd>
+        
+        
+   
+ </dl>
+
+            <!--支付方式-->
+            <dl class="help-center-about" itemid="helpcenterabout" itemname="购物指南">
+                <dt>购物指南</dt>
+  
+                  <dd>
+                  <a href="/Article/Details/19" target="_blank">常见问题  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/9" target="_blank">会员介绍  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/8" target="_blank">购物流程  </a>
+                   </dd>
+        
+        
+   
+ </dl>
+
+            <!--配送方式-->
+            <dl class="help-center-about" itemid="helpcenterabout" itemname="付款方式">
+                <dt>付款方式</dt>
+  
+                  <dd>
+                  <a href="/Article/Details/12" target="_blank">微信支付  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/11" target="_blank">货到付款  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/4" target="_blank">民生店付宝  </a>
+                   </dd>
+        
+        
+   
+ </dl>
+
+            <!--售后服务-->
+            <dl class="help-center-about" itemid="helpcenterabout" itemname="售后服务">
+                <dt>售后服务</dt>
+  
+                  <dd>
+                  <a href="/Article/Details/15" target="_blank">退换货及补货  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/14" target="_blank">退款说明  </a>
+                   </dd>
+                  <dd>
+                  <a href="/Article/Details/13" target="_blank">售后政策  </a>
+                   </dd>
+        
+        
+   
+ </dl>
+
+            <div class="help-center-acount">
+                <p>
+                    客服中心热线：021-95105225</p>
+                <p>
+                    客服中心信箱：service#maticsoft(发邮件时，请将#改为@)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- guarantee start -->
+<div class="guarantee">
+    <div class="w980">
+        <div class="guarantee-cont">
+            <ul>
+                <li>1000城市货到付款</li>
+                <li>10日无条件退换货</li>
+                <li>真实产品信息</li>
+                <li>专业服务团队</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- guarantee end -->
+<script type="text/javascript">
+    //    var helpitemnamenum = $('[itemid=helpcenterabout]');    //document.getElementsByName($('[name=hidtopics]').val());
+    //    for (var i = 0; i < helpitemnamenum.length; i++) {
+    //        if (helpitemnamenum[i].attr('itemname') == "新手上路") {
+    //            helpitemnamenum[i].removeClass('help-center-about').addClass('help-center-novice');
+    //        }
+    //    }
+    //更改页脚显示样式
+    $('[itemid=helpcenterabout]').eq(1).removeClass('help-center-about').addClass('help-center-novice');
+    $('[itemid=helpcenterabout]').eq(2).removeClass('help-center-about').addClass('help-center-pay');
+    $('[itemid=helpcenterabout]').eq(3).removeClass('help-center-about').addClass('help-center-exp');
+    $('[itemid=helpcenterabout]').eq(4).removeClass('help-center-about').addClass('help-center-service');
+    $('.help-center-about').append("<dd><a href=\"" + $YSWL.BasePath + "store/apply\" target=\"_blank\">商家入驻</a></dd>");
+</script>
+
+<div class='copyright'><p> <span class='mr15'>&#169; 2014 店商互联 版权所有</span> <span>京ICP备14014701号-1</span></p><br/><div style="display: none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000318212'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1000318212' type='text/javascript'%3E%3C/script%3E"));</script></div></div>
+
+
+
+        
+    
+
+    </body>
+</html>

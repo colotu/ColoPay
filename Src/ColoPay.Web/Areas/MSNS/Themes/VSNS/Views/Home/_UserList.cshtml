@@ -1,0 +1,30 @@
+﻿@using Webdiyer.WebControls.Mvc
+@model Webdiyer.WebControls.Mvc.PagedList<YSWL.MALL.Model.SNS.GroupUsers>
+           @if (null != Model)
+           {
+               <div class="warp" id="userList">
+               @foreach (var item in Model)
+               {
+  <div class="header">
+  <a href="@(ViewBag.BasePath)Profile/Index/@item.UserID"><i class="topicLogo fl db"><img src="/Upload/User/Gravatar/@(item.UserID).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" class="tImg usergravator" width="78" height="78" ></i></a>
+        <h3 style="font-size: inherit;height: 32px;overflow: hidden;line-height: 16px;">@item.NickName</h3>
+        <h4 style="float: left;color: #000;font-weight:normal;">加入时间：@item.JoinTime.ToString("yyyy-MM-dd")</h4>
+    </div> 
+               }
+               </div>
+               <div>
+                                       @Ajax.Pager(Model, new PagerOptions
+                        {
+                            ShowDisabledPagerItems = false,
+                            AlwaysShowFirstLastPageNumber = false,
+                            ShowPrevNext = false,ShowFirstLast = false,
+                            PageIndexParameterName = "page",
+                            NumericPagerItemCount = 5,
+                            CurrentPagerItemTemplate = "<p class=\"in_s\">{0}</p>",
+                            NumericPagerItemTemplate = "<p>{0}</p>",
+                            NavigationPagerItemTemplate = "<p>{0}</p>",
+                            CssClass = "in_pages",
+                             
+                        }).AjaxOptions(a => a.SetUpdateTargetId("userList"))
+               </div>
+           }

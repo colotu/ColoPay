@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+@model Webdiyer.WebControls.Mvc.PagedList<YSWL.MALL.Model.SNS.GroupUsers>
+       
+
+    @{Html.RenderPartial("_UserList", Model);}
+
+<script type="text/javascript">
+    $(function () {
+        $(".myTopics").click(function () {
+            window.location = "@(ViewBag.BasePath)Profile/GetMsgByUser/" + $(this).attr("userId");
+        });
+        $(".myMsg").click(function () {
+            window.location = "@(ViewBag.BasePath)Profile/GetReplyByUser";
+        });
+        $(".logout").click(function () {
+            window.location = "@(ViewBag.BasePath)Account/Logout";
+        });
+    });
+</script>

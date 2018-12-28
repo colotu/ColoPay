@@ -1,0 +1,226 @@
+.qkbox,.pvbox {
+	margin: 8px 0 0 0;
+	padding: 10px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+	border: 1px solid #fff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9fdff),
+		color-stop(100%, #eaf1f5) );
+	height: 160px;
+	color: #000;
+	line-height: normal;
+	font-size: 13px;
+}
+
+.qkbox .msg {
+	font-size: 13px
+}
+
+.qkbox a {
+	color: #000;
+	font-size: 13px;
+	text-decoration: none
+}
+
+.qkbox .userlist {
+	text-align: center;
+	overflow: hidden;
+	margin: 20px 0;
+}
+
+.qkbox .entry {
+	width: 62px;
+	height: 80px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 10px;
+	position: relative;
+}
+
+.qkbox .entry .headwrap {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 0 5px #000;
+	height: 40px;
+	width: 40px;
+}
+
+.qkbox .entry .head {
+	width: 40px;
+	height: 40px;
+}
+
+.qkbox .entry .nick {
+	width: 60px;
+	vertical-align: top;
+	display: inline-block;
+	word-wrap: break-word;
+	margin-top: 3px;
+}
+
+#qkbox-cmode {
+	float: left;
+}
+
+#qkbox-switch {
+	float: right;
+}
+
+.qkbox .qkbox-x {
+	background: url(../images/delete.png) no-repeat top
+		left;
+	display: block;
+	height: 18px;
+	position: absolute;
+	right: 5px;
+	text-indent: -9000em;
+	top: -5px;
+	width: 19px;
+}
+
+.pvbox {
+	height: 120px
+}
+
+.pvbox form {
+	width: auto
+}
+
+.pvbox h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: 微软雅黑, Helvetica;
+}
+
+.pvbox .bar input {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0 .1) 0 1px 0 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.0 .1) 0 1px 0 0;
+	box-shadow: rgba(0, 0, 0, 0.0 .1) 0 1px 0 0;
+	background-color: #5B74A8;
+	border: 1px solid #29447E;
+	font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 2px 6px;
+	height: 28px;
+	color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 120px
+}
+
+.pvbox .bar .submit {
+	float: left
+}
+
+.pvbox .bar .cancel {
+	float: right
+}
+
+.pvbox .main {
+	width: 244px;
+	height: 42px;
+	background: #f0f0f0;
+	margin: 15px auto;
+	border: 1px solid rgba(57, 84, 106, 0.28);
+	-moz-box-shadow: 0px 2px 5px rgba(57, 84, 106, 0.28) inset;
+	-webkit-box-shadow: 0px 2px 5px rgba(57, 84, 106, 0.28) inset;
+	box-shadow: 0px 2px 5px rgba(57, 84, 106, 0.28) inset;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.pvbox .main div {
+	-moz-border-radius: 6px 0 0 6px;
+	-webkit-border-radius: 6px 0 0 6px;
+	border-radius: 6px 0 0 6px;
+	background: #ffffff;
+	padding: 2px;
+	width: 110px;
+	border-right: 1px solid #ebebec;
+	float: left;
+	height: 38px;
+}
+
+.pvbox .main input {
+	float: left;
+	border: none;
+	background: url(../images/bg_input2.png) repeat-x;
+	height: 24px;
+	font-size: 24px;
+	padding:0px 0px 0px 4px;
+	width: 120px;
+	height: 42px;
+	border-left: 1px solid #d4d5d6;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #676869;
+	font-size: 14px;
+}
+
+#pttip {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	z-index: 9999;
+	margin-top: -100px;
+	margin-left: -150px;
+	width: 300px;
+	height: auto;
+}
+
+#pttip .main {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+	border-radius: 4px 4px 4px 4px;
+	color: #FFFFFF;
+	display: inline-block;
+	line-height: 1.5em;
+	max-width: 230px;
+	padding: 15px 15px 15px 45px;
+	position: relative;
+	text-align: left;
+	font-size: 12px;
+	height: auto;
+}
+
+#pttip .main .pttip-icon {
+	background-image: url(../images/hint.png);
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	display: inline-block;
+	position: absolute;
+	left: 8px;
+	top: 11px;
+	background-repeat: no-repeat;
+	background-size: 25px auto;
+}
+
+#ptcontainer {
+	height: auto;
+}
+#loginBox p{
+	position: relative;
+}
+#loginBox p .pt_inp_empty{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/close2.png) no-repeat center center;
+	text-indent: -999em;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: 4px;
+}

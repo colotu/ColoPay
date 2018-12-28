@@ -1,0 +1,141 @@
+﻿@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+<style type="text/css" >
+    .qq-upload-list {
+        display: none!important;
+    }
+    #uploadify-queue {
+        display: none!important; 
+    }
+</style>
+  @if (!ViewBag.userState)
+  {
+      <script type="text/javascript" src="/Areas/MSNS/Themes/VSNS/Content/Scripts/addGravatar.js"></script>
+  }
+
+<div class="warp" >
+    <div class="header">
+        <input type="hidden" value="@(ViewBag.userId)" id="userId"/>
+       
+            @if (!ViewBag.userState)
+            {
+                <ul style="float:left;">
+                    <li class="on"  id="addPic">
+                        <a href="javascript:;" class="cBtn spr db " title="" id="closeImg" style="display: none; z-index: 99999">关闭</a>
+                        <div class="published_v1" id="UploadPhoto" >
+                            <p><a href="javascript:;"><img class="attchImg" width="60px" height="60px"  src="/Upload/User/Gravatar/@(ViewBag.userId).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))"/></a></p>
+                        </div>
+                    </li>
+                </ul>
+                        <h3 style="margin-left: 25%;">@ViewBag.nickName</h3>
+        <h4 style="float: left;color: #000;margin-left: 5%;">@ViewBag.trueName</h4>
+        <h4 style="float: right;margin-right: 100px;color: #000;">@ViewBag.gender</h4>
+            }
+            else
+            {
+                <i class="topicLogo fl db">
+                    <img src="/Upload/User/Gravatar/@(ViewBag.userId).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" class="gravartar" current="@ViewBag.currentUser" width="78" height="78" >
+                </i>
+                        <h3>@ViewBag.nickName</h3>
+        <h4 style="float: left;color: #000;">@ViewBag.trueName</h4>
+        <h4 style="float: right;margin-right: 100px;color: #000;">@ViewBag.gender</h4>    
+            }
+            </div>
+
+    
+    <div class="container">
+        
+        @if (!ViewBag.userState)
+        {
+            <div class="topicBox">
+                <ul>
+                
+                    <li class="topicRank pShow needsclick myMsg" style="cursor: pointer;">
+                        <span>我的消息</span>
+                        <span style="position: absolute; right: 35px;">@ViewBag.replyCount</span>
+                        <span class="incoAnswer db rkArrow goEnter"><i class="go"></i></span>
+                    </li>
+                    <li class="topicRank pShow needsclick myTopics" userId="@(ViewBag.userId)" style="cursor: pointer;">
+                        <span>我的话题</span>
+                        <span class="db pT">@ViewBag.topicCount</span>
+                        <span class="incoAnswer db rkArrow goEnter"><i class="go"></i></span>
+                    </li>
+                                        <li class="topicRank pShow myFav" userId="@(ViewBag.userId)" style="cursor: pointer;">
+                        <span>我的收藏</span>
+                        <span class="db pT">@ViewBag.favCount</span>
+                        <span class="incoAnswer db rkArrow myFav"><i class="go"></i></span>
+                    </li>
+
+                    <li class="topicRank pShow needsclick changePassword" userId="@(ViewBag.userId)"  style="cursor: pointer;">
+                        <span>修改密码</span>
+                        <span style="position: absolute; right: 35px;"></span>
+                        <span class="incoAnswer db rkArrow goEnter"><i class="go"></i></span>
+                    </li>
+                                        <li class="topicRank pShow" style="cursor: pointer;" id="goIndex">
+                        <span>小组首页</span>
+                        <span style="position: absolute; right: 35px;"></span>
+                        <span class="incoAnswer db rkArrow "><i class="go"></i></span>
+                    </li>
+                    <li class="topicRank pShow personalInfo" userId="@(ViewBag.userId)"  style="cursor: pointer;">
+                        <span>个人资料</span>
+                        <span style="position: absolute; right: 35px;"></span>
+                        <span class="incoAnswer db rkArrow goEnter"><i class="go"></i></span>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="topicBox">
+                <ul>
+                    <li class="topicRank pShow logout" style="padding: 0;cursor: pointer;text-align: center;background-color: #61A419;border-radius: 0.5em;">
+                        <span style="color: #ffffff;">安全退出</span>
+                        <span class="incoAnswer db rkArrow"></span>
+                    </li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <div class="topicBox">
+                <ul>
+                    <li class="topicRank pShow needsclick myTopics"  style="cursor: pointer;" userId="@(ViewBag.userId)">
+                        <span>Ta的话题</span>
+                        <span class="db pT">@ViewBag.topicCount</span>
+                        <span class="incoAnswer db rkArrow goEnter"><i class="go"></i></span>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".myTopics").click(function () {
+            window.location = "@(ViewBag.BasePath)Profile/GetMsgByUser/" + $(this).attr("userId");
+        });
+        $(".myFav").click(function () {
+            window.location = "@(ViewBag.BasePath)Profile/GetFavMsgByUser/" + $(this).attr("userId");
+        });
+        $(".myMsg").click(function () {
+            window.location = "@(ViewBag.BasePath)Profile/GetReplyByUser";
+        });
+        $(".logout").click(function () {
+            window.location = "@(ViewBag.BasePath)Account/Logout";
+        });
+        $(".changePassword").click(function () {
+            window.location = "@(ViewBag.BasePath)UserCenter/ChangePassword";
+        });
+        $(".personalInfo").click(function () {
+            window.location = "@(ViewBag.BasePath)UserCenter/Personal";
+        });
+        $("#goIndex").click(function() {
+            window.location = "@(ViewBag.BasePath)";
+        });
+    });
+</script>

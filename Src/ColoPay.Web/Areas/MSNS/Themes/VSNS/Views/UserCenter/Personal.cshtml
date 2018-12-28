@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "修改个人资料";
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+ @model YSWL.MALL.Model.Members.UsersExpModel
+            <script type="text/javascript" src="/Areas/MSNS/Themes/VSNS/Content/Scripts/UpdateUserInfo.js"></script>  
+<div class="warp">
+    <div class="container">
+        <p>
+            <input id="hfSex" type="hidden" value="@Model.Sex"  />
+            <label class="qq_label changePage" style="margin-left: 16px;">
+                用户名：</label>
+            <label>@Model.UserName</label>
+        </p>
+        <p>
+            <label class="qq_label changePage" style="margin-left: 16px;">
+                昵&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
+            <input id="txtNickName" type="text" class="chageInput logininput text_input" maxlength="20" value="@Model.NickName"/>
+        </p>
+        <p>
+            <label class="qq_label changePage" style="margin-left: 16px;">
+                性&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+            <input type="radio" name="radman" value="1" id="radman" class="dan" /><label>男</label>
+            <input type="radio" name="radman" value="0" id="radwoman" class="dan" /><label>女</label>
+        </p>
+        <p style="margin-bottom: 20px;">
+            <label class="pwd_label changePage">
+                手机号码：</label>
+            <input  id="txtPhone" type="text" class="chageInput logininput text_input" maxlength="11"  value="@Model.Phone"/>
+        </p>
+        <a href="javascript:void(0);" title="保存" onclick="submit();" style="margin-left: 30%;">
+            <img src="/Areas/MSNS/Themes/VSNS/Content/images/mat_2.jpg" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var gender = $("#hfSex").val();
+        if (gender == "0") {
+            $("#radwoman").prop('checked', true);
+        }
+        if (gender == "1") {
+            $("#radman").prop('checked', true);
+        }
+    });
+</script>
+

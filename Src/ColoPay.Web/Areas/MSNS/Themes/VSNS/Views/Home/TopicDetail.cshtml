@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "~/Areas/MSNS/Themes/VSNS/Views/Shared/_BaseLayout.cshtml";
+}
+@model   YSWL.MALL.ViewModel.SNS.TopicReply
+@if (null != Model)
+{
+    <div class="container" >
+        <div class="tt" id="t_44">
+            <div class="topicCon">
+                <p class="personImgDate">
+                    <span class="perImg db">
+                        <a href="javascipt:;"><img src="/Upload/User/Gravatar/@(Model.Topic.CreatedUserID).jpg?t=@(DateTime.Now.ToString("yyyyMMddHHmmssfff"))" style="min-width: 38px;min-height: 38px;" class="bImg" width="38" height="38" alt="头像"></a>
+                        <i class=""></i>
+                        <span class="timeT">@Model.Topic.CreatedNickName<i>@Model.Topic.CreatedDate.ToString("yyyy-MM-dd")</i></span>
+                    </span>
+                </p>
+                <div class="detailCon">
+                    <p style="max-height: none;">
+                        @Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(Model.Topic.Description))</p>
+                                        @if (!string.IsNullOrWhiteSpace(Model.Topic.ImageUrl))
+                {
+                    <div class="slideBox">
+                                <img src="@YSWL.MALL.Web.Components.FileHelper.GeThumbImage(Model.Topic.ImageUrl, "T180X120_")"  style="display: inline;">
+                        
+                    </div>
+                }      
+                  <input type="hidden" class="supportValue" value="@ViewBag.support" itemid="@Model.Topic.TopicID"/>   
+                    <span class="replyShare db fr"><a href="javascript:;" class="like" tid="6" itemid="@Model.Topic.TopicID">
+                                                       <i class="noPraise support" itemid="@Model.Topic.TopicID"></i></a><span class="likecount"  itemid="@Model.Topic.TopicID">@Model.Topic.FavCount</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        @if (null != Model.TopicsReply && Model.TopicsReply.Count > 0)
+        {
+            foreach (var item in Model.TopicsReply)
+            {
+  <div class="tb">
+            <div class="topicCon">
+                    <p class="personImgDate">
+                        <span class="perImg db">
+                            <a href="javascipt:;"><img src="/Upload/User/Gravatar/@(item.ReplyUserID).jpg" style="min-width: 38px;min-height: 38px;" class="bImg" width="38" height="38"></a>
+                            <i class=""></i>
+                            <span class="timeT">@item.ReplyNickName<i>@item.CreatedDate.ToString("yyyy-MM-dd")</i></span>
+                        </span>
+                    </p>
+                    <div class="detailCon" id="dp_44_142" uid="13931085" author="@item.ReplyNickName">
+                        <p id="p_44_142_0" uid="13931085" author="@item.ReplyNickName">
+                            @Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(item.Description))
+                        </p>
+                    </div>
+            </div>
+        </div>
+            }
+        }
+        
+    </div>
+    
+    
+}
+<script type="text/javascript">
+    $(function() {
+        $(".supportValue").each(function () {
+            if ($(this).val() == "support") {
+                $("i[itemid='" + $(this).attr("itemid") + "']").addClass("Praise");
+            }
+        });
+    });
+</script>

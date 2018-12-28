@@ -1,0 +1,23 @@
+﻿@using Webdiyer.WebControls.Mvc
+@model YSWL.MALL.ViewModel.SNS.TopicReply
+<div class="topicList">
+    <ul id="replyList_6" class="replyUl" itemid="@Model.Topic.TopicID">
+        @if (null != Model.TopicsReply && Model.TopicsReply.Count > 0)
+        {
+            for (int i = 0; i < (Model.TopicsReply.Count > 3 ? 3 : Model.TopicsReply.Count); i++)
+            {
+                <li author="@(Model.TopicsReply[i].ReplyNickName)" id="r_@(Model.TopicsReply[i].ReplyID)"   class="replyLi" replyId="@(Model.TopicsReply[i].ReplyID)"  uid="@(Model.TopicsReply[i].ReplyUserID)" tid="@(Model.TopicsReply[i].TopicID)"><a
+                                                                                                                               href="javascript:;" class="sW fl"><span class="replyUser">@(Model.TopicsReply[i].ReplyNickName)：</span>
+                                                                                                                               <span class="replyContent" >@Html.Raw(YSWL.MALL.ViewModel.ViewModelBase.ReplaceFace(Model.TopicsReply[i].Description))</span></a></li>  
+            }
+        }
+    </ul> 
+    @if (null != Model.TopicsReply&&Model.TopicsReply.Count > 3)
+    {
+        <p id="rCount_6" class="more">
+            @Html.ActionLink("更多", "TopicReply", "Home", new { Id =Model.Topic.TopicID,viewName="TopicDetail"},new{})
+            共<span class="replyCount" itemid="@Model.Topic.TopicID">@(Model.TopicsReply.Count)</span>条评论
+        </p>
+    }
+</div>
+
