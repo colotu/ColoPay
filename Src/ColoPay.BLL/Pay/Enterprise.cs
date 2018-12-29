@@ -1,18 +1,18 @@
-﻿using System;
+﻿
+using System;
 using System.Data;
 using System.Collections.Generic;
 using YSWL.Common;
-using ColoPay.Model.SysManage;
-
-namespace ColoPay.BLL.SysManage
+using ColoPay.Model.Pay;
+namespace ColoPay.BLL.Pay
 {
 	/// <summary>
-	/// TaskQueue
+	/// Enterprise
 	/// </summary>
-	public partial class TaskQueue
+	public partial class Enterprise
 	{
-        private readonly ColoPay.DAL.SysManage.TaskQueue dal = new DAL.SysManage.TaskQueue();
-		public TaskQueue()
+		private readonly ColoPay.DAL.Pay.Enterprise dal=new ColoPay.DAL.Pay.Enterprise();
+		public Enterprise()
 		{}
 		#region  BasicMethod
 
@@ -27,15 +27,15 @@ namespace ColoPay.BLL.SysManage
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int ID,int Type)
+		public bool Exists(int EnterpriseID)
 		{
-			return dal.Exists(ID,Type);
+			return dal.Exists(EnterpriseID);
 		}
 
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public bool Add(ColoPay.Model.SysManage.TaskQueue model)
+		public int  Add(ColoPay.Model.Pay.Enterprise model)
 		{
 			return dal.Add(model);
 		}
@@ -43,7 +43,7 @@ namespace ColoPay.BLL.SysManage
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(ColoPay.Model.SysManage.TaskQueue model)
+		public bool Update(ColoPay.Model.Pay.Enterprise model)
 		{
 			return dal.Update(model);
 		}
@@ -51,43 +51,50 @@ namespace ColoPay.BLL.SysManage
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int ID,int Type)
+		public bool Delete(int EnterpriseID)
 		{
 			
-			return dal.Delete(ID,Type);
+			return dal.Delete(EnterpriseID);
+		}
+		/// <summary>
+		/// 删除一条数据
+		/// </summary>
+		public bool DeleteList(string EnterpriseIDlist )
+		{
+			return dal.DeleteList(YSWL.Common.Globals.SafeLongFilter(EnterpriseIDlist,0) );
 		}
 
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public ColoPay.Model.SysManage.TaskQueue GetModel(int ID,int Type)
+		public ColoPay.Model.Pay.Enterprise GetModel(int EnterpriseID)
 		{
 			
-			return dal.GetModel(ID,Type);
+			return dal.GetModel(EnterpriseID);
 		}
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public ColoPay.Model.SysManage.TaskQueue GetModelByCache(int ID,int Type)
+		public ColoPay.Model.Pay.Enterprise GetModelByCache(int EnterpriseID)
 		{
 			
-			string CacheKey = "TaskQueueModel-" + ID+Type;
+			string CacheKey = "EnterpriseModel-" + EnterpriseID;
 			object objModel = YSWL.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
 				{
-					objModel = dal.GetModel(ID,Type);
+					objModel = dal.GetModel(EnterpriseID);
 					if (objModel != null)
 					{
-						 int ModelCache = Globals.SafeInt(BLL.SysManage.ConfigSystem.GetValueByCache("ModelCache"), 30);
+						int ModelCache = YSWL.Common.ConfigHelper.GetConfigInt("ModelCache");
 						YSWL.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
 					}
 				}
 				catch{}
 			}
-			return (ColoPay.Model.SysManage.TaskQueue)objModel;
+			return (ColoPay.Model.Pay.Enterprise)objModel;
 		}
 
 		/// <summary>
@@ -107,7 +114,7 @@ namespace ColoPay.BLL.SysManage
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<ColoPay.Model.SysManage.TaskQueue> GetModelList(string strWhere)
+		public List<ColoPay.Model.Pay.Enterprise> GetModelList(string strWhere)
 		{
 			DataSet ds = dal.GetList(strWhere);
 			return DataTableToList(ds.Tables[0]);
@@ -115,20 +122,20 @@ namespace ColoPay.BLL.SysManage
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<ColoPay.Model.SysManage.TaskQueue> DataTableToList(DataTable dt)
+		public List<ColoPay.Model.Pay.Enterprise> DataTableToList(DataTable dt)
 		{
-			List<ColoPay.Model.SysManage.TaskQueue> modelList = new List<ColoPay.Model.SysManage.TaskQueue>();
+			List<ColoPay.Model.Pay.Enterprise> modelList = new List<ColoPay.Model.Pay.Enterprise>();
 			int rowsCount = dt.Rows.Count;
 			if (rowsCount > 0)
 			{
-				ColoPay.Model.SysManage.TaskQueue model;
+				ColoPay.Model.Pay.Enterprise model;
 				for (int n = 0; n < rowsCount; n++)
 				{
 					model = dal.DataRowToModel(dt.Rows[n]);
 					if (model != null)
 					{
 						modelList.Add(model);
-				}
+					}
 				}
 			}
 			return modelList;
@@ -166,32 +173,7 @@ namespace ColoPay.BLL.SysManage
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-        /// <summary>
-        /// 删除所有文章任务
-        /// </summary>
-        public bool DeleteArticle()
-        {
-            return dal.DeleteArticle();
-        }
 
-        public List<ColoPay.Model.SysManage.TaskQueue> GetContinueTask(int type)
-        {
-            DataSet ds = dal.GetContinueTask(type);
-            return DataTableToList(ds.Tables[0]);
-        }
-
-        public ColoPay.Model.SysManage.TaskQueue GetLastModel(int type)
-        {
-            return dal.GetLastModel(type);
-        }
-
-        /// <summary>
-        /// 删除所有指定类型任务
-        /// </summary>
-        public bool DeleteTask(int Type)
-        {
-            return dal.DeleteTask(Type);
-        }
 		#endregion  ExtensionMethod
 	}
 }

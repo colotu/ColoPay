@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using YSWL.Common;
 using ColoPay.Model.Members;
-using ColoPay.SQLServerDAL;
+using ColoPay.DAL;
 
 namespace ColoPay.BLL.Members
 {
@@ -12,7 +12,7 @@ namespace ColoPay.BLL.Members
     /// </summary>
     public class UsersExp : ColoPay.Model.Members.UsersExpModel
     {
-        private readonly ColoPay.SQLServerDAL.Members.UsersExp dal = new ColoPay.SQLServerDAL.Members.UsersExp();
+        private readonly ColoPay.DAL.Members.UsersExp dal = new ColoPay.DAL.Members.UsersExp();
 
         #region  BasicMethod
 

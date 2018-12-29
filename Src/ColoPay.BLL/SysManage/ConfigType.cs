@@ -12,7 +12,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public partial class ConfigType
     {
-        private readonly ColoPay.SQLServerDAL.SysManage.ConfigType dal = new SQLServerDAL.SysManage.ConfigType();
+        private readonly ColoPay.DAL.SysManage.ConfigType dal = new DAL.SysManage.ConfigType();
        
 
         #region  BasicMethod

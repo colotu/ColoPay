@@ -27,7 +27,7 @@ namespace ColoPay.BLL.SysManage
 	/// </summary>
 	public partial class ConfigArea
 	{
-        private readonly ColoPay.SQLServerDAL.SysManage.ConfigArea dal = new SQLServerDAL.SysManage.ConfigArea();
+        private readonly ColoPay.DAL.SysManage.ConfigArea dal = new DAL.SysManage.ConfigArea();
 		public ConfigArea()
 		{}
 		#region  BasicMethod

@@ -15,7 +15,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public class ConfigSystem
     {
-        private static ColoPay.SQLServerDAL.SysManage.ConfigSystem dal = new SQLServerDAL.SysManage.ConfigSystem();
+        private static ColoPay.DAL.SysManage.ConfigSystem dal = new DAL.SysManage.ConfigSystem();
         private static DataCacheCore dataCache = new DataCacheCore(new CacheOption
         {
             CacheType =   CacheType.IIS

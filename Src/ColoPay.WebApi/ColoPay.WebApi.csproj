@@ -124,31 +124,11 @@
     <Reference Include="YSWL.DBUtility">
       <HintPath>..\Lib\YSWL.DBUtility.dll</HintPath>
     </Reference>
-    <Reference Include="YSWL.Email, Version=1.2.6117.25863, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\YSWL.Email.dll</HintPath>
-    </Reference>
     <Reference Include="YSWL.Json">
       <HintPath>..\Lib\YSWL.Json.dll</HintPath>
     </Reference>
     <Reference Include="YSWL.Log">
-      <HintPath>..\..\..\Lib\YSWL.Log.dll</HintPath>
-    </Reference>
-    <Reference Include="YSWL.Payment, Version=2.3.1.30463, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\YSWL.Payment.dll</HintPath>
-    </Reference>
-    <Reference Include="YSWL.SAAS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\YSWL.SAAS.dll</HintPath>
-    </Reference>
-    <Reference Include="YSWL.ShoppingCart, Version=1.0.6087.30461, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\YSWL.ShoppingCart.dll</HintPath>
-    </Reference>
-    <Reference Include="YSWL.WeChat, Version=1.5.6117.25866, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\YSWL.WeChat.dll</HintPath>
+      <HintPath>..\Lib\YSWL.Log.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +155,6 @@
     <Compile Include="Common\HttpHelper.cs" />
     <Compile Include="Common\LogHelp.cs" />
     <Compile Include="Common\Position.cs" />
-    <Compile Include="Common\RedisHelper.cs" />
     <Compile Include="Common\StringHelper.cs" />
     <Compile Include="Controllers\ApiBaseController.cs" />
     <Compile Include="Controllers\ApiControllerBase.cs" />
@@ -215,10 +194,6 @@
     <ProjectReference Include="..\ColoPay.Model\ColoPay.Model.csproj">
       <Project>{400f9ebc-f979-4f92-8efc-69a98377dd25}</Project>
       <Name>ColoPay.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ColoPay.SQLServerDAL\ColoPay.SQLServerDAL.csproj">
-      <Project>{c087a469-5fc8-4b2f-8b49-f7906170dabd}</Project>
-      <Name>ColoPay.SQLServerDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

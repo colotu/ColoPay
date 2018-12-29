@@ -12,7 +12,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public class ErrorLog
     {
-        private static ColoPay.SQLServerDAL.SysManage.ErrorLog dal = new SQLServerDAL.SysManage.ErrorLog();
+        private static ColoPay.DAL.SysManage.ErrorLog dal = new DAL.SysManage.ErrorLog();
         
         #region  Method
         /// <summary>

@@ -12,7 +12,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public class TreeFavorite
     {
-        private readonly ColoPay.SQLServerDAL.SysManage.TreeFavorite dal = new SQLServerDAL.SysManage.TreeFavorite();
+        private readonly ColoPay.DAL.SysManage.TreeFavorite dal = new DAL.SysManage.TreeFavorite();
 
 
         #region  Method

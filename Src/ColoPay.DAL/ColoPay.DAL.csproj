@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{400F9EBC-F979-4F92-8EFC-69A98377DD25}</ProjectGuid>
+    <ProjectGuid>{C087A469-5FC8-4B2F-8B49-F7906170DABD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ColoPay.Model</RootNamespace>
-    <AssemblyName>ColoPay.Model</AssemblyName>
+    <RootNamespace>ColoPay.DAL</RootNamespace>
+    <AssemblyName>ColoPay.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
@@ -66,15 +66,29 @@
     <Reference Include="YSWL.Accounts">
       <HintPath>..\Lib\YSWL.Accounts.dll</HintPath>
     </Reference>
-    <Reference Include="YSWL.Payment, Version=2.2.10.29363, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="YSWL.Common, Version=4.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\YSWL.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YSWL.DBUtility, Version=1.5.4898.29709, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\YSWL.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="YSWL.Json">
+      <HintPath>..\Lib\YSWL.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="YSWL.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\YSWL.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="YSWL.Payment">
       <HintPath>..\Lib\YSWL.Payment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -85,18 +99,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALCommon.cs" />
     <Compile Include="Pay\Enterprise.cs" />
     <Compile Include="Pay\EnterprisePayFee.cs" />
     <Compile Include="Pay\Order.cs" />
     <Compile Include="Pay\PaymentTypes.cs" />
     <Compile Include="Pay\Withdraw.cs" />
-    <Compile Include="SysManage\ApplicationKeyType.cs" />
     <Compile Include="SysManage\ConfigArea.cs" />
-    <Compile Include="SysManage\EnumHelper.cs" />
-    <Compile Include="SysManage\ErrorLog.cs" />
-    <Compile Include="SysManage\SysNode.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysManage\ConfigType.cs" />
     <Compile Include="SysManage\TaskQueue.cs" />
+    <Compile Include="SysManage\ConfigSystem.cs" />
+    <Compile Include="PubConstant.cs" />
+    <Compile Include="SysManage\ErrorLog.cs" />
+    <Compile Include="SysManage\MultiLanguage.cs" />
+    <Compile Include="SysManage\SysTree.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysManage\TreeFavorite.cs" />
     <Compile Include="SysManage\UserLog.cs" />
     <Compile Include="Members\Users.cs" />
     <Compile Include="Members\UsersExp.cs" />
@@ -119,7 +137,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ColoPay.Model\ColoPay.Model.csproj">
+      <Project>{400f9ebc-f979-4f92-8efc-69a98377dd25}</Project>
+      <Name>ColoPay.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

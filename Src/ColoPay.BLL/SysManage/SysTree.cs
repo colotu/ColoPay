@@ -15,7 +15,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public class SysTree
     {
-        private readonly ColoPay.SQLServerDAL.SysManage.SysTree dal = new SQLServerDAL.SysManage.SysTree();
+        private readonly ColoPay.DAL.SysManage.SysTree dal = new DAL.SysManage.SysTree();
 
 
         public int GetPermissionCatalogID(int permissionID)

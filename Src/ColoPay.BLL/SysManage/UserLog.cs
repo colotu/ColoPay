@@ -12,7 +12,7 @@ namespace ColoPay.BLL.SysManage
     /// </summary>
     public class UserLog
     {
-        private static ColoPay.SQLServerDAL.SysManage.UserLog dal = new SQLServerDAL.SysManage.UserLog();
+        private static ColoPay.DAL.SysManage.UserLog dal = new DAL.SysManage.UserLog();
                
         #region 
         

@@ -113,6 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateManage.cs" />
+    <Compile Include="Pay\Enterprise.cs" />
+    <Compile Include="Pay\EnterprisePayFee.cs" />
+    <Compile Include="Pay\Order.cs" />
+    <Compile Include="Pay\PaymentTypes.cs" />
+    <Compile Include="Pay\Withdraw.cs" />
     <Compile Include="SysManage\ConfigArea.cs" />
     <Compile Include="SysManage\ConfigSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,13 +149,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ColoPay.DAL\ColoPay.DAL.csproj">
+      <Project>{c087a469-5fc8-4b2f-8b49-f7906170dabd}</Project>
+      <Name>ColoPay.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ColoPay.Model\ColoPay.Model.csproj">
       <Project>{400f9ebc-f979-4f92-8efc-69a98377dd25}</Project>
       <Name>ColoPay.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ColoPay.SQLServerDAL\ColoPay.SQLServerDAL.csproj">
-      <Project>{c087a469-5fc8-4b2f-8b49-f7906170dabd}</Project>
-      <Name>ColoPay.SQLServerDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -159,9 +164,7 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pay\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

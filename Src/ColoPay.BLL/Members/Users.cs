@@ -17,7 +17,7 @@ namespace ColoPay.BLL.Members
     /// </summary>
     public partial class Users
     {
-        private readonly ColoPay.SQLServerDAL.Members.Users dal = new SQLServerDAL.Members.Users();
+        private readonly ColoPay.DAL.Members.Users dal = new DAL.Members.Users();
         public Users()
         { }
         #region  Method
