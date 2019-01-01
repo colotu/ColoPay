@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Mall.ALL")]
 [assembly: AssemblyDescription("20170223")]
 [assembly: AssemblyConfiguration("Mall.ALL")]
-[assembly: AssemblyCompany("云商未来（北京）科技有限公司")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyCopyright("Copyright(C)2006-2015 YSWL. All Rights Reserved.")]
 [assembly: AssemblyTrademark("YS56")]
 [assembly: AssemblyCulture("")]

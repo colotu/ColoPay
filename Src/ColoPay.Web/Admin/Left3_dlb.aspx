@@ -57,7 +57,7 @@
                 Metronic.init(); // init metronic core componets
                 Layout.init(); // init layout
             });
-            $('.dropdown_ul a').click(function () {
+            $('.page-sidebar-menu').find('a').click(function () {
                 var $this = $(this);
                 var href = $this.attr('src');
                 var title = $this.text();

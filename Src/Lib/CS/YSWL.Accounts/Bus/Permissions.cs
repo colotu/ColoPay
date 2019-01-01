@@ -8,7 +8,6 @@ using System.Xml;
 using YSWL.Accounts.IData;
 using YSWL.Common;
 using YSWL.DBUtility;
-using YSWL.SAAS.BLL;
 
 namespace YSWL.Accounts.Bus
 {
@@ -160,116 +159,7 @@ namespace YSWL.Accounts.Bus
         }
 
 
-        #region  XML  权限处理
-
-        private static DataCacheCore dataCache = new DataCacheCore(new CacheOption
-        {
-            CacheType = SAASInfo.GetSystemBoolValue("RedisCacheUse") ? CacheType.Redis : CacheType.IIS,
-            ReadWriteHosts = SAASInfo.GetSystemValue("RedisCacheReadWriteHosts"),
-            ReadOnlyHosts = SAASInfo.GetSystemValue("RedisCacheReadOnlyHosts"),
-            CancelProductKey = true,
-            CancelEnterpriseKey = true,
-            DefaultDb = 1
-        });
-        /// <summary>
-        /// 获取所有的XML 权限
-        /// </summary>
-        /// <returns></returns>
-        public static List<Permissions> GetAllXMLPermission()
-        {
-            string path = HttpContext.Current.Server.MapPath("/Config/Permission.config");
-            List<Permissions> permissionList = new List<Permissions>();
-            if (!File.Exists(path))
-            {
-                return permissionList;
-            }
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(path);
-            //取指定的结点的集合
-            XmlNodeList nodes = xmlDoc.SelectNodes("permissions/application");
-            if (nodes != null)
-            {
-                Permissions model = null;
-                foreach (XmlElement parentNode in nodes)
-                {
-                    foreach (XmlElement node in parentNode.ChildNodes)
-                    {
-                        model = new Permissions
-                        {
-                            PermissionID = Common.Globals.SafeInt(node.GetAttribute("PermissionID"), 0),
-                            Description = node.GetAttribute("Description"),
-                            CategoryID = Common.Globals.SafeInt(node.GetAttribute("CategoryID"), 0)
-                        };
-                        permissionList.Add(model);
-                    }
-                }
-            }
-            return permissionList;
-        }
-        /// <summary>
-        /// 获取所有的XML 权限缓存
-        /// </summary>
-        /// <returns></returns>
-        public static List<Permissions> GetAllXMLPermissionCache()
-        {
-            string CacheKey = "GetAllXMLPermissionCache";
-            List<Permissions> allPermissions = dataCache.GetCache<List<Permissions>>(CacheKey);
-            if (allPermissions == null)
-            {
-                allPermissions = GetAllXMLPermission();
-                if (allPermissions != null)
-                {
-                    dataCache.SetCache(CacheKey, allPermissions, DateTime.MaxValue, TimeSpan.Zero);
-                }
-            }
-            return allPermissions;
-        }
-        /// <summary>
-        /// 获取某用户的权限
-        /// </summary>
-        /// <returns></returns>
-        public static List<Permissions> GetPermissionByUser(int userId)
-        {
-            List<Permissions> ALLList = GetAllXMLPermissionCache();
-            //获取所有的用户角色关联
-            YSWL.Accounts.Bus.Role roleBll=new Role();
-            List<UserRoles> ALLUserRoleList= roleBll.GetALLUserRole();
-            //获取所有的角色权限关联
-            List<RolePermissions> ALLRolePermList = roleBll.GetALLRolePerm();
-
-            #region  处理应用菜单
-            #endregion 
-
-            #region  处理权限逻辑
-
-            List<UserRoles> userRoleList = ALLUserRoleList.Where(c => c.UserID == userId).ToList();
-
-            #region  处理系统管理员权限，系统管理员默认加载所有的权限
-            var systemRole= userRoleList.Find(c => c.RoleID == 1);
-            if (systemRole != null) //如果包含系统管理员角色，则加载所有的权限
-            {
-                return ALLList;
-            }
-            #endregion
-
-            if (userRoleList == null || userRoleList.Count == 0)
-            {
-                return null;
-            }
-            List<RolePermissions> rolePermList = ALLRolePermList.Where(c => userRoleList.Select(k=>k.RoleID).Contains(c.RoleID)).ToList();
-
-            if (rolePermList==null || rolePermList.Count==0)
-            {
-                return null;
-            }
-            List<Permissions> permissionList =
-                ALLList.Where(c => rolePermList.Select(k => k.PermissionID).Contains(c.PermissionID)).ToList();
-            #endregion
-
-            return permissionList;  
-        }
-
-        #endregion
+        
     }
 
 

@@ -70,7 +70,7 @@ namespace ColoPay.Web.Admin
             }
             strtemp.AppendFormat("<script language=\"JavaScript\" type=\"text/javascript\">window.top.document.title='{1}{0}';</script>",
                 (!MvcApplication.IsAuthorize) ?
-                " Powered by 云商未来" : "", (String.IsNullOrWhiteSpace(MvcApplication.SiteName) ? "云订货管理系统" : MvcApplication.SiteName));
+                " Powered by 银河支付" : "", (String.IsNullOrWhiteSpace(MvcApplication.SiteName) ? "" : MvcApplication.SiteName));
             strMenu = strtemp.ToString();
         }
     }

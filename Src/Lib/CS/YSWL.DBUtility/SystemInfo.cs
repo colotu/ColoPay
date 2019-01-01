@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using YSWL.Common;
-using YSWL.SAAS.BLL;
 
 namespace YSWL.DBUtility
 {
@@ -24,8 +23,7 @@ namespace YSWL.DBUtility
                 CancelProductKey = true,
                 CancelEnterpriseKey = true,
                 DefaultDb = 0,
-                ReadWriteHosts = SAASInfo.GetSystemValue("RedisCacheReadWriteHosts"),
-                ReadOnlyHosts = SAASInfo.GetSystemValue("RedisCacheReadOnlyHosts"),
+                
             });
             string BaseKey = "OMS_ConnectionData";
             string CacheKey = BaseKey+"_" + enterpriseId;

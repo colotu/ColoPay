@@ -596,11 +596,7 @@ namespace YSWL.Accounts.Bus
         public bool Update(bool isSaas=false)
         {
             bool isSuccess = true;
-            if (isSaas)
-            {
-       
-                isSuccess = YSWL.SAAS.BLL.SAASInfo.UpdateUser(userName, password ,trueName,String.IsNullOrWhiteSpace(phone)?userName:phone , employeeID,activity);
-            }
+           
             return isSuccess&&dataUser.Update(
                 userID,
                 userName,
@@ -624,10 +620,6 @@ namespace YSWL.Accounts.Bus
         {
             byte[] cryptPassword = AccountsPrincipal.EncryptPassword(password);
             bool IsSuccess = true;
-            if (IsSaaS)
-            {
-                IsSuccess = YSWL.SAAS.BLL.SAASInfo.SetPassword(UserName, cryptPassword);
-            }
             return IsSuccess && dataUser.SetPassword(UserName, cryptPassword);
         }
         /// <summary>
@@ -843,60 +835,6 @@ namespace YSWL.Accounts.Bus
         public bool UpdateActivity(string userName, bool activity)
         {
             return dataUser.UpdateActivity(userName, activity);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="enterpriseId"></param>
-        /// <param name="applicationIds">应用Id集合,"|"分割式，如 1|3|5 </param>
-        /// <returns></returns>
-        public int Create2SAAS(long enterpriseId,string applicationIds="", bool isCover = false)
-        {
-            #region  根据用户类型，确定SAAS 的用户类型
-
-            int saasUserType = 1;
-            switch (UserType)
-            {
-                case "UU":
-                    saasUserType = 1;
-                    break;
-                case "SS":
-                    saasUserType =3;
-                    break;
-                case "AA":
-                    saasUserType = 2;
-                    break;
-                default:
-                    saasUserType = 2;
-                    break;
-            }
-            #endregion 
-            //Log.LogHelper.AddTextLog("xxx1", "isCover:"+ isCover);
-            bool isSuccess = YSWL.SAAS.BLL.SAASInfo.CreateSAASUser(userName, password, trueName, phone, enterpriseId, saasUserType, applicationIds, isCover);
-
-            if (isSuccess)
-            {
-                userID = dataUser.Create(
-                 userName,
-                 password,
-                 nickName,
-                 trueName,
-                 sex,
-                 phone,
-                 email,
-                 employeeID,
-                 departmentID,
-                 activity,
-                 userType,
-                 style,
-                 User_iCreator,
-                 User_dateValid,
-                 User_cLang,
-                 User_dateApprove, User_iApproveState);
-                return userID;
-            }
-
-            return -100;
         }
 
         #endregion

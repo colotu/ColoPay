@@ -1,4 +1,4 @@
-﻿<%@ Page Title="<%$ Resources:SysManage,ptClearCache%>" Language="C#" MasterPageFile="~/Admin/Basic.Master" AutoEventWireup="true" CodeBehind="ClearCache.aspx.cs" Inherits="ColoPay.Web.Admin.SysManage.ClearCache" %>
+﻿<%@ Page Title="<%$ Resources:SysManage,ptClearCache%>" Language="C#" MasterPageFile="~/Admin/BasicNoFoot.Master" AutoEventWireup="true" CodeBehind="ClearCache.aspx.cs" Inherits="ColoPay.Web.Admin.SysManage.ClearCache" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

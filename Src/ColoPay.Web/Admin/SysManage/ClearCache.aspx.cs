@@ -7,7 +7,7 @@ namespace ColoPay.Web.Admin.SysManage
 {
     public partial class ClearCache : PageBaseAdmin
     {
-        protected override int Act_PageLoad { get { return 62; } } //系统管理_是否显示清空缓存
+        protected override int Act_PageLoad { get { return -1; } } //系统管理_是否显示清空缓存
 
         protected void Page_Load(object sender, EventArgs e)
         {

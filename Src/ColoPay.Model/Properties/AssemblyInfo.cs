@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("4.0.0.0")]
 [assembly: AssemblyFileVersion("4.0.0.0")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("云商未来（北京）科技有限公司")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyCopyright("Copyright(C)2006-2013 YSWL. All Rights Reserved.")]
 //[assembly: AssemblyCopyright("版权所有 (C) YSWL 2004-2011")]
 [assembly: AssemblyTrademark("YSWL")]

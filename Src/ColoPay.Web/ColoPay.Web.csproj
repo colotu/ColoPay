@@ -74,9 +74,7 @@
       <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http">
-      <HintPath>..\Lib\System.Net.Http.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -117,7 +115,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\YSWL.Common.dll</HintPath>
     </Reference>
-    <Reference Include="YSWL.Components, Version=1.2.6195.27313, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="YSWL.Components, Version=1.5.6938.40616, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\YSWL.Components.dll</HintPath>
     </Reference>
@@ -408,6 +406,13 @@
     <Compile Include="Admin\Main2.aspx.designer.cs">
       <DependentUpon>Main2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\main_index_dlb.aspx.cs">
+      <DependentUpon>main_index_dlb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\main_index_dlb.aspx.designer.cs">
+      <DependentUpon>main_index_dlb.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\main_wc.aspx.cs">
       <DependentUpon>main_wc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -421,6 +426,27 @@
     </Compile>
     <Compile Include="Admin\Ms\QR\QRCode.aspx.designer.cs">
       <DependentUpon>QRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\BalanceDetail.aspx.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\BalanceDetail.aspx.designer.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\WithdrawList.aspx.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\WithdrawList.aspx.designer.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SyncUserInfo.aspx.cs">
       <DependentUpon>SyncUserInfo.aspx</DependentUpon>
@@ -596,6 +622,97 @@
     <Compile Include="Controllers\ControllerBaseSupplier.cs" />
     <Compile Include="Controllers\ControllerBaseAgent.cs" />
     <Compile Include="Controllers\ControllerBaseSales.cs" />
+    <Compile Include="Controls\AjaxRegion.ascx.cs">
+      <DependentUpon>AjaxRegion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AjaxRegion.ascx.designer.cs">
+      <DependentUpon>AjaxRegion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\checkright.ascx.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\checkright.ascx.designer.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\copyright.ascx.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\copyright.ascx.designer.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowPaymentMode.ascx.cs">
+      <DependentUpon>ShowPaymentMode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShowPaymentMode.ascx.designer.cs">
+      <DependentUpon>ShowPaymentMode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDroplistPermission.ascx.cs">
+      <DependentUpon>UCDroplistPermission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDroplistPermission.ascx.designer.cs">
+      <DependentUpon>UCDroplistPermission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCPermission.ascx.cs">
+      <DependentUpon>UCPermission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPermission.ascx.designer.cs">
+      <DependentUpon>UCPermission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\main_index.aspx.cs">
+      <DependentUpon>main_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\main_index.aspx.designer.cs">
+      <DependentUpon>main_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Pay\BalanceDetail.aspx.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Pay\BalanceDetail.aspx.designer.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Pay\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Pay\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Pay\WithdrawList.aspx.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Pay\WithdrawList.aspx.designer.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -625,7 +742,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Content Include="404.html" />
-    <Content Include="Admin\Bind.htm" />
     <Content Include="Admin\css\productstyle.css" />
     <Content Include="Admin\css\style-left-dlb.css" />
     <Content Include="Admin\css\style-left.css" />
@@ -724,7 +840,11 @@
     <Content Include="Admin\Left2.aspx" />
     <Content Include="Admin\Left3.aspx" />
     <Content Include="Admin\Left3_dlb.aspx" />
+    <Content Include="Admin\main_index_dlb.aspx" />
     <Content Include="Admin\main_wc.aspx" />
+    <Content Include="Admin\Pay\BalanceDetail.aspx" />
+    <Content Include="Admin\Pay\OrderList.aspx" />
+    <Content Include="Admin\Pay\WithdrawList.aspx" />
     <Content Include="Admin\SyncUserInfo.aspx" />
     <Content Include="Admin\SysManage\AreaList.aspx" />
     <Content Include="Admin\SysManage\SysConfig.aspx" />
@@ -1119,6 +1239,20 @@
     <Content Include="Content\themes\base\images\404\404_180X60.jpg" />
     <Content Include="Content\themes\base\images\404\404_980X68.jpg" />
     <Content Include="Content\themes\base\images\404\404_200X200.jpg" />
+    <Content Include="Controls\AjaxRegion.ascx" />
+    <Content Include="Controls\checkright.ascx" />
+    <Content Include="Controls\copyright.ascx" />
+    <Content Include="Controls\ShowPaymentMode.ascx" />
+    <Content Include="Controls\UCDroplistPermission.ascx" />
+    <Content Include="Controls\UCPermission.ascx" />
+    <Content Include="Enterprise\Left.aspx" />
+    <Content Include="Enterprise\Login.aspx" />
+    <Content Include="Enterprise\main.htm" />
+    <Content Include="Enterprise\main_index.aspx" />
+    <Content Include="Enterprise\Pay\BalanceDetail.aspx" />
+    <Content Include="Enterprise\Pay\OrderList.aspx" />
+    <Content Include="Enterprise\Pay\WithdrawList.aspx" />
+    <Content Include="Enterprise\Top.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\alink\dukeji1.jpg" />
     <Content Include="Images\alink\logo200.jpg" />
@@ -3600,7 +3734,6 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Pay\" />
     <Folder Include="App_GlobalResources\SNS\" />
     <Folder Include="Content\themes\red\" />
   </ItemGroup>
@@ -3763,6 +3896,9 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>installerstep.designer.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Controls\CopyRight.ascx.resx">
+      <DependentUpon>copyright.ascx.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

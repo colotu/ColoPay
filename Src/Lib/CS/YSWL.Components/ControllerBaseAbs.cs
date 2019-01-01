@@ -24,7 +24,6 @@ using System.Web.Routing;
 using YSWL.Accounts.Bus;
 using YSWL.Common;
 using YSWL.Components;
-using YSWL.SAAS.BLL;
 
 namespace YSWL.Web.Controllers
 {
@@ -143,9 +142,6 @@ namespace YSWL.Web.Controllers
                     {
                         host = filterContext.HttpContext.Request.Url.Host.ToLower();
                     }
-                    //启用个性域名访问
-                    int entId = SAASInfo.GetSAASEntIdByMallDomain(host);
-                    if (entId > 0) enterpriseId = entId;
                 }
 
                 if (enterpriseId == 0)
@@ -190,7 +186,7 @@ namespace YSWL.Web.Controllers
                     host = filterContext.HttpContext.Request.Url.Host.ToLower();
                 }
                 //启用个性域名访问
-                int entId = SAASInfo.GetSAASEnterpriseIdByDomain(host);
+                int entId = 0;//SAASInfo.GetSAASEnterpriseIdByDomain(host);
                 //FileManage.WriteText(new System.Text.StringBuilder(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff") + host + " entId:" + entId));
                 if (entId < 0)
                 {

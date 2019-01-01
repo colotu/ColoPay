@@ -134,7 +134,7 @@ namespace YSWL.Common
             switch (option.CacheType)
             {
                 case CacheType.Redis:
-                    dataCacheProvider = new YSWL.Common.RedisDataCache(option.ReadWriteHosts, option.ReadOnlyHosts, option.DefaultDb);
+                   // dataCacheProvider = new YSWL.Common.RedisDataCache(option.ReadWriteHosts, option.ReadOnlyHosts, option.DefaultDb);
                     break;
                 case CacheType.IIS:
                     dataCacheProvider = new YSWL.Common.IISDataCache();

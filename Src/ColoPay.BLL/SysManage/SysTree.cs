@@ -185,12 +185,12 @@ namespace ColoPay.BLL.SysManage
 
         public List<ColoPay.Model.SysManage.SysNode> GetTreeListByType(int treeType,bool Enabled)
         {
-            //根据配置加载对应的菜单
-            bool IsXMLTree = ColoPay.BLL.SysManage.ConfigSystem.GetBoolValueByCache("SAAS_Menu_IsXML");
-            if (IsXMLTree)
-            {
-                return GetAllTreeListXmlCache(treeType);
-            }
+            ////根据配置加载对应的菜单
+            //bool IsXMLTree = ColoPay.BLL.SysManage.ConfigSystem.GetBoolValueByCache("SAAS_Menu_IsXML");
+            //if (IsXMLTree)
+            //{
+            //    return GetAllTreeListXmlCache(treeType);
+            //}
 
             DataSet ds = GetAllEnabledTreeByType(treeType, Enabled);
             List<ColoPay.Model.SysManage.SysNode> NodeList= DataTableToList(ds.Tables[0]);

@@ -25,9 +25,8 @@ namespace ColoPay.Web.Admin
          
                 Page.Title = NodeName;
                 //0:admin后台 1:企业后台  2:代理商后台 3:用户后台
-                List<ColoPay.Model.SysManage.SysNode> nodeList = sm.GetTreeListByTypeCache(0, true,MvcApplication.IsAutoConn);
+                List<ColoPay.Model.SysManage.SysNode> nodeList = sm.GetTreeListByTypeCache(0, true,false);
                
-                
                 LoadMenu(nodeList);
             }
         }
@@ -42,8 +41,16 @@ namespace ColoPay.Web.Admin
                 if ((item.PermissionID == -1) || (UserPrincipal.HasPermissionID(item.PermissionID)))
                 {
                     List<ColoPay.Model.SysManage.SysNode> secNode = nodeList.Where(c => c.ParentID == item.NodeID).OrderBy(c => c.OrderID).ToList();
-                    string sectemp = LoadMenu2(secNode,nodeList);
-                    strtemp.AppendFormat("<li><a  src=\"{0}\" href=\"javascript:;\" ><i class=\"fa\"><img class=\"menu1\" src=\"img/navbar_r_dlb.png\" alt=\"right\" ></i><span class=\"title\">{1}</span></a>{2}</li>", item.Url, item.TreeText, sectemp);
+                    if (secNode != null && secNode.Count > 0)
+                    {
+                        string sectemp = LoadMenu2(secNode, nodeList);
+                        strtemp.AppendFormat("<li><a  src=\"{0}\" href=\"javascript:;\" ><i class=\"fa\"><img class=\"menu1\" src=\"img/navbar_r_dlb.png\" alt=\"right\" ></i><span class=\"title\">{1}</span></a>{2}</li>", item.Url, item.TreeText, sectemp);
+                    }
+                    else
+                    {
+                        strtemp.AppendFormat("<li><a  src=\"{0}\" href=\"javascript:;\" target=\"mainFrame\">{1}</a></li>", item.Url, item.TreeText);
+                    }
+
                 }
 
             }

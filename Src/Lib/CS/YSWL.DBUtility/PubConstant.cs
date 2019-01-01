@@ -40,10 +40,6 @@ namespace YSWL.DBUtility
             get
             {
 
-                if (isAutoConn)
-                {
-                    return YSWL.SAAS.PubConstant.GetConnectionStr();
-                }
                 //¸üÐÂ»º´æ
                 ConfigurationManager.RefreshSection("appSettings");
 

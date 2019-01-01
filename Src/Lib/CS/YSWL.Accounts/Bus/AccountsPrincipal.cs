@@ -113,35 +113,19 @@ namespace YSWL.Accounts.Bus
         {
             identity = new SiteIdentity(userID);
 
-            #region XML 权限
-            if (isXML())
-            {
-                List<Permissions> permissionList = YSWL.Accounts.Bus.Permissions.GetPermissionByUser(userID);
-                if (permissionList != null)
-                {
-                    foreach (var item in permissionList)
-                    {
-                        permissionListid.Add(item.PermissionID);
-                        permissionsDesc.Add(item.Description);
-                    }
-                }
-            }
-            #endregion
-            
             #region 数据库权限
-            else
+
+            permissionLists = dataUser.GetEffectivePermissionLists(userID);
+            if (permissionLists.Tables.Count > 0)
             {
-                permissionLists = dataUser.GetEffectivePermissionLists(userID);
-                if (permissionLists.Tables.Count > 0)
+                foreach (DataRow dr in permissionLists.Tables[0].Rows)
                 {
-                    foreach (DataRow dr in permissionLists.Tables[0].Rows)
-                    {
-                        permissionListid.Add(Convert.ToInt32(dr["PermissionID"]));
-                        permissionsDesc.Add(dr["Description"].ToString());
-                        //增加用户 的特别权限
-                    }
+                    permissionListid.Add(Convert.ToInt32(dr["PermissionID"]));
+                    permissionsDesc.Add(dr["Description"].ToString());
+                    //增加用户 的特别权限
                 }
             }
+
             #endregion
 
             rolesKeyValue = dataUser.GetUserRoles4KeyValues(userID);
@@ -154,36 +138,22 @@ namespace YSWL.Accounts.Bus
             SiteIdentity _identity;
             identity = _identity = new SiteIdentity(userName);
 
-            #region XML 权限
-            if (isXML())
-            {
-                List<Permissions> permissionList = YSWL.Accounts.Bus.Permissions.GetPermissionByUser(_identity.UserID);
-                if (permissionList != null)
-                {
-                    foreach (var item in permissionList)
-                    {
-                        permissionListid.Add(item.PermissionID);
-                        permissionsDesc.Add(item.Description);
-                    }
-                }
-            }
-            #endregion
+
 
             #region 数据库权限
-            else
+
+            permissionLists = dataUser.GetEffectivePermissionLists(_identity.UserID);
+            if (permissionLists.Tables.Count > 0)
             {
-                permissionLists = dataUser.GetEffectivePermissionLists(_identity.UserID);
-                if (permissionLists.Tables.Count > 0)
+                foreach (DataRow dr in permissionLists.Tables[0].Rows)
                 {
-                    foreach (DataRow dr in permissionLists.Tables[0].Rows)
-                    {
-                        permissionListid.Add(Convert.ToInt32(dr["PermissionID"]));
-                        permissionsDesc.Add(dr["Description"].ToString());
-                    }
+                    permissionListid.Add(Convert.ToInt32(dr["PermissionID"]));
+                    permissionsDesc.Add(dr["Description"].ToString());
                 }
             }
+
             #endregion
-            
+
             rolesKeyValue = dataUser.GetUserRoles4KeyValues(_identity.UserID);
             if (IsVerify)//需要认证
             {
@@ -208,7 +178,7 @@ namespace YSWL.Accounts.Bus
                     Log.LogHelper.AddErrorLog(ex.Message, ex.StackTrace);
                 }
             }
-            return Common.Globals.SafeBool(objModel,false);
+            return Common.Globals.SafeBool(objModel, false);
         }
 
         /// <summary>
@@ -331,9 +301,9 @@ namespace YSWL.Accounts.Bus
                 AccountsPrincipal objModel = YSWL.Common.DataCache.GetCache(CacheKey) as AccountsPrincipal;
                 return objModel;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Log.LogHelper.AddErrorLog(ex.Message,ex.StackTrace);
+                Log.LogHelper.AddErrorLog(ex.Message, ex.StackTrace);
             }
             return null;
         }

@@ -23,9 +23,7 @@ namespace ColoPay.Web.Admin
                 }
                 User currentUser = null;
 
-                Page.Title = MvcApplication.SiteName + "-系统登录" + ((!MvcApplication.IsAuthorize)
-                    ? YSWL.Common.DEncrypt.Hex16.Decode("0050006F0077006500720065006400200062007900204E915546672A6765")
-                    : "");
+                Page.Title = MvcApplication.SiteName + "-系统登录";
 
                 if (Session[Globals.SESSIONKEY_ADMIN] != null)
                 {

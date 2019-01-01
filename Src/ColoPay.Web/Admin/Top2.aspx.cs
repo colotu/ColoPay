@@ -63,7 +63,7 @@ namespace ColoPay.Web.Admin
             }
             strtemp.AppendFormat("<script language=\"JavaScript\" type=\"text/javascript\">window.top.document.title='{1}-系统管理{0}';</script>",
                 (!MvcApplication.IsAuthorize) ?
-                " Powered by 云商未来" : "",MvcApplication.SiteName);
+                " Powered by 银河支付" : "",MvcApplication.SiteName);
             strMenu = strtemp.ToString();
         }
     }

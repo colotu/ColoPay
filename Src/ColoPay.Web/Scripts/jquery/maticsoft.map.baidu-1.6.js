@@ -279,7 +279,7 @@ function LoadMakers(data) {
     /* 添加运动轨迹*/
     //版权说明
     var copy = new BMap.CopyrightControl(BMAP_ANCHOR_BOTTOM_RIGHT, new BMap.Size(15, 15));
-    copy.addCopyright(new BMap.Copyright(1, "@ 2012 云商未来 (北京) 科技有限公司", map.getBounds()));
+    copy.addCopyright(new BMap.Copyright(1, "@ 2018 银河支付 ", map.getBounds()));
     map.addControl(copy); ////////--------
     if (CurrentOption.addEventListener) {
         if (CurrentOption.addEventListener.event && CurrentOption.addEventListener.callback) {

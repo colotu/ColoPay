@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateManage.cs" />
+    <Compile Include="Pay\BalanceDetail.cs" />
     <Compile Include="Pay\Enterprise.cs" />
     <Compile Include="Pay\EnterprisePayFee.cs" />
     <Compile Include="Pay\Order.cs" />

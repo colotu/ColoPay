@@ -134,40 +134,26 @@ namespace YSWL.Components
 
         public static bool IsAuthorize
         {
+
+           
             get
             {
-                if (IsAutoConn)//如果是SAAS 自动跳过校验
-                {
-                    return true;
-                }
-                if (ApplicationOption == null) return false;
-                if (HttpContext.Current == null) return false;
-                if (HttpContext.Current.Session != null)
-                {
-                    bool? isAuthorize = Globals.SafeBool(HttpContext.Current.Session[KEY_ISAUTHORIZE], null);
-                    if (!isAuthorize.HasValue)
-                    {
-                        //重新效验
-                        HttpContext.Current.Session[KEY_ISAUTHORIZE] = isAuthorize =
-                            YSWL.Authorize.AuthController.CheckAuthorize
-                                (
-                                    ApplicationOption.AuthorizeCode, ProductInfoFull);
-                    }
-                    return isAuthorize.Value;
-                }
-                else
-                {
-                    //NO SESSION FROM APPLICATION
-                    bool? isAuthorize = Globals.SafeBool(HttpContext.Current.Application[KEY_ISAUTHORIZE], null);
-                    if (!isAuthorize.HasValue)
-                    {
-                        //重新效验
-                        HttpContext.Current.Application[KEY_ISAUTHORIZE] = isAuthorize =
-                           YSWL.Authorize.AuthController.CheckAuthorize(
-                                    ApplicationOption.AuthorizeCode, ProductInfoFull);
-                    }
-                    return isAuthorize.Value;
-                }
+                return true;
+                //if (ApplicationOption == null) return false;
+                //if (HttpContext.Current == null) return false;
+                //if (HttpContext.Current.Session != null)
+                //{
+                //    bool? isAuthorize = Globals.SafeBool(HttpContext.Current.Session[KEY_ISAUTHORIZE], null);
+                   
+                //    return isAuthorize.Value;
+                //}
+                //else
+                //{
+                //    //NO SESSION FROM APPLICATION
+                //    bool? isAuthorize = Globals.SafeBool(HttpContext.Current.Application[KEY_ISAUTHORIZE], null);
+                   
+                //    return isAuthorize.Value;
+                //}
             }
             //set { if (HttpContext.Current != null) HttpContext.Current.Application[KEY_ISAUTHORIZE] = value; }
         }
