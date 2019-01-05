@@ -25,6 +25,9 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="borderkuang padd-no">
             <tr>
                 <td height="35" bgcolor="#FFFFFF" class="newstitlebody">
+                     <asp:Literal ID="Literal1" runat="server" Text="代理商" />：
+                    <asp:DropDownList ID="ddlAgent" runat="server" Width="200px" OnSelectedIndexChanged="ddlAgent_Changed">
+                    </asp:DropDownList>
                     <asp:Literal ID="Literal2" runat="server" Text="商户" />：
                     <asp:DropDownList ID="ddlEnterprise" runat="server" Width="200px">
                     </asp:DropDownList>
@@ -66,7 +69,14 @@
                 <asp:TemplateField ControlStyle-Width="50" HeaderText="企业名称"
                     ItemStyle-HorizontalAlign="left" ItemStyle-Width="250px">
                     <ItemTemplate>
-                        <%# GetEnterpriseName(Eval("EnterpriseID")) %>
+                         <%# GetEnterpriseName(Eval("EnterpriseID"),Eval("AgentId"),Eval("Type")) %>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+                 <asp:TemplateField ControlStyle-Width="50" HeaderText="提现类型"
+                    ItemStyle-HorizontalAlign="left" ItemStyle-Width="120px">
+                    <ItemTemplate>
+                        <%#YSWL.Common.Globals.SafeInt(Eval("Type"),0)==0?"商家":"代理商" %>
                     </ItemTemplate>
                 </asp:TemplateField>
 

@@ -530,7 +530,15 @@ namespace ColoPay.BLL.Members
         #endregion
 
 
-        
-        }
+        /// <summary>
+        /// 得到一个对象实体 根据用户名活动对象实体
+        /// </summary>
+        public ColoPay.Model.Members.Users GetModelByUsername(string strUsername)
+        {
+
+            return dal.GetModel(strUsername);
+        } 
+
+    }
 }
 

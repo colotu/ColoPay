@@ -85,6 +85,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pay\Agent.cs" />
+    <Compile Include="Pay\AgentPayFee.cs" />
     <Compile Include="Pay\BalanceDetail.cs" />
     <Compile Include="Pay\Enterprise.cs" />
     <Compile Include="Pay\EnterprisePayFee.cs" />

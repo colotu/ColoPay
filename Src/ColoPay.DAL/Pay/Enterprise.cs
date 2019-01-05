@@ -62,11 +62,12 @@ namespace ColoPay.DAL.Pay
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Pay_Enterprise(");
-			strSql.Append("UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark)");
+			strSql.Append("AgentId,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark)");
 			strSql.Append(" values (");
-			strSql.Append("@UserName,@Name,@SimpleName,@Status,@EnterpriseNum,@BusinessLicense,@TelPhone,@CellPhone,@AccountBank,@AccountInfo,@AccountNum,@WithdrawBank,@WithdrawInfo,@WithdrawNum,@Balance,@AppId,@AppSecrit,@AppUrl,@AppReturnUrl,@ContactMail,@Address,@EnteRank,@CreatedDate,@CreatedUserID,@RegisterIp,@Remark)");
+			strSql.Append("@AgentId,@UserName,@Name,@SimpleName,@Status,@EnterpriseNum,@BusinessLicense,@TelPhone,@CellPhone,@AccountBank,@AccountInfo,@AccountNum,@WithdrawBank,@WithdrawInfo,@WithdrawNum,@Balance,@AppId,@AppSecrit,@AppUrl,@AppReturnUrl,@ContactMail,@Address,@EnteRank,@CreatedDate,@CreatedUserID,@RegisterIp,@Remark)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
+					new SqlParameter("@AgentId", SqlDbType.Int,4),
 					new SqlParameter("@UserName", SqlDbType.NVarChar,50),
 					new SqlParameter("@Name", SqlDbType.NVarChar,200),
 					new SqlParameter("@SimpleName", SqlDbType.NVarChar,200),
@@ -93,32 +94,33 @@ namespace ColoPay.DAL.Pay
 					new SqlParameter("@CreatedUserID", SqlDbType.Int,4),
 					new SqlParameter("@RegisterIp", SqlDbType.NVarChar,50),
 					new SqlParameter("@Remark", SqlDbType.NVarChar,1000)};
-			parameters[0].Value = model.UserName;
-			parameters[1].Value = model.Name;
-			parameters[2].Value = model.SimpleName;
-			parameters[3].Value = model.Status;
-			parameters[4].Value = model.EnterpriseNum;
-			parameters[5].Value = model.BusinessLicense;
-			parameters[6].Value = model.TelPhone;
-			parameters[7].Value = model.CellPhone;
-			parameters[8].Value = model.AccountBank;
-			parameters[9].Value = model.AccountInfo;
-			parameters[10].Value = model.AccountNum;
-			parameters[11].Value = model.WithdrawBank;
-			parameters[12].Value = model.WithdrawInfo;
-			parameters[13].Value = model.WithdrawNum;
-			parameters[14].Value = model.Balance;
-			parameters[15].Value = model.AppId;
-			parameters[16].Value = model.AppSecrit;
-			parameters[17].Value = model.AppUrl;
-			parameters[18].Value = model.AppReturnUrl;
-			parameters[19].Value = model.ContactMail;
-			parameters[20].Value = model.Address;
-			parameters[21].Value = model.EnteRank;
-			parameters[22].Value = model.CreatedDate;
-			parameters[23].Value = model.CreatedUserID;
-			parameters[24].Value = model.RegisterIp;
-			parameters[25].Value = model.Remark;
+			parameters[0].Value = model.AgentId;
+			parameters[1].Value = model.UserName;
+			parameters[2].Value = model.Name;
+			parameters[3].Value = model.SimpleName;
+			parameters[4].Value = model.Status;
+			parameters[5].Value = model.EnterpriseNum;
+			parameters[6].Value = model.BusinessLicense;
+			parameters[7].Value = model.TelPhone;
+			parameters[8].Value = model.CellPhone;
+			parameters[9].Value = model.AccountBank;
+			parameters[10].Value = model.AccountInfo;
+			parameters[11].Value = model.AccountNum;
+			parameters[12].Value = model.WithdrawBank;
+			parameters[13].Value = model.WithdrawInfo;
+			parameters[14].Value = model.WithdrawNum;
+			parameters[15].Value = model.Balance;
+			parameters[16].Value = model.AppId;
+			parameters[17].Value = model.AppSecrit;
+			parameters[18].Value = model.AppUrl;
+			parameters[19].Value = model.AppReturnUrl;
+			parameters[20].Value = model.ContactMail;
+			parameters[21].Value = model.Address;
+			parameters[22].Value = model.EnteRank;
+			parameters[23].Value = model.CreatedDate;
+			parameters[24].Value = model.CreatedUserID;
+			parameters[25].Value = model.RegisterIp;
+			parameters[26].Value = model.Remark;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -137,6 +139,7 @@ namespace ColoPay.DAL.Pay
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update Pay_Enterprise set ");
+			strSql.Append("AgentId=@AgentId,");
 			strSql.Append("UserName=@UserName,");
 			strSql.Append("Name=@Name,");
 			strSql.Append("SimpleName=@SimpleName,");
@@ -165,6 +168,7 @@ namespace ColoPay.DAL.Pay
 			strSql.Append("Remark=@Remark");
 			strSql.Append(" where EnterpriseID=@EnterpriseID");
 			SqlParameter[] parameters = {
+					new SqlParameter("@AgentId", SqlDbType.Int,4),
 					new SqlParameter("@UserName", SqlDbType.NVarChar,50),
 					new SqlParameter("@Name", SqlDbType.NVarChar,200),
 					new SqlParameter("@SimpleName", SqlDbType.NVarChar,200),
@@ -192,33 +196,34 @@ namespace ColoPay.DAL.Pay
 					new SqlParameter("@RegisterIp", SqlDbType.NVarChar,50),
 					new SqlParameter("@Remark", SqlDbType.NVarChar,1000),
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4)};
-			parameters[0].Value = model.UserName;
-			parameters[1].Value = model.Name;
-			parameters[2].Value = model.SimpleName;
-			parameters[3].Value = model.Status;
-			parameters[4].Value = model.EnterpriseNum;
-			parameters[5].Value = model.BusinessLicense;
-			parameters[6].Value = model.TelPhone;
-			parameters[7].Value = model.CellPhone;
-			parameters[8].Value = model.AccountBank;
-			parameters[9].Value = model.AccountInfo;
-			parameters[10].Value = model.AccountNum;
-			parameters[11].Value = model.WithdrawBank;
-			parameters[12].Value = model.WithdrawInfo;
-			parameters[13].Value = model.WithdrawNum;
-			parameters[14].Value = model.Balance;
-			parameters[15].Value = model.AppId;
-			parameters[16].Value = model.AppSecrit;
-			parameters[17].Value = model.AppUrl;
-			parameters[18].Value = model.AppReturnUrl;
-			parameters[19].Value = model.ContactMail;
-			parameters[20].Value = model.Address;
-			parameters[21].Value = model.EnteRank;
-			parameters[22].Value = model.CreatedDate;
-			parameters[23].Value = model.CreatedUserID;
-			parameters[24].Value = model.RegisterIp;
-			parameters[25].Value = model.Remark;
-			parameters[26].Value = model.EnterpriseID;
+			parameters[0].Value = model.AgentId;
+			parameters[1].Value = model.UserName;
+			parameters[2].Value = model.Name;
+			parameters[3].Value = model.SimpleName;
+			parameters[4].Value = model.Status;
+			parameters[5].Value = model.EnterpriseNum;
+			parameters[6].Value = model.BusinessLicense;
+			parameters[7].Value = model.TelPhone;
+			parameters[8].Value = model.CellPhone;
+			parameters[9].Value = model.AccountBank;
+			parameters[10].Value = model.AccountInfo;
+			parameters[11].Value = model.AccountNum;
+			parameters[12].Value = model.WithdrawBank;
+			parameters[13].Value = model.WithdrawInfo;
+			parameters[14].Value = model.WithdrawNum;
+			parameters[15].Value = model.Balance;
+			parameters[16].Value = model.AppId;
+			parameters[17].Value = model.AppSecrit;
+			parameters[18].Value = model.AppUrl;
+			parameters[19].Value = model.AppReturnUrl;
+			parameters[20].Value = model.ContactMail;
+			parameters[21].Value = model.Address;
+			parameters[22].Value = model.EnteRank;
+			parameters[23].Value = model.CreatedDate;
+			parameters[24].Value = model.CreatedUserID;
+			parameters[25].Value = model.RegisterIp;
+			parameters[26].Value = model.Remark;
+			parameters[27].Value = model.EnterpriseID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -282,7 +287,7 @@ namespace ColoPay.DAL.Pay
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 EnterpriseID,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark from Pay_Enterprise ");
+			strSql.Append("select  top 1 EnterpriseID,AgentId,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark from Pay_Enterprise ");
 			strSql.Append(" where EnterpriseID=@EnterpriseID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4)
@@ -313,6 +318,10 @@ namespace ColoPay.DAL.Pay
 				if(row["EnterpriseID"]!=null && row["EnterpriseID"].ToString()!="")
 				{
 					model.EnterpriseID=int.Parse(row["EnterpriseID"].ToString());
+				}
+				if(row["AgentId"]!=null && row["AgentId"].ToString()!="")
+				{
+					model.AgentId=int.Parse(row["AgentId"].ToString());
 				}
 				if(row["UserName"]!=null)
 				{
@@ -428,7 +437,7 @@ namespace ColoPay.DAL.Pay
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select EnterpriseID,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark ");
+			strSql.Append("select EnterpriseID,AgentId,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark ");
 			strSql.Append(" FROM Pay_Enterprise ");
 			if(strWhere.Trim()!="")
 			{
@@ -448,7 +457,7 @@ namespace ColoPay.DAL.Pay
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" EnterpriseID,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark ");
+			strSql.Append(" EnterpriseID,AgentId,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark ");
 			strSql.Append(" FROM Pay_Enterprise ");
 			if(strWhere.Trim()!="")
 			{
@@ -533,7 +542,96 @@ namespace ColoPay.DAL.Pay
 		#endregion  BasicMethod
 		#region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+
+
+        #region  周 20190101增加  用户名和企业名是否重复
+        /// <summary>
+        /// 是否用户名是否存在
+        /// </summary>
+        public bool ExistsUsername(string strUsername)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Pay_Enterprise");
+            strSql.Append(" where UserName=@strUsername");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@strUsername", SqlDbType.VarChar,50)
+            };
+            parameters[0].Value = strUsername;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
+
+        /// <summary>
+        /// 修改用户名是否存在
+        /// </summary>
+        public bool ExistsUsername(string Enterpid, string strUsername)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Pay_Enterprise");
+            strSql.Append(" where EnterpriseID<>@EnterpriseID and  UserName=@strUsername");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+                    new SqlParameter("@strUsername", SqlDbType.VarChar,50)
+            };
+            parameters[0].Value = Enterpid;
+            parameters[1].Value = strUsername;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
+
+        /// <summary>
+        /// 企业名称是否存在
+        /// </summary>
+        public bool ExistsName(string strName)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Pay_Enterprise");
+            strSql.Append(" where Name=@Name");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Name", SqlDbType.VarChar,200)
+            };
+            parameters[0].Value = strName;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
+
+        /// <summary>
+        /// 企业名称是否存在
+        /// </summary>
+        public bool ExistsName(string Enterpid, string strName)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Pay_Enterprise");
+            strSql.Append(" where  EnterpriseID<>@EnterpriseID and Name=@Name");
+            SqlParameter[] parameters = {
+                new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+                    new SqlParameter("@Name", SqlDbType.VarChar,200)
+            };
+            parameters[0].Value = Enterpid;
+            parameters[1].Value = strName;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
+        #endregion
+
+
+        public int GetEnterpriseID(string userName)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.AppendFormat("select Top1 EnterpriseID  FROM Pay_Enterprise  where  UserName='{0}'", userName);
+            
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+
+    }
 }
 

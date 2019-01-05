@@ -88,9 +88,6 @@
     <Reference Include="YSWL.Payment">
       <HintPath>..\Lib\YSWL.Payment.dll</HintPath>
     </Reference>
-    <Reference Include="YSWL.RedisClient">
-      <HintPath>..\Lib\YSWL.RedisClient.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -113,6 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateManage.cs" />
+    <Compile Include="Pay\Agent.cs" />
+    <Compile Include="Pay\AgentPayFee.cs" />
     <Compile Include="Pay\BalanceDetail.cs" />
     <Compile Include="Pay\Enterprise.cs" />
     <Compile Include="Pay\EnterprisePayFee.cs" />

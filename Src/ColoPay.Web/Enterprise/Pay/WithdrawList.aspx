@@ -1,5 +1,4 @@
-﻿
-<%@ Page Title="<%$ Resources:SysManage, ptMenuManage%>" Language="C#" MasterPageFile="~/Admin/Basic.Master"
+﻿<%@ Page Title="<%$ Resources:SysManage, ptMenuManage%>" Language="C#" MasterPageFile="~/Admin/Basic.Master"
     AutoEventWireup="true" CodeBehind="WithdrawList.aspx.cs" Inherits="ColoPay.Web.Enterprise.Pay.WithdrawList" %>
 
 <%@ Register Assembly="ColoPay.Web" Namespace="ColoPay.Web.Controls" TagPrefix="cc1" %>
@@ -44,10 +43,18 @@
                 </td>
             </tr>
         </table>
-
+                <div class="newslist mar-bt">
+            <div class="newsicon">
+                <ul>
+                    <li class="add-btn" id="liAdd" runat="server"><a href="WithdrawAdd.aspx">
+                        <asp:Literal ID="Literal5" runat="server" Text="申请提现" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <cc1:GridViewEx ID="gridView" runat="server" AllowPaging="True" AllowSorting="True"
             ShowToolBar="True" AutoGenerateColumns="False" OnBind="BindData" OnPageIndexChanging="gridView_PageIndexChanging"
-            OnRowDataBound="gridView_RowDataBound" OnRowCommand="gridView_RowCommand" 
+            OnRowDataBound="gridView_RowDataBound"  
             Width="100%" PageSize="15" DataKeyNames="WithdrawId" ShowExportExcel="False" ShowExportWord="False"
             ExcelFileName="FileName1" CellPadding="3" BorderWidth="1px">
             <Columns>

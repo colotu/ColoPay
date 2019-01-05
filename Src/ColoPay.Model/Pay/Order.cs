@@ -30,6 +30,7 @@ namespace ColoPay.Model.Pay
 		private string _ordercode;
 		private string _enterorder;
 		private int _enterpriseid;
+		private int _agentd=0;
 		private decimal _amount;
 		private decimal _paymentfee;
 		private decimal _feerate;
@@ -76,6 +77,14 @@ namespace ColoPay.Model.Pay
 		{
 			set{ _enterpriseid=value;}
 			get{return _enterpriseid;}
+		}
+		/// <summary>
+		/// 代理商ID
+		/// </summary>
+		public int Agentd
+		{
+			set{ _agentd=value;}
+			get{return _agentd;}
 		}
 		/// <summary>
 		/// 实际支付金额

@@ -434,12 +434,47 @@
     <Compile Include="Admin\Pay\BalanceDetail.aspx.designer.cs">
       <DependentUpon>BalanceDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Pay\EnterpriseAdd.aspx.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\EnterpriseAdd.aspx.designer.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\EnterpriseList.aspx.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\EnterpriseList.aspx.designer.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Pay\OrderList.aspx.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Pay\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\PayFeeEdit.aspx.cs">
+      <DependentUpon>PayFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\PayFeeEdit.aspx.designer.cs">
+      <DependentUpon>PayFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\PayFeeList.aspx.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\PayFeeList.aspx.designer.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\showEnterInfo.aspx.cs">
+      <DependentUpon>showEnterInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\showEnterInfo.aspx.designer.cs">
+      <DependentUpon>showEnterInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Pay\WithdrawList.aspx.cs">
       <DependentUpon>WithdrawList.aspx</DependentUpon>
@@ -606,6 +641,83 @@
     <Compile Include="Admin\Top2.aspx.designer.cs">
       <DependentUpon>Top2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agent\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\main_index.aspx.cs">
+      <DependentUpon>main_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\main_index.aspx.designer.cs">
+      <DependentUpon>main_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\BalanceDetail.aspx.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\BalanceDetail.aspx.designer.cs">
+      <DependentUpon>BalanceDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\MyBalance.aspx.cs">
+      <DependentUpon>MyBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\MyBalance.aspx.designer.cs">
+      <DependentUpon>MyBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\WithdrawAdd.aspx.cs">
+      <DependentUpon>WithdrawAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\WithdrawAdd.aspx.designer.cs">
+      <DependentUpon>WithdrawAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\WithdrawList.aspx.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\WithdrawList.aspx.designer.cs">
+      <DependentUpon>WithdrawList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\UserPass.aspx.cs">
+      <DependentUpon>UserPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\UserPass.aspx.designer.cs">
+      <DependentUpon>UserPass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\AreaRegistrationBase.cs" />
     <Compile Include="Areas\Supplier\Controllers\AccountController.cs" />
     <Compile Include="Areas\Supplier\Controllers\HomeController.cs" />
@@ -616,6 +728,9 @@
     <Compile Include="Areas\Supplier\SupplierAreaRegistration.cs" />
     <Compile Include="Components\BankHelper.cs" />
     <Compile Include="Components\DateTimeHelper.cs" />
+    <Compile Include="Components\PageBaseAgent.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Components\Position.cs" />
     <Compile Include="Controllers\ControllerBaseAdmin.cs" />
     <Compile Include="Controllers\ControllerBaseERP.cs" />
@@ -678,6 +793,13 @@
     <Compile Include="Enterprise\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Enterprise\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Enterprise\main_index.aspx.cs">
       <DependentUpon>main_index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -699,6 +821,13 @@
     <Compile Include="Enterprise\Pay\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Enterprise\Pay\WithdrawAdd.aspx.cs">
+      <DependentUpon>WithdrawAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\Pay\WithdrawAdd.aspx.designer.cs">
+      <DependentUpon>WithdrawAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Enterprise\Pay\WithdrawList.aspx.cs">
       <DependentUpon>WithdrawList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -712,6 +841,13 @@
     </Compile>
     <Compile Include="Enterprise\Top.aspx.designer.cs">
       <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\UserPass.aspx.cs">
+      <DependentUpon>UserPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\UserPass.aspx.designer.cs">
+      <DependentUpon>UserPass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -843,12 +979,29 @@
     <Content Include="Admin\main_index_dlb.aspx" />
     <Content Include="Admin\main_wc.aspx" />
     <Content Include="Admin\Pay\BalanceDetail.aspx" />
+    <Content Include="Admin\Pay\EnterpriseAdd.aspx" />
+    <Content Include="Admin\Pay\EnterpriseList.aspx" />
     <Content Include="Admin\Pay\OrderList.aspx" />
+    <Content Include="Admin\Pay\PayFeeEdit.aspx" />
+    <Content Include="Admin\Pay\PayFeeList.aspx" />
+    <Content Include="Admin\Pay\showEnterInfo.aspx" />
     <Content Include="Admin\Pay\WithdrawList.aspx" />
     <Content Include="Admin\SyncUserInfo.aspx" />
     <Content Include="Admin\SysManage\AreaList.aspx" />
     <Content Include="Admin\SysManage\SysConfig.aspx" />
     <Content Include="Admin\Top3.aspx" />
+    <Content Include="Agent\Left.aspx" />
+    <Content Include="Agent\Login.aspx" />
+    <Content Include="Agent\Logout.aspx" />
+    <Content Include="Agent\main.htm" />
+    <Content Include="Agent\main_index.aspx" />
+    <Content Include="Agent\Pay\BalanceDetail.aspx" />
+    <Content Include="Agent\Pay\MyBalance.aspx" />
+    <Content Include="Agent\Pay\OrderList.aspx" />
+    <Content Include="Agent\Pay\WithdrawAdd.aspx" />
+    <Content Include="Agent\Pay\WithdrawList.aspx" />
+    <Content Include="Agent\Top.aspx" />
+    <Content Include="Agent\UserPass.aspx" />
     <Content Include="Areas\Supplier\Themes\M1\Content\Css\admin.css" />
     <Content Include="Areas\Supplier\Themes\M1\Content\Css\admin_login.css" />
     <Content Include="Areas\Supplier\Themes\M1\Content\Css\base.css" />
@@ -1247,12 +1400,15 @@
     <Content Include="Controls\UCPermission.ascx" />
     <Content Include="Enterprise\Left.aspx" />
     <Content Include="Enterprise\Login.aspx" />
+    <Content Include="Enterprise\Logout.aspx" />
     <Content Include="Enterprise\main.htm" />
     <Content Include="Enterprise\main_index.aspx" />
     <Content Include="Enterprise\Pay\BalanceDetail.aspx" />
     <Content Include="Enterprise\Pay\OrderList.aspx" />
+    <Content Include="Enterprise\Pay\WithdrawAdd.aspx" />
     <Content Include="Enterprise\Pay\WithdrawList.aspx" />
     <Content Include="Enterprise\Top.aspx" />
+    <Content Include="Enterprise\UserPass.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\alink\dukeji1.jpg" />
     <Content Include="Images\alink\logo200.jpg" />

@@ -12,6 +12,7 @@ namespace ColoPay.Model.Pay
 		{}
 		#region Model
 		private int _enterpriseid;
+		private int _agentid=0;
 		private string _username;
 		private string _name;
 		private string _simplename;
@@ -45,6 +46,14 @@ namespace ColoPay.Model.Pay
 		{
 			set{ _enterpriseid=value;}
 			get{return _enterpriseid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int AgentId
+		{
+			set{ _agentid=value;}
+			get{return _agentid;}
 		}
 		/// <summary>
 		/// 登录用户

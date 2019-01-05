@@ -13,10 +13,12 @@ namespace ColoPay.Web.Admin.Pay
         private ColoPay.BLL.Pay.Withdraw withdrawBll = new BLL.Pay.Withdraw();
         private ColoPay.BLL.Pay.Enterprise enterpriseBll = new BLL.Pay.Enterprise();
         private ColoPay.BLL.Members.Users userBll = new BLL.Members.Users();
+        private ColoPay.BLL.Pay.Agent agentBll = new BLL.Pay.Agent();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
+                BindAgent();
                 BindEnterprise();
             }
         }
@@ -33,9 +35,16 @@ namespace ColoPay.Web.Admin.Pay
         {
             this.ddlEnterprise.Items.Clear();
             this.ddlEnterprise.Items.Add(new ListItem(Resources.Site.All, ""));
-
-
-            List<ColoPay.Model.Pay.Enterprise> modelList = enterpriseBll.GetModelList("");
+            int agentId = YSWL.Common.Globals.SafeInt(this.ddlAgent.SelectedValue, 0);
+            List<ColoPay.Model.Pay.Enterprise> modelList = new List<ColoPay.Model.Pay.Enterprise>();
+            if (agentId > 0)
+            {
+                modelList = enterpriseBll.GetModelList(" agentId=" + agentId);
+            }
+            else
+            {
+                modelList = enterpriseBll.GetModelList("");
+            }
             if (modelList != null && modelList.Count > 0)
             {
 
@@ -45,26 +54,53 @@ namespace ColoPay.Web.Admin.Pay
                     this.ddlEnterprise.Items.Add(new ListItem(item.Name, item.EnterpriseID.ToString()));
 
                 }
-
             }
             this.ddlEnterprise.DataBind();
 
         }
 
+        private void BindAgent()
+        {
+            this.ddlAgent.Items.Clear();
+            this.ddlAgent.Items.Add(new ListItem(Resources.Site.All, ""));
+            List<ColoPay.Model.Pay.Agent> modelList = agentBll.GetModelList("");
+            if (modelList != null && modelList.Count > 0)
+            {
+                foreach (var item in modelList)
+                {
+                    this.ddlAgent.Items.Add(new ListItem(item.Name, item.AgentId.ToString()));
+                }
+            }
+            this.ddlAgent.DataBind();
+        }
+
         #endregion
+
+        public void ddlAgent_Changed(object sender, System.EventArgs e)
+        {
+            BindEnterprise();
+        }
+
 
         #region gridView
 
         public void BindData()
         {
-
-
             StringBuilder strWhere = new StringBuilder();
+            int agentId= YSWL.Common.Globals.SafeInt(this.ddlAgent.SelectedValue, 0);
             int enterpriseID = YSWL.Common.Globals.SafeInt(this.ddlEnterprise.SelectedValue, 0);
 
+            if (agentId > 0)
+            {
+                strWhere.AppendFormat(" AgentID={0}", agentId);
+            }
 
             if (enterpriseID > 0)
             {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
                 strWhere.AppendFormat(" EnterpriseID={0}", enterpriseID);
             }
             string status = ddlStatus.SelectedValue;
@@ -214,19 +250,29 @@ namespace ColoPay.Web.Admin.Pay
 
         #endregion
 
-        #region 获取商家名称
+        #region 获取企业名称
         /// <summary>
-        /// 获取商家名称
+        /// 获取企业名称
         /// </summary>
         /// <param name="target"></param>
         /// <returns></returns>
-        protected string GetEnterpriseName(object target)
+        protected string GetEnterpriseName(object objEnterprise, object objAgent, object objType)
         {
-            int enterpriseId = YSWL.Common.Globals.SafeInt(target, 0);
+            int enterpriseId = YSWL.Common.Globals.SafeInt(objEnterprise, 0);
+            int agentId = YSWL.Common.Globals.SafeInt(objAgent, 0);
+            int type = YSWL.Common.Globals.SafeInt(objType, 0);
 
-            ColoPay.Model.Pay.Enterprise enterpriseModel = enterpriseBll.GetModelByCache(enterpriseId);
+            if (type == 0)
+            {
+                ColoPay.Model.Pay.Enterprise enterpriseModel = enterpriseBll.GetModelByCache(enterpriseId);
+                return enterpriseModel == null ? "未知" : enterpriseModel.Name;
+            }
+            else
+            {
+                ColoPay.Model.Pay.Agent agentModel = agentBll.GetModelByCache(agentId);
+                return agentModel == null ? "未知" : agentModel.Name;
+            }
 
-            return enterpriseModel == null ? "未知" : enterpriseModel.Name;
         }
         #endregion
 

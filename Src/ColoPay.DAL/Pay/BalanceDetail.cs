@@ -62,12 +62,14 @@ namespace ColoPay.DAL.Pay
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Pay_BalanceDetail(");
-			strSql.Append("EnterpriseID,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime)");
+			strSql.Append("EnterpriseID,AgentId,Type,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime)");
 			strSql.Append(" values (");
-			strSql.Append("@EnterpriseID,@PayType,@OriginalId,@OriginalCode,@PaymentFee,@OrderAmount,@Amount,@CreatedTime)");
+			strSql.Append("@EnterpriseID,@AgentId,@Type,@PayType,@OriginalId,@OriginalCode,@PaymentFee,@OrderAmount,@Amount,@CreatedTime)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+					new SqlParameter("@AgentId", SqlDbType.Int,4),
+					new SqlParameter("@Type", SqlDbType.Int,4),
 					new SqlParameter("@PayType", SqlDbType.Int,4),
 					new SqlParameter("@OriginalId", SqlDbType.Int,4),
 					new SqlParameter("@OriginalCode", SqlDbType.NVarChar,100),
@@ -76,13 +78,15 @@ namespace ColoPay.DAL.Pay
 					new SqlParameter("@Amount", SqlDbType.Money,8),
 					new SqlParameter("@CreatedTime", SqlDbType.DateTime)};
 			parameters[0].Value = model.EnterpriseID;
-			parameters[1].Value = model.PayType;
-			parameters[2].Value = model.OriginalId;
-			parameters[3].Value = model.OriginalCode;
-			parameters[4].Value = model.PaymentFee;
-			parameters[5].Value = model.OrderAmount;
-			parameters[6].Value = model.Amount;
-			parameters[7].Value = model.CreatedTime;
+			parameters[1].Value = model.AgentId;
+			parameters[2].Value = model.Type;
+			parameters[3].Value = model.PayType;
+			parameters[4].Value = model.OriginalId;
+			parameters[5].Value = model.OriginalCode;
+			parameters[6].Value = model.PaymentFee;
+			parameters[7].Value = model.OrderAmount;
+			parameters[8].Value = model.Amount;
+			parameters[9].Value = model.CreatedTime;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -102,6 +106,8 @@ namespace ColoPay.DAL.Pay
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update Pay_BalanceDetail set ");
 			strSql.Append("EnterpriseID=@EnterpriseID,");
+			strSql.Append("AgentId=@AgentId,");
+			strSql.Append("Type=@Type,");
 			strSql.Append("PayType=@PayType,");
 			strSql.Append("OriginalId=@OriginalId,");
 			strSql.Append("OriginalCode=@OriginalCode,");
@@ -112,6 +118,8 @@ namespace ColoPay.DAL.Pay
 			strSql.Append(" where DetailId=@DetailId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+					new SqlParameter("@AgentId", SqlDbType.Int,4),
+					new SqlParameter("@Type", SqlDbType.Int,4),
 					new SqlParameter("@PayType", SqlDbType.Int,4),
 					new SqlParameter("@OriginalId", SqlDbType.Int,4),
 					new SqlParameter("@OriginalCode", SqlDbType.NVarChar,100),
@@ -121,14 +129,16 @@ namespace ColoPay.DAL.Pay
 					new SqlParameter("@CreatedTime", SqlDbType.DateTime),
 					new SqlParameter("@DetailId", SqlDbType.Int,4)};
 			parameters[0].Value = model.EnterpriseID;
-			parameters[1].Value = model.PayType;
-			parameters[2].Value = model.OriginalId;
-			parameters[3].Value = model.OriginalCode;
-			parameters[4].Value = model.PaymentFee;
-			parameters[5].Value = model.OrderAmount;
-			parameters[6].Value = model.Amount;
-			parameters[7].Value = model.CreatedTime;
-			parameters[8].Value = model.DetailId;
+			parameters[1].Value = model.AgentId;
+			parameters[2].Value = model.Type;
+			parameters[3].Value = model.PayType;
+			parameters[4].Value = model.OriginalId;
+			parameters[5].Value = model.OriginalCode;
+			parameters[6].Value = model.PaymentFee;
+			parameters[7].Value = model.OrderAmount;
+			parameters[8].Value = model.Amount;
+			parameters[9].Value = model.CreatedTime;
+			parameters[10].Value = model.DetailId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -192,7 +202,7 @@ namespace ColoPay.DAL.Pay
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 DetailId,EnterpriseID,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime from Pay_BalanceDetail ");
+			strSql.Append("select  top 1 DetailId,EnterpriseID,AgentId,Type,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime from Pay_BalanceDetail ");
 			strSql.Append(" where DetailId=@DetailId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@DetailId", SqlDbType.Int,4)
@@ -227,6 +237,14 @@ namespace ColoPay.DAL.Pay
 				if(row["EnterpriseID"]!=null && row["EnterpriseID"].ToString()!="")
 				{
 					model.EnterpriseID=int.Parse(row["EnterpriseID"].ToString());
+				}
+				if(row["AgentId"]!=null && row["AgentId"].ToString()!="")
+				{
+					model.AgentId=int.Parse(row["AgentId"].ToString());
+				}
+				if(row["Type"]!=null && row["Type"].ToString()!="")
+				{
+					model.Type=int.Parse(row["Type"].ToString());
 				}
 				if(row["PayType"]!=null && row["PayType"].ToString()!="")
 				{
@@ -266,7 +284,7 @@ namespace ColoPay.DAL.Pay
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select DetailId,EnterpriseID,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime ");
+			strSql.Append("select DetailId,EnterpriseID,AgentId,Type,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime ");
 			strSql.Append(" FROM Pay_BalanceDetail ");
 			if(strWhere.Trim()!="")
 			{
@@ -286,7 +304,7 @@ namespace ColoPay.DAL.Pay
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" DetailId,EnterpriseID,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime ");
+			strSql.Append(" DetailId,EnterpriseID,AgentId,Type,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime ");
 			strSql.Append(" FROM Pay_BalanceDetail ");
 			if(strWhere.Trim()!="")
 			{

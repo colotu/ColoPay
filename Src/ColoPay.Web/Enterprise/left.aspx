@@ -13,7 +13,7 @@
   <div class=" page-container "  >
   <div class="page-sidebar-wrapper">
 <div class=" page-sidebar navbar-collapse collapse content_wrap" >
- <div class="logo"><img src="images/logo.png" id="lblLogo"  ></div>
+ <div class="logo"><img src="/admin/images/logo.png" id="lblLogo"  ></div>
  <div class="nav-left">
  
     <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">

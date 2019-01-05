@@ -174,7 +174,45 @@ namespace ColoPay.BLL.Pay
 		#endregion  BasicMethod
 		#region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+
+
+        #region  周 20190101增加  用户名和企业名是否重复
+        /// <summary>
+        /// 是否用户名是否存在
+        /// </summary>
+        public bool ExistsUsername(string strUsername)
+        {
+            return dal.ExistsUsername(strUsername);
+        }
+
+        /// <summary>
+        /// 修改用户名是否存在
+        /// </summary>
+        public bool ExistsUsername(string Enterpid, string strUsername)
+        {
+            return dal.ExistsUsername(Enterpid, strUsername);
+        }
+
+        /// <summary>
+        /// 企业名称是否存在
+        /// </summary>
+        public bool ExistsName(string strUsername)
+        {
+            return dal.ExistsName(strUsername);
+        }
+        public bool ExistsName(string Enterpid, string strUsername)
+        {
+            return dal.ExistsName(Enterpid,strUsername);
+        }
+        #endregion
+
+        #region  获取企业的ID
+        public int GetEnterpriseID(string userName)
+        {
+            return dal.GetEnterpriseID(userName);
+        }
+        # endregion
+    }
 }
 

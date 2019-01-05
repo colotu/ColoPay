@@ -199,7 +199,6 @@ namespace ColoPay.BLL.Pay
         public bool Pay(int withdrawId, int status, int userId)
         {
 
-            ColoPay.BLL.Pay.BalanceDetail detailBll = new BalanceDetail();
             ColoPay.Model.Pay.BalanceDetail detailModel = new Model.Pay.BalanceDetail();
             ColoPay.Model.Pay.Withdraw withdrawModel = GetModel(withdrawId);
             if (withdrawModel != null)
@@ -215,6 +214,11 @@ namespace ColoPay.BLL.Pay
                 withdrawModel.Status = status + 1;
             }
           return dal.Pay(withdrawModel,detailModel,userId);
+        }
+
+        public bool AddWithdraw(ColoPay.Model.Pay.Withdraw withdrawModel)
+        {
+            return dal.AddWithdraw(withdrawModel);
         }
         #endregion  ExtensionMethod
     }

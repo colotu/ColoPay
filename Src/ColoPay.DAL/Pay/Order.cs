@@ -62,14 +62,15 @@ namespace ColoPay.DAL.Pay
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Pay_Order(");
-			strSql.Append("OrderCode,EnterOrder,EnterpriseID,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark)");
+			strSql.Append("OrderCode,EnterOrder,EnterpriseID,Agentd,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark)");
 			strSql.Append(" values (");
-			strSql.Append("@OrderCode,@EnterOrder,@EnterpriseID,@Amount,@PaymentFee,@FeeRate,@OrderAmount,@PayModeId,@PaymentTypeName,@PaymentGateway,@PaymentStatus,@OrderInfo,@AppId,@AppSecrit,@AppUrl,@AppReturnUrl,@CreatedTime,@Remark)");
+			strSql.Append("@OrderCode,@EnterOrder,@EnterpriseID,@Agentd,@Amount,@PaymentFee,@FeeRate,@OrderAmount,@PayModeId,@PaymentTypeName,@PaymentGateway,@PaymentStatus,@OrderInfo,@AppId,@AppSecrit,@AppUrl,@AppReturnUrl,@CreatedTime,@Remark)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@OrderCode", SqlDbType.NVarChar,300),
 					new SqlParameter("@EnterOrder", SqlDbType.NVarChar,300),
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+					new SqlParameter("@Agentd", SqlDbType.Int,4),
 					new SqlParameter("@Amount", SqlDbType.Money,8),
 					new SqlParameter("@PaymentFee", SqlDbType.Money,8),
 					new SqlParameter("@FeeRate", SqlDbType.Decimal,9),
@@ -88,21 +89,22 @@ namespace ColoPay.DAL.Pay
 			parameters[0].Value = model.OrderCode;
 			parameters[1].Value = model.EnterOrder;
 			parameters[2].Value = model.EnterpriseID;
-			parameters[3].Value = model.Amount;
-			parameters[4].Value = model.PaymentFee;
-			parameters[5].Value = model.FeeRate;
-			parameters[6].Value = model.OrderAmount;
-			parameters[7].Value = model.PayModeId;
-			parameters[8].Value = model.PaymentTypeName;
-			parameters[9].Value = model.PaymentGateway;
-			parameters[10].Value = model.PaymentStatus;
-			parameters[11].Value = model.OrderInfo;
-			parameters[12].Value = model.AppId;
-			parameters[13].Value = model.AppSecrit;
-			parameters[14].Value = model.AppUrl;
-			parameters[15].Value = model.AppReturnUrl;
-			parameters[16].Value = model.CreatedTime;
-			parameters[17].Value = model.Remark;
+			parameters[3].Value = model.Agentd;
+			parameters[4].Value = model.Amount;
+			parameters[5].Value = model.PaymentFee;
+			parameters[6].Value = model.FeeRate;
+			parameters[7].Value = model.OrderAmount;
+			parameters[8].Value = model.PayModeId;
+			parameters[9].Value = model.PaymentTypeName;
+			parameters[10].Value = model.PaymentGateway;
+			parameters[11].Value = model.PaymentStatus;
+			parameters[12].Value = model.OrderInfo;
+			parameters[13].Value = model.AppId;
+			parameters[14].Value = model.AppSecrit;
+			parameters[15].Value = model.AppUrl;
+			parameters[16].Value = model.AppReturnUrl;
+			parameters[17].Value = model.CreatedTime;
+			parameters[18].Value = model.Remark;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -124,6 +126,7 @@ namespace ColoPay.DAL.Pay
 			strSql.Append("OrderCode=@OrderCode,");
 			strSql.Append("EnterOrder=@EnterOrder,");
 			strSql.Append("EnterpriseID=@EnterpriseID,");
+			strSql.Append("Agentd=@Agentd,");
 			strSql.Append("Amount=@Amount,");
 			strSql.Append("PaymentFee=@PaymentFee,");
 			strSql.Append("FeeRate=@FeeRate,");
@@ -144,6 +147,7 @@ namespace ColoPay.DAL.Pay
 					new SqlParameter("@OrderCode", SqlDbType.NVarChar,300),
 					new SqlParameter("@EnterOrder", SqlDbType.NVarChar,300),
 					new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+					new SqlParameter("@Agentd", SqlDbType.Int,4),
 					new SqlParameter("@Amount", SqlDbType.Money,8),
 					new SqlParameter("@PaymentFee", SqlDbType.Money,8),
 					new SqlParameter("@FeeRate", SqlDbType.Decimal,9),
@@ -163,22 +167,23 @@ namespace ColoPay.DAL.Pay
 			parameters[0].Value = model.OrderCode;
 			parameters[1].Value = model.EnterOrder;
 			parameters[2].Value = model.EnterpriseID;
-			parameters[3].Value = model.Amount;
-			parameters[4].Value = model.PaymentFee;
-			parameters[5].Value = model.FeeRate;
-			parameters[6].Value = model.OrderAmount;
-			parameters[7].Value = model.PayModeId;
-			parameters[8].Value = model.PaymentTypeName;
-			parameters[9].Value = model.PaymentGateway;
-			parameters[10].Value = model.PaymentStatus;
-			parameters[11].Value = model.OrderInfo;
-			parameters[12].Value = model.AppId;
-			parameters[13].Value = model.AppSecrit;
-			parameters[14].Value = model.AppUrl;
-			parameters[15].Value = model.AppReturnUrl;
-			parameters[16].Value = model.CreatedTime;
-			parameters[17].Value = model.Remark;
-			parameters[18].Value = model.OrderId;
+			parameters[3].Value = model.Agentd;
+			parameters[4].Value = model.Amount;
+			parameters[5].Value = model.PaymentFee;
+			parameters[6].Value = model.FeeRate;
+			parameters[7].Value = model.OrderAmount;
+			parameters[8].Value = model.PayModeId;
+			parameters[9].Value = model.PaymentTypeName;
+			parameters[10].Value = model.PaymentGateway;
+			parameters[11].Value = model.PaymentStatus;
+			parameters[12].Value = model.OrderInfo;
+			parameters[13].Value = model.AppId;
+			parameters[14].Value = model.AppSecrit;
+			parameters[15].Value = model.AppUrl;
+			parameters[16].Value = model.AppReturnUrl;
+			parameters[17].Value = model.CreatedTime;
+			parameters[18].Value = model.Remark;
+			parameters[19].Value = model.OrderId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -242,7 +247,7 @@ namespace ColoPay.DAL.Pay
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 OrderId,OrderCode,EnterOrder,EnterpriseID,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark from Pay_Order ");
+			strSql.Append("select  top 1 OrderId,OrderCode,EnterOrder,EnterpriseID,Agentd,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark from Pay_Order ");
 			strSql.Append(" where OrderId=@OrderId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@OrderId", SqlDbType.Int,4)
@@ -285,6 +290,10 @@ namespace ColoPay.DAL.Pay
 				if(row["EnterpriseID"]!=null && row["EnterpriseID"].ToString()!="")
 				{
 					model.EnterpriseID=int.Parse(row["EnterpriseID"].ToString());
+				}
+				if(row["Agentd"]!=null && row["Agentd"].ToString()!="")
+				{
+					model.Agentd=int.Parse(row["Agentd"].ToString());
 				}
 				if(row["Amount"]!=null && row["Amount"].ToString()!="")
 				{
@@ -356,7 +365,7 @@ namespace ColoPay.DAL.Pay
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select OrderId,OrderCode,EnterOrder,EnterpriseID,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark ");
+			strSql.Append("select OrderId,OrderCode,EnterOrder,EnterpriseID,Agentd,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark ");
 			strSql.Append(" FROM Pay_Order ");
 			if(strWhere.Trim()!="")
 			{
@@ -376,7 +385,7 @@ namespace ColoPay.DAL.Pay
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" OrderId,OrderCode,EnterOrder,EnterpriseID,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark ");
+			strSql.Append(" OrderId,OrderCode,EnterOrder,EnterpriseID,Agentd,Amount,PaymentFee,FeeRate,OrderAmount,PayModeId,PaymentTypeName,PaymentGateway,PaymentStatus,OrderInfo,AppId,AppSecrit,AppUrl,AppReturnUrl,CreatedTime,Remark ");
 			strSql.Append(" FROM Pay_Order ");
 			if(strWhere.Trim()!="")
 			{

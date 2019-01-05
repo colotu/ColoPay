@@ -36,7 +36,7 @@ namespace ColoPay.Web.Enterprise.Pay
 
 
             StringBuilder strWhere = new StringBuilder();
-            int enterpriseID = CurrentUser.EnterpriseId;
+            int enterpriseID = CurrEnterpriseID;
 
 
             if (enterpriseID > 0)

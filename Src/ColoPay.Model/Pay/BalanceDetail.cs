@@ -27,7 +27,9 @@ namespace ColoPay.Model.Pay
 		{}
 		#region Model
 		private int _detailid;
-		private int? _enterpriseid;
+		private int _enterpriseid;
+		private int _agentid=0;
+		private int _type=0;
 		private int _paytype;
 		private int _originalid;
 		private string _originalcode;
@@ -46,10 +48,26 @@ namespace ColoPay.Model.Pay
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? EnterpriseID
+		public int EnterpriseID
 		{
 			set{ _enterpriseid=value;}
 			get{return _enterpriseid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int AgentId
+		{
+			set{ _agentid=value;}
+			get{return _agentid;}
+		}
+		/// <summary>
+		/// 明细类型  0：商家用户 1：代理商
+		/// </summary>
+		public int Type
+		{
+			set{ _type=value;}
+			get{return _type;}
 		}
 		/// <summary>
 		/// 支付方式  0：支付  1：提现

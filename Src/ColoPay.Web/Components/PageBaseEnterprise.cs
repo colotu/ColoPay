@@ -86,5 +86,15 @@ namespace ColoPay.Web
 
         #endregion
 
+        public int CurrEnterpriseID
+        { 
+            get
+            {
+                if (CurrentUser == null) return 0;
+                ColoPay.BLL.Pay.Enterprise bll = new BLL.Pay.Enterprise();
+                return bll.GetEnterpriseID(CurrentUser.UserName);
+            }
+        }
+
     }
 }
