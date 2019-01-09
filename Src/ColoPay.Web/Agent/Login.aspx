@@ -34,7 +34,7 @@
   <!-- start 登录页 -->
   <div class="s-login-box-wrap">
     <div class="logo">
-       <asp:Image ID="Image1" runat="server" ImageUrl="images/logo_login.png" />
+       <asp:Image ID="Image1" runat="server" ImageUrl="/admin/images/logo_login.png" />
     </div>
     <div class="s-login-box">
       <div class="s-login-title">登录</div>
