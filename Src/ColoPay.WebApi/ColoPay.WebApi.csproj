@@ -151,13 +151,10 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\EnumHelper.cs" />
-    <Compile Include="Common\FileHelper.cs" />
     <Compile Include="Common\HttpHelper.cs" />
-    <Compile Include="Common\LogHelp.cs" />
-    <Compile Include="Common\Position.cs" />
     <Compile Include="Common\StringHelper.cs" />
-    <Compile Include="Controllers\ApiBaseController.cs" />
     <Compile Include="Controllers\ApiControllerBase.cs" />
+    <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Filter\ApiAuthorizeAttribute.cs" />
     <Compile Include="Filter\CrossDomainHandler.cs" />
     <Compile Include="Filter\JsonCallbackAttribut.cs" />
@@ -167,6 +164,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FailResult.cs" />
+    <Compile Include="Models\PayInfo.cs" />
     <Compile Include="Models\ResponseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,9 +178,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

@@ -420,7 +420,7 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
-		/*
+        /*
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
@@ -445,10 +445,30 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
 		}*/
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+       public ColoPay.Model.Pay.PaymentTypes GetPaymentInfo(string type)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 ModeId,MerchantCode,EmailAddress,SecretKey,SecondKey,Password,Partner,Name,Description,Gateway,DisplaySequence,Charge,IsPercent,AllowRecharge,Logo,DrivePath from Pay_PaymentTypes ");
+            strSql.Append(" where Gateway=@Gateway");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Gateway", SqlDbType.NVarChar,200)
+            };
+            parameters[0].Value = type;
 
-		#endregion  ExtensionMethod
-	}
+            ColoPay.Model.Pay.PaymentTypes model = new ColoPay.Model.Pay.PaymentTypes();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion  ExtensionMethod
+    }
 }
 

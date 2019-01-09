@@ -21,7 +21,7 @@ namespace ColoPay.Web.Agent
 
                 Page.Title = NodeName;
                 //0:admin后台 1:企业后台  2:代理商后台 3:用户后台
-                List<ColoPay.Model.SysManage.SysNode> nodeList = sm.GetTreeListByTypeCache(1, true, false);
+                List<ColoPay.Model.SysManage.SysNode> nodeList = sm.GetTreeListByTypeCache(2, true, false);
 
                 LoadMenu(nodeList);
             }

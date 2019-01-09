@@ -212,7 +212,22 @@ namespace ColoPay.BLL.Pay
         {
             return dal.GetEnterpriseID(userName);
         }
-        # endregion
+        #endregion
+
+
+
+        #region  验证
+        public bool Verification(string num,string appid,string secrit)
+        {
+            return dal.Verification(num, appid, secrit);
+        }
+        #endregion
+
+        public ColoPay.Model.Pay.Enterprise GetEnterpriseInfo(string num, string appid, string secrit)
+        { 
+            return dal.GetEnterpriseInfo(num, appid, secrit);
+        }
+
     }
 }
 

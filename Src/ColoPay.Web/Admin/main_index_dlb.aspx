@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head id="Head1" runat="server">
-    <title>商城系统框架</title>
+    <title>银河支付框架</title>
     <script src="/admin/js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <link href="/admin/css/admin.css" rel="stylesheet" type="text/css" />
     <link href="/admin/js/easyui/easyui.css" rel="stylesheet" type="text/css" />

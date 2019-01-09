@@ -619,7 +619,7 @@ namespace ColoPay.DAL.Pay
         public int GetEnterpriseID(string userName)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.AppendFormat("select Top1 EnterpriseID  FROM Pay_Enterprise  where  UserName='{0}'", userName);
+            strSql.AppendFormat("select Top 1 EnterpriseID  FROM Pay_Enterprise  where  UserName='{0}'", userName);
             
             object obj = DbHelperSQL.GetSingle(strSql.ToString());
             if (obj == null)
@@ -629,6 +629,52 @@ namespace ColoPay.DAL.Pay
             else
             {
                 return Convert.ToInt32(obj);
+            }
+        }
+
+
+        public bool Verification(string num, string appid, string secrit)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Pay_Enterprise");
+            strSql.Append(" where EnterpriseNum=@EnterpriseNum and AppId=@AppId and AppSecrit=@AppSecrit and Status=1");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@EnterpriseNum", SqlDbType.NVarChar,200),
+                    new SqlParameter("@AppId", SqlDbType.NVarChar,200),
+                    new SqlParameter("@AppSecrit", SqlDbType.NVarChar,200)
+            };
+            parameters[0].Value = num;
+            parameters[1].Value = appid;
+            parameters[2].Value = secrit;
+
+            return DbHelperSQL.Exists(strSql.ToString(), parameters);
+        }
+
+
+        public ColoPay.Model.Pay.Enterprise GetEnterpriseInfo(string num, string appid, string secrit)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 EnterpriseID,AgentId,UserName,Name,SimpleName,Status,EnterpriseNum,BusinessLicense,TelPhone,CellPhone,AccountBank,AccountInfo,AccountNum,WithdrawBank,WithdrawInfo,WithdrawNum,Balance,AppId,AppSecrit,AppUrl,AppReturnUrl,ContactMail,Address,EnteRank,CreatedDate,CreatedUserID,RegisterIp,Remark from Pay_Enterprise ");
+            strSql.Append(" where EnterpriseNum=@EnterpriseNum and AppId=@AppId and AppSecrit=@AppSecrit and Status=1");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@EnterpriseNum", SqlDbType.NVarChar,200),
+                    new SqlParameter("@AppId", SqlDbType.NVarChar,200),
+                    new SqlParameter("@AppSecrit", SqlDbType.NVarChar,200)
+            };
+            parameters[0].Value = num;
+            parameters[1].Value = appid;
+            parameters[2].Value = secrit;
+
+            ColoPay.Model.Pay.Enterprise model = new ColoPay.Model.Pay.Enterprise();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
             }
         }
 

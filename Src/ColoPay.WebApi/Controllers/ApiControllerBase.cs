@@ -11,70 +11,22 @@ namespace ColoPay.WebApi.Controllers
     public class ApiControllerBase : ApiController
     {
 
+        private ColoPay.BLL.Pay.Enterprise bll = new BLL.Pay.Enterprise();
         public HttpServerUtility Server => HttpContext.Current.Server;
 
         /// <summary>
-        /// 企业表示的key
+        /// 当前企业用户
         /// </summary>
-        private readonly string EnterPriseKey = "YSWL_SAAS_EnterpriseID";
-
-        /// <summary>
-        /// 用户标识的key
-        /// </summary>
-        private readonly string UserKey = "YSWL_SAAS_UserName";
-
-        /// <summary>
-        /// 获取企业ID
-        /// </summary>
-        public long EnterpiseId
+        public ColoPay.Model.Pay.Enterprise CurrEnterprise
         {
             get
             {
                 var request = HttpContext.Current.Request;
-                string enterValue = "";
-                string userAgent = request.UserAgent;
-                if (userAgent != null && userAgent.Contains("ys56"))
-                {
-                    enterValue = request.Headers[EnterPriseKey];
-                }
-                else
-                {
-                    var httpCookie = request.Cookies[EnterPriseKey];
-                    if (httpCookie != null) enterValue = httpCookie.Value;
-                }
-                long enterprise = YSWL.Common.DEncrypt.DEncrypt.ConvertToNumber(enterValue);
-                return enterprise;
-            }
-        }
-
-        /// <summary>
-        /// 当前登录用户
-        /// </summary>
-        public YSWL.Accounts.Bus.User CurrentUser
-        {
-            get
-            {
-                var request = HttpContext.Current.Request;
-                string enterValue = "";
-                string userValue;
-                string userAgent = request.UserAgent;
-
-                if (userAgent != null && userAgent.Contains("ys56"))
-                {
-                    enterValue = request.Headers[EnterPriseKey];
-                    string userName = request.Headers[UserKey];
-                    userValue = StringHelper.Decode(userName);
-                }
-                else
-                {
-                    var httpCookie = request.Cookies[EnterPriseKey];
-                    if (httpCookie != null) enterValue = httpCookie.Value;
-                    userValue = HttpContext.Current.User.Identity.Name;
-                }
-
-                long enterprise = YSWL.Common.DEncrypt.DEncrypt.ConvertToNumber(enterValue);
-                string redisKey = $"{enterprise}_{userValue}"; ;
-                return RedisHelper.GetInstance().GetCache<YSWL.Accounts.Bus.User>(redisKey);
+            
+                string appid=request.Headers["appid"];
+                string secrit = request.Headers["secrit"];
+                string bnum = request.Headers["bnum"];
+                return bll.GetEnterpriseInfo(bnum, appid, secrit);
             }
         }
 

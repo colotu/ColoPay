@@ -22,13 +22,13 @@
             return false;
         }
     </script>
-    <script type="text/javascript" src="js/YSWL.Common.js" charset="gb2312"></script>
+    <script type="text/javascript" src="js/Common.js" charset="gb2312"></script>
 </head>
 <body class="standard-bg">
-  <link href="<%= YSWL.Components.MvcApplication.StaticHost %>/css/login.min.css" rel="stylesheet"   type="text/css"/>
-  <link href="<%= YSWL.Components.MvcApplication.StaticHost %>/lib/msgbox-2.0/css/msgbox.min.css" rel="stylesheet"/>
-  <script src="<%= YSWL.Components.MvcApplication.StaticHost %>/lib/jquery-2.2.4.min.js"></script>
-  <script src="<%= YSWL.Components.MvcApplication.StaticHost %>/lib/msgbox-2.0/js/msgbox.min.js"></script>
+    <link href="/admin/css/login.min.css" rel="stylesheet"   type="text/css"/>
+  <link href="/admin/js/msgbox-2.0/css/msgbox.min.css" rel="stylesheet"/>
+  <script src="/admin/js/jquery-2.2.4.min.js"></script>
+  <script src="/admin/js/msgbox-2.0/script/msgbox.min.js"></script>
 <!-- 外层包裹的类（实现左右上间隙） -->
 <div class="standard-page-wrapper">
   <!-- start 登录页 -->

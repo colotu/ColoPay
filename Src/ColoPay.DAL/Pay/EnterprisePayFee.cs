@@ -274,7 +274,7 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
-		/*
+        /*
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
@@ -299,10 +299,28 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
 		}*/
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
-
-		#endregion  ExtensionMethod
-	}
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+        public decimal GetPayFeeRate(int enterpeiseId, int modeId)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  FeeRate FROM Pay_EnterprisePayFee where EnterpriseID=@EnterpriseID and PayModeId=@PayModeId ");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+                    new SqlParameter("@PayModeId", SqlDbType.Int,4)         };
+            parameters[0].Value = enterpeiseId;
+            parameters[1].Value = modeId;
+            object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return YSWL.Common.Globals.SafeDecimal(obj,0);
+            }
+        }
+        #endregion  ExtensionMethod
+    }
 }
 
