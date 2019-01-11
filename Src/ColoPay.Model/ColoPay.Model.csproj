@@ -91,6 +91,7 @@
     <Compile Include="Pay\Enterprise.cs" />
     <Compile Include="Pay\EnterprisePayFee.cs" />
     <Compile Include="Pay\Order.cs" />
+    <Compile Include="Pay\OrderInfo.cs" />
     <Compile Include="Pay\PaymentTypes.cs" />
     <Compile Include="Pay\Withdraw.cs" />
     <Compile Include="SysManage\ApplicationKeyType.cs" />

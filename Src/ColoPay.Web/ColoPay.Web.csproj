@@ -364,13 +364,6 @@
     <Compile Include="Admin\Left2.aspx.designer.cs">
       <DependentUpon>Left2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Left3.aspx.cs">
-      <DependentUpon>Left3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Left3.aspx.designer.cs">
-      <DependentUpon>Left3.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Left3_dlb.aspx.cs">
       <DependentUpon>Left3_dlb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,6 +419,34 @@
     </Compile>
     <Compile Include="Admin\Ms\QR\QRCode.aspx.designer.cs">
       <DependentUpon>QRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentEdit.aspx.cs">
+      <DependentUpon>AgentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentEdit.aspx.designer.cs">
+      <DependentUpon>AgentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentList.aspx.cs">
+      <DependentUpon>AgentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentList.aspx.designer.cs">
+      <DependentUpon>AgentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentPayFeeEdit.aspx.cs">
+      <DependentUpon>AgentPayFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentPayFeeEdit.aspx.designer.cs">
+      <DependentUpon>AgentPayFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentPayFeeList.aspx.cs">
+      <DependentUpon>AgentPayFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pay\AgentPayFeeList.aspx.designer.cs">
+      <DependentUpon>AgentPayFeeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Pay\BalanceDetail.aspx.cs">
       <DependentUpon>BalanceDetail.aspx</DependentUpon>
@@ -676,6 +697,20 @@
     <Compile Include="Agent\Pay\BalanceDetail.aspx.designer.cs">
       <DependentUpon>BalanceDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agent\Pay\EnterpriseAdd.aspx.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\EnterpriseAdd.aspx.designer.cs">
+      <DependentUpon>EnterpriseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\EnterpriseList.aspx.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\EnterpriseList.aspx.designer.cs">
+      <DependentUpon>EnterpriseList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agent\Pay\MyBalance.aspx.cs">
       <DependentUpon>MyBalance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -689,6 +724,20 @@
     </Compile>
     <Compile Include="Agent\Pay\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\PayFeeEdit.aspx.cs">
+      <DependentUpon>PayFeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\PayFeeEdit.aspx.designer.cs">
+      <DependentUpon>PayFeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent\Pay\PayFeeList.aspx.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\Pay\PayFeeList.aspx.designer.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Agent\Pay\WithdrawAdd.aspx.cs">
       <DependentUpon>WithdrawAdd.aspx</DependentUpon>
@@ -857,6 +906,10 @@
     </Compile>
     <Compile Include="Handlers\API\Result.cs" />
     <Compile Include="Handlers\API\ResultStatus.cs" />
+    <Compile Include="Handlers\Pay\PaymentNotifyHandler.cs" />
+    <Compile Include="Handlers\Pay\PaymentOption.cs" />
+    <Compile Include="Handlers\Pay\PaymentReturnHandler.cs" />
+    <Compile Include="Handlers\Pay\SendPaymentHandler.cs" />
     <Compile Include="Handlers\Tools\BarCodeHandler.cs" />
     <Compile Include="Handlers\UploadMultipleFileHandler.cs" />
     <Compile Include="App_GlobalResources\Shop\Shop1.designer.cs">
@@ -974,10 +1027,13 @@
     <Content Include="Admin\js\Shop\Shipping\UpdateShipType.js" />
     <Content Include="Admin\js\Shop\httptostatic.js" />
     <Content Include="Admin\Left2.aspx" />
-    <Content Include="Admin\Left3.aspx" />
     <Content Include="Admin\Left3_dlb.aspx" />
     <Content Include="Admin\main_index_dlb.aspx" />
     <Content Include="Admin\main_wc.aspx" />
+    <Content Include="Admin\Pay\AgentEdit.aspx" />
+    <Content Include="Admin\Pay\AgentList.aspx" />
+    <Content Include="Admin\Pay\AgentPayFeeEdit.aspx" />
+    <Content Include="Admin\Pay\AgentPayFeeList.aspx" />
     <Content Include="Admin\Pay\BalanceDetail.aspx" />
     <Content Include="Admin\Pay\EnterpriseAdd.aspx" />
     <Content Include="Admin\Pay\EnterpriseList.aspx" />
@@ -996,8 +1052,12 @@
     <Content Include="Agent\main.htm" />
     <Content Include="Agent\main_index.aspx" />
     <Content Include="Agent\Pay\BalanceDetail.aspx" />
+    <Content Include="Agent\Pay\EnterpriseAdd.aspx" />
+    <Content Include="Agent\Pay\EnterpriseList.aspx" />
     <Content Include="Agent\Pay\MyBalance.aspx" />
     <Content Include="Agent\Pay\OrderList.aspx" />
+    <Content Include="Agent\Pay\PayFeeEdit.aspx" />
+    <Content Include="Agent\Pay\PayFeeList.aspx" />
     <Content Include="Agent\Pay\WithdrawAdd.aspx" />
     <Content Include="Agent\Pay\WithdrawList.aspx" />
     <Content Include="Agent\Top.aspx" />
