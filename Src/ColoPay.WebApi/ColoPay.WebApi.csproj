@@ -164,8 +164,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FailResult.cs" />
+    <Compile Include="Models\BZNotify.cs" />
     <Compile Include="Models\PayInfo.cs" />
+    <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Models\ResponseResult.cs" />
+    <Compile Include="PayApi\BZ_Pay.cs" />
+    <Compile Include="PayApi\EnterpriseNotify.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

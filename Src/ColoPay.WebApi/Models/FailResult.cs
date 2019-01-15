@@ -60,6 +60,8 @@ namespace ColoPay.WebApi.Models
 
         [Description("订单号已存在")]
         OrderExists = 1002,
+        [Description("订单已经支付")]
+        HasPaid = 1003,
         [Description("客户已存在")]
         CustomerExists =1003,
 

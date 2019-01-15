@@ -6,30 +6,13 @@ using ColoPay.WebApi.Models;
 
 namespace ColoPay.WebApi.Controllers
 {
-    [WebApiAuth]
     [JsonCallback]
     public class ApiControllerBase : ApiController
     {
 
-        private ColoPay.BLL.Pay.Enterprise bll = new BLL.Pay.Enterprise();
         public HttpServerUtility Server => HttpContext.Current.Server;
 
-        /// <summary>
-        /// 当前企业用户
-        /// </summary>
-        public ColoPay.Model.Pay.Enterprise CurrEnterprise
-        {
-            get
-            {
-                var request = HttpContext.Current.Request;
-            
-                string appid=request.Headers["appid"];
-                string secrit = request.Headers["secrit"];
-                string bnum = request.Headers["bnum"];
-                return bll.GetEnterpriseInfo(bnum, appid, secrit);
-            }
-        }
-
+       
         /// <summary>
         /// 成功状态返回结果
         /// </summary>
