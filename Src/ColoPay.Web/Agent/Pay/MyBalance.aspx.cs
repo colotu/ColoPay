@@ -32,6 +32,10 @@ namespace ColoPay.Web.Agent.Pay
             StringBuilder strWhere = new StringBuilder();
             strWhere.AppendFormat(" AgentId={0} and Type=1", CurrAgentID);
             string type = ddlType.SelectedValue;
+
+            string startStr = this.txtDateStart.Text;
+            string endStr = this.txtDateEnd.Text;
+
             if (!string.IsNullOrWhiteSpace(type))
             {
                 if (strWhere.Length > 1)
@@ -39,6 +43,24 @@ namespace ColoPay.Web.Agent.Pay
                     strWhere.Append(" and ");
                 }
                 strWhere.AppendFormat("PayType={0}", YSWL.Common.Globals.SafeInt(type, 0));
+            }
+
+            if (!String.IsNullOrWhiteSpace(startStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedTime>='{0}'", startStr);
+            }
+
+            if (!String.IsNullOrWhiteSpace(endStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedTime<='{0}'", endStr);
             }
 
             string keyWord = this.txtKeyword.Text;

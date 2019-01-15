@@ -41,14 +41,9 @@ namespace ColoPay.Web.Agent.Pay
             DataSet ds = new DataSet();
 
             StringBuilder strWhere = new StringBuilder();
-            string status = ddlStatus.SelectedValue.Trim();
+
             strWhere.Append(" AgentId="+lbAgentId.Text+" ");
-
-            if (status.Length > 0)
-            {
-                strWhere.Append(" and Status ='" + status + "' ");
-            }
-
+            
             if (txtKeyword.Text.Trim() != "")
             {
                 strWhere.Append(" and Name like '%" + YSWL.Common.InjectionFilter.SqlFilter(txtKeyword.Text) + "%' ");

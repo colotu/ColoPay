@@ -31,6 +31,15 @@ namespace ColoPay.Web.Agent.Pay {
         protected global::System.Web.UI.WebControls.Label lbEnterPid;
         
         /// <summary>
+        /// lbAgentId 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAgentId;
+        
+        /// <summary>
         /// lblMsg 控件。
         /// </summary>
         /// <remarks>
@@ -101,24 +110,6 @@ namespace ColoPay.Web.Agent.Pay {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSimpleName;
-        
-        /// <summary>
-        /// Literal9 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal9;
-        
-        /// <summary>
-        /// ddlStatus 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
         
         /// <summary>
         /// Literal8 控件。
@@ -301,24 +292,6 @@ namespace ColoPay.Web.Agent.Pay {
         protected global::System.Web.UI.WebControls.TextBox txtWithdrawNum;
         
         /// <summary>
-        /// Literal19 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal19;
-        
-        /// <summary>
-        /// txtBalance 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBalance;
-        
-        /// <summary>
         /// Literal20 控件。
         /// </summary>
         /// <remarks>
@@ -425,24 +398,6 @@ namespace ColoPay.Web.Agent.Pay {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
-        /// <summary>
-        /// Literal26 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal26;
-        
-        /// <summary>
-        /// ddlEnteRank 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEnteRank;
         
         /// <summary>
         /// Literal27 控件。

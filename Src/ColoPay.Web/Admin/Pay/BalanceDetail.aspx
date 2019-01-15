@@ -2,7 +2,37 @@
     AutoEventWireup="true" CodeBehind="BalanceDetail.aspx.cs" Inherits="ColoPay.Web.Admin.Pay.BalanceDetail" %>
 
 <%@ Register Assembly="ColoPay.Web" Namespace="ColoPay.Web.Controls" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<link href="/Scripts/jqueryui/jquery-ui-1.8.19.custom.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/jqueryui/jquery-ui-1.8.19.custom.min.js" type="text/javascript"></script>
+<script src="/admin/js/jqueryui/JqueryDataPicker4CN.js" type="text/javascript"></script>
+ <script type="text/javascript">
+        $(function () {
+            
+            $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
 
+            $("[id$='txtDateStart']").prop("readonly", true).datepicker({
+                changeMonth: true,
+                dateFormat: "yy-mm-dd",
+                onClose: function (selectedDate) {
+                    $("[id$='txtDateEnd']").datepicker("option", "minDate", selectedDate);
+                }
+            });
+            $("[id$='txtDateEnd']").prop("readonly", true).datepicker({
+               
+                changeMonth: true,
+                dateFormat: "yy-mm-dd",
+                onClose: function (selectedDate) {
+                    $("[id$='txtDateStart']").datepicker("option", "maxDate", selectedDate);
+                    $("[id$='txtDateEnd']").val($(this).val());
+                }
+            });
+
+           
+        });
+      
+    </script>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="newslistabout">
 
@@ -23,6 +53,10 @@
                         <asp:ListItem Value="1" Text="提现">
                         </asp:ListItem>
                     </asp:DropDownList>
+                         <asp:Literal ID="LiteralCreatedDate" runat="server" Text="创建日期" />：
+                    <asp:TextBox ID="txtDateStart" runat="server" Width="120px">                     
+                    </asp:TextBox>-<asp:TextBox ID="txtDateEnd" Width="120px" runat="server"></asp:TextBox>
+
                     <asp:Literal ID="Literal3" runat="server" Text="<%$ Resources:Site, lblKeyword %>" />：
                     <asp:TextBox ID="txtKeyword" runat="server" class="admininput_1"></asp:TextBox>
                     <asp:Button ID="btnSearch" runat="server" Text="<%$ Resources:Site, btnSearchText %>"

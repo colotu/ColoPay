@@ -223,9 +223,9 @@ namespace ColoPay.BLL.Pay
         }
         #endregion
 
-        public ColoPay.Model.Pay.Enterprise GetEnterpriseInfo(string num, string appid, string secrit)
+        public ColoPay.Model.Pay.Enterprise GetEnterpriseInfo(string appid, string secrit)
         { 
-            return dal.GetEnterpriseInfo(num, appid, secrit);
+            return dal.GetEnterpriseInfo(appid, secrit);
         }
 
     }

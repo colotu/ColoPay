@@ -178,18 +178,39 @@ namespace ColoPay.BLL.Pay
 		{
 			return dal.GetListByPage( strWhere,  orderby,  startIndex,  endIndex);
 		}
-		/// <summary>
-		/// 分页获取数据列表
-		/// </summary>
-		//public DataSet GetList(int PageSize,int PageIndex,string strWhere)
-		//{
-			//return dal.GetList(PageSize,PageIndex,strWhere);
-		//}
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        //public DataSet GetList(int PageSize,int PageIndex,string strWhere)
+        //{
+        //return dal.GetList(PageSize,PageIndex,strWhere);
+        //}
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
-
-		#endregion  ExtensionMethod
-	}
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+        public bool AgentBalance(ColoPay.Model.Pay.Order orderInfo)
+        {
+            if (orderInfo.Agentd <= 0) return false;
+            //获取代理商的费率比例
+            ColoPay.BLL.Pay.AgentPayFee feeBll = new AgentPayFee();
+            ColoPay.Model.Pay.AgentPayFee payFeeInfo = feeBll.GetModel(orderInfo.Agentd, orderInfo.PaymentTypeId);
+            ColoPay.Model.Pay.BalanceDetail detail = new Model.Pay.BalanceDetail();
+            if (payFeeInfo != null)
+            {
+                detail.AgentId = orderInfo.Agentd;
+                detail.PaymentFee = orderInfo.Amount * (orderInfo.FeeRate - payFeeInfo.FeeRate) / 100;
+                detail.Amount = detail.Amount;
+                detail.OrderAmount = detail.PaymentFee;
+                detail.CreatedTime = DateTime.Now;
+                detail.EnterpriseID = orderInfo.EnterpriseID;
+                detail.Type = 1;
+                detail.PayType = 0;
+                detail.OriginalId = orderInfo.OrderId;
+                detail.OriginalCode = orderInfo.OrderCode;
+            }
+            return dal.AgentBalance(detail);
+        }
+        #endregion  ExtensionMethod
+    }
 }
 

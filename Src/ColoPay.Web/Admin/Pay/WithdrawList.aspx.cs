@@ -90,6 +90,9 @@ namespace ColoPay.Web.Admin.Pay
             int agentId= YSWL.Common.Globals.SafeInt(this.ddlAgent.SelectedValue, 0);
             int enterpriseID = YSWL.Common.Globals.SafeInt(this.ddlEnterprise.SelectedValue, 0);
 
+            string startStr = this.txtDateStart.Text;
+            string endStr = this.txtDateEnd.Text;
+
             if (agentId > 0)
             {
                 strWhere.AppendFormat(" AgentID={0}", agentId);
@@ -113,6 +116,23 @@ namespace ColoPay.Web.Admin.Pay
                 }
                 strWhere.AppendFormat("Status={0}", YSWL.Common.Globals.SafeInt(status, 0));
             }
+            if (!String.IsNullOrWhiteSpace(startStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedDate>='{0}'", startStr);
+            }
+
+            if (!String.IsNullOrWhiteSpace(endStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedDate<='{0}'", endStr);
+            }
 
             string keyWord = this.txtKeyword.Text;
             if (!string.IsNullOrWhiteSpace(keyWord))
@@ -124,6 +144,8 @@ namespace ColoPay.Web.Admin.Pay
 
                 strWhere.AppendFormat("( WithdrawCode like '%{0}%'  )", keyWord);
             }
+
+          
 
             gridView.DataSetSource = withdrawBll.GetList(0, strWhere.ToString(), "CreatedDate desc");
         }

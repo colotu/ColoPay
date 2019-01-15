@@ -168,6 +168,7 @@ namespace ColoPay.Web.Admin.Pay
             }
             else
             {
+                
 
                 if (EnterpriseBll.ExistsUsername(lbEnterPid.Text, txtUserName.Text))
                 {
@@ -180,7 +181,7 @@ namespace ColoPay.Web.Admin.Pay
                 }
                 else
                 {
-                    userModel.UserName = txtUserName.Text;
+                    //userModel.UserName = txtUserName.Text;
                     EnterpriseBll.Update(EnterPriseModel);//修改企业信息
                     YSWL.Common.MessageBox.ShowSuccessTip(this, string.Format("修改商户信息：【{0}】成功！", txtUserName.Text));
                     Response.Redirect("EnterpriseList.aspx");

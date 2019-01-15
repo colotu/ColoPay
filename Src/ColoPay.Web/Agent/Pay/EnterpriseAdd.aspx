@@ -14,6 +14,7 @@
             <tr>
                 <td bgcolor="#FFFFFF" class="newstitlebody">
                     <asp:Label ID="lbEnterPid" runat="server" Text="" Visible="false"></asp:Label>
+                    <asp:Label ID="lbAgentId" runat="server" Text="" Visible="false"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
@@ -25,7 +26,7 @@
                     <table cellspacing="0" cellpadding="3" width="100%" border="0">
                         <tr>
                             <td class="td_class">
-                                <asp:Literal ID="Literal2" runat="server" Text="登录用户名" />：
+                                <asp:Literal ID="Literal2" runat="server" Text="*登录用户名" />：
                             </td>
                             <td height="25">
                                 <asp:TextBox ID="txtUserName" TabIndex="1" runat="server" Width="200px" MaxLength="20"></asp:TextBox>
@@ -35,7 +36,7 @@
                         </tr>
                         <tr>
                             <td class="td_class">
-                                <asp:Literal ID="Literal5" runat="server" Text="企业名称" />：
+                                <asp:Literal ID="Literal5" runat="server" Text="*企业名称" />：
                             </td>
                             <td height="25">
                                 <asp:TextBox ID="txtName" TabIndex="4" runat="server" Width="200px" MaxLength="20"></asp:TextBox>
@@ -43,21 +44,10 @@
                         </tr>
                         <tr>
                             <td class="td_class">
-                                <asp:Literal ID="Literal7" runat="server" Text="企业简称" />：
+                                <asp:Literal ID="Literal7" runat="server" Text="*企业简称" />：
                             </td>
                             <td style="height: 3px" height="3">
                                 <asp:TextBox ID="txtSimpleName" runat="server" Width="200px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_class">
-                                <asp:Literal ID="Literal9" runat="server" Text="状态" />：
-                            </td>
-                            <td style="height: 3px" height="3">
-                                <asp:DropDownList ID="ddlStatus" runat="server">
-                                    <asp:ListItem Selected="True" Text="正常" Value="1"></asp:ListItem>
-                                    <asp:ListItem Text="冻结" Value="0"></asp:ListItem>
-                                </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
@@ -86,7 +76,7 @@
                         </tr>
                         <tr>
                             <td class="td_class">
-                                <asp:Literal ID="Literal12" runat="server" Text="手机号码" />：
+                                <asp:Literal ID="Literal12" runat="server" Text="*手机号码" />：
                             </td>
                             <td height="25">
                                 <asp:TextBox ID="txtCellPhone" runat="server" Width="200px"></asp:TextBox>
@@ -139,15 +129,7 @@
                             <td height="25">
                                 <asp:TextBox ID="txtWithdrawNum" runat="server" Width="200px"></asp:TextBox>
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="td_class">
-                                <asp:Literal ID="Literal19" runat="server" Text="商家余额" />：
-                            </td>
-                            <td height="25">
-                                <asp:TextBox ID="txtBalance" runat="server" Width="200px">0</asp:TextBox>
-                            </td>
-                        </tr>
+                        </tr>                        
                         <tr>
                             <td class="td_class">
                                 <asp:Literal ID="Literal20" runat="server" Text="商家AppId" />：
@@ -194,18 +176,6 @@
                             </td>
                             <td height="25">
                                 <asp:TextBox ID="txtAddress" runat="server" Width="200px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_class">
-                                <asp:Literal ID="Literal26" runat="server" Text="商户等级" />：
-                            </td>
-                            <td height="25">
-                                <asp:DropDownList ID="ddlEnteRank" runat="server">
-                                    <asp:ListItem Selected="True" Text="普通商户" Value="0"></asp:ListItem>
-                                    <asp:ListItem Text="重点商户" Value="1"></asp:ListItem>
-                                    <asp:ListItem Text="股东商户" Value="2"></asp:ListItem>
-                                </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>

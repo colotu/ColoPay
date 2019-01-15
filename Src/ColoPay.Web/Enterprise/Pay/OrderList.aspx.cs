@@ -36,6 +36,9 @@ namespace ColoPay.Web.Enterprise.Pay
             StringBuilder strWhere = new StringBuilder();
             int enterpriseID = CurrEnterpriseID;
 
+            string startStr = this.txtDateStart.Text;
+            string endStr = this.txtDateEnd.Text;
+
             if (enterpriseID > 0)
             {
                 strWhere.AppendFormat(" EnterpriseID={0}", enterpriseID);
@@ -49,6 +52,24 @@ namespace ColoPay.Web.Enterprise.Pay
                     strWhere.Append(" and ");
                 }
                 strWhere.AppendFormat("PaymentStatus={0}", YSWL.Common.Globals.SafeInt(status, 0));
+            }
+
+            if (!String.IsNullOrWhiteSpace(startStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedTime>='{0}'", startStr);
+            }
+
+            if (!String.IsNullOrWhiteSpace(endStr))
+            {
+                if (strWhere.Length > 1)
+                {
+                    strWhere.Append(" and ");
+                }
+                strWhere.AppendFormat(" CreatedTime<='{0}'", endStr);
             }
 
             string keyWord = this.txtKeyword.Text;

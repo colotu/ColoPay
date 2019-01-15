@@ -19,6 +19,8 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using YSWL.DBUtility;//Please add references
+using System.Collections.Generic;
+
 namespace ColoPay.DAL.Pay
 {
 	/// <summary>
@@ -361,7 +363,7 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
-		/*
+        /*
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
@@ -386,10 +388,59 @@ namespace ColoPay.DAL.Pay
 			return DbHelperSQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
 		}*/
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+        public bool AgentBalance(ColoPay.Model.Pay.BalanceDetail detail)
+        {
+            //事务处理
+            List<CommandInfo> sqllist = new List<CommandInfo>();
+            //更新代理商余额
+            StringBuilder strSql1 = new StringBuilder();
+            strSql1.Append("update Pay_Agent set  Balance=Balance+@PaymentFee ");
+            strSql1.Append(" where AgentId=@AgentId  ");
+            SqlParameter[] parameters1 = {
+                        new SqlParameter("@AgentId", SqlDbType.Int,4),
+                          new SqlParameter("@PaymentFee", SqlDbType.Decimal)
+                                         };
+            parameters1[0].Value = detail.AgentId;
+            parameters1[1].Value = detail.PaymentFee;
+            CommandInfo cmd = new CommandInfo(strSql1.ToString(), parameters1);
+            sqllist.Add(cmd);
+            //增加商家资金明细
 
-		#endregion  ExtensionMethod
-	}
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into Pay_BalanceDetail(");
+            strSql.Append("EnterpriseID,AgentId,Type,PayType,OriginalId,OriginalCode,PaymentFee,OrderAmount,Amount,CreatedTime)");
+            strSql.Append(" values (");
+            strSql.Append("@EnterpriseID,@AgentId,@Type,@PayType,@OriginalId,@OriginalCode,@PaymentFee,@OrderAmount,@Amount,@CreatedTime)");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@EnterpriseID", SqlDbType.Int,4),
+                    new SqlParameter("@AgentId", SqlDbType.Int,4),
+                    new SqlParameter("@Type", SqlDbType.Int,4),
+                    new SqlParameter("@PayType", SqlDbType.Int,4),
+                    new SqlParameter("@OriginalId", SqlDbType.Int,4),
+                    new SqlParameter("@OriginalCode", SqlDbType.NVarChar,100),
+                    new SqlParameter("@PaymentFee", SqlDbType.Money,8),
+                    new SqlParameter("@OrderAmount", SqlDbType.Money,8),
+                    new SqlParameter("@Amount", SqlDbType.Money,8),
+                    new SqlParameter("@CreatedTime", SqlDbType.DateTime)};
+            parameters[0].Value = detail.EnterpriseID;
+            parameters[1].Value = detail.AgentId;
+            parameters[2].Value = detail.Type;
+            parameters[3].Value = detail.PayType;
+            parameters[4].Value = detail.OriginalId;
+            parameters[5].Value = detail.OriginalCode;
+            parameters[6].Value = detail.PaymentFee;
+            parameters[7].Value = detail.OrderAmount;
+            parameters[8].Value = detail.Amount;
+            parameters[9].Value = detail.CreatedTime;
+
+            cmd = new CommandInfo(strSql.ToString(), parameters);
+            sqllist.Add(cmd);
+
+            return DBHelper.DefaultDBHelper.ExecuteSqlTran(sqllist) > 0 ? true : false;
+        }
+        #endregion  ExtensionMethod
+    }
 }
 

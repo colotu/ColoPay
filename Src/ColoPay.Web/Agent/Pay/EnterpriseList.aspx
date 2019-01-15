@@ -9,16 +9,7 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="borderkuang padd-no">
             <tr>
                 <td height="35" bgcolor="#FFFFFF" class="newstitlebody">
-                    <asp:DropDownList ID="seleEnterprise" runat="server" Width="200px">
-                    </asp:DropDownList>
-                    状态：<asp:DropDownList ID="ddlStatus" runat="server" Width="80px">
-                        <asp:ListItem Value="" Text="全部">
-                        </asp:ListItem>
-                        <asp:ListItem Value="1" Text="正常">
-                        </asp:ListItem>
-                        <asp:ListItem Value="0" Text="冻结">
-                        </asp:ListItem>
-                    </asp:DropDownList>
+                    
                     <asp:Literal ID="Literal3" runat="server" Text="商家名称" />：
                     <asp:TextBox ID="txtKeyword" runat="server" class="admininput_1"></asp:TextBox>
 
@@ -68,9 +59,9 @@
                 <asp:HyperLinkField HeaderText="设置费率" ControlStyle-Width="80"
                     DataNavigateUrlFields="EnterpriseID" DataNavigateUrlFormatString="PayFeeList.aspx?Enterpid={0}"
                     Text="编辑费率" ItemStyle-HorizontalAlign="Center" />
-                <asp:HyperLinkField HeaderText="操作" ControlStyle-Width="50"
+                <%--<asp:HyperLinkField HeaderText="操作" ControlStyle-Width="50"
                     DataNavigateUrlFields="EnterpriseID" DataNavigateUrlFormatString="EnterpriseAdd.aspx?Enterpid={0}"
-                    Text="编辑" ItemStyle-HorizontalAlign="Center" />
+                    Text="编辑" ItemStyle-HorizontalAlign="Center" />--%>
             </Columns>
             <FooterStyle Height="25px" HorizontalAlign="Right" />
             <HeaderStyle Height="35px" />

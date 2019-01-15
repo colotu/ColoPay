@@ -12,7 +12,7 @@ namespace ColoPay.Web.Agent.Pay
         public string adminname = "Management";
         private UserType userTypeManage = new UserType();
 
-        
+        ColoPay.BLL.Pay.Agent AgentBll = new BLL.Pay.Agent();
         Model.Members.Users userModel = new Model.Members.Users();
 
         ColoPay.BLL.Pay.Enterprise EnterpriseBll = new BLL.Pay.Enterprise();
@@ -25,6 +25,8 @@ namespace ColoPay.Web.Agent.Pay
         {
             if (!IsPostBack)
             {
+                lbAgentId.Text = AgentBll.GetAgentID(currentUser.UserName).ToString();
+
                 if ((Request.Params["Enterpid"] != null) && (Request.Params["Enterpid"].ToString() != ""))
                 {
                     txtUserName.ReadOnly = true;
@@ -46,7 +48,7 @@ namespace ColoPay.Web.Agent.Pay
             txtUserName.Text = EnterPriseModel.UserName;
             txtName.Text = EnterPriseModel.Name;
             txtSimpleName.Text = EnterPriseModel.SimpleName;
-            ddlStatus.SelectedValue = EnterPriseModel.Status.ToString();
+
             txtEnterpriseNum.Text = EnterPriseModel.EnterpriseNum;
             txtBusinessLicense.Text = EnterPriseModel.BusinessLicense;
             txtTelPhone.Text = EnterPriseModel.TelPhone;
@@ -57,15 +59,13 @@ namespace ColoPay.Web.Agent.Pay
             txtWithdrawBank.Text = EnterPriseModel.WithdrawBank;
             txtWithdrawInfo.Text = EnterPriseModel.WithdrawInfo;
             txtWithdrawNum.Text = EnterPriseModel.WithdrawNum;
-            txtBalance.Text = EnterPriseModel.Balance.ToString();
+
             txtAppId.Text = EnterPriseModel.AppId;
             txtAppSecrit.Text = EnterPriseModel.AppSecrit;
             txtAppUrl.Text = EnterPriseModel.AppUrl;
             txtAppReturnUrl.Text = EnterPriseModel.AppReturnUrl;
             txtContactMail.Text = EnterPriseModel.ContactMail;
             txtAddress.Text = EnterPriseModel.Address;
-            ddlEnteRank.SelectedValue = EnterPriseModel.EnteRank.ToString();
-
             txtRemark.Text = EnterPriseModel.Remark;
 
         }
@@ -109,7 +109,7 @@ namespace ColoPay.Web.Agent.Pay
             EnterPriseModel.UserName = txtUserName.Text;
             EnterPriseModel.Name = txtName.Text;
             EnterPriseModel.SimpleName = txtSimpleName.Text;
-            EnterPriseModel.Status = int.Parse(ddlStatus.SelectedValue);
+            EnterPriseModel.Status = 0;
             EnterPriseModel.EnterpriseNum = txtEnterpriseNum.Text;
             EnterPriseModel.BusinessLicense = txtBusinessLicense.Text;
             EnterPriseModel.TelPhone = txtTelPhone.Text;
@@ -120,19 +120,21 @@ namespace ColoPay.Web.Agent.Pay
             EnterPriseModel.WithdrawBank = txtWithdrawBank.Text;
             EnterPriseModel.WithdrawInfo = txtWithdrawInfo.Text;
             EnterPriseModel.WithdrawNum = txtWithdrawNum.Text;
-            EnterPriseModel.Balance = decimal.Parse(txtBalance.Text.Trim());
+            EnterPriseModel.Balance = 0;
             EnterPriseModel.AppId = txtAppId.Text;
             EnterPriseModel.AppSecrit = txtAppSecrit.Text;
             EnterPriseModel.AppUrl = txtAppUrl.Text;
             EnterPriseModel.AppReturnUrl = txtAppReturnUrl.Text;
             EnterPriseModel.ContactMail = txtContactMail.Text;
             EnterPriseModel.Address = txtAddress.Text;
-            EnterPriseModel.EnteRank = int.Parse(ddlEnteRank.SelectedValue);
+            EnterPriseModel.EnteRank =1;
             EnterPriseModel.CreatedDate = DateTime.Now;
             EnterPriseModel.CreatedUserID = CurrentUser.UserID;
 
             EnterPriseModel.RegisterIp = "";
             EnterPriseModel.Remark = txtRemark.Text;
+
+            EnterPriseModel.AgentId = int.Parse(lbAgentId.Text);
 
             if (lbEnterPid.Text == "")
             {
