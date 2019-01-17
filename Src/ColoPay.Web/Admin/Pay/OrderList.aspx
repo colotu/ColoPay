@@ -53,7 +53,7 @@
                     </asp:DropDownList>
                      <asp:Literal ID="LiteralCreatedDate" runat="server" Text="创建日期" />：
                     <asp:TextBox ID="txtDateStart" runat="server" Width="120px">                     
-                    </asp:TextBox>-<asp:TextBox ID="txtDateEnd" Width="120px" runat="server"></asp:TextBox>
+                    </asp:TextBox> - <asp:TextBox ID="txtDateEnd" Width="120px" runat="server"></asp:TextBox>
 
 
                     <asp:Literal ID="Literal3" runat="server" Text="<%$ Resources:Site, lblKeyword %>" />：
