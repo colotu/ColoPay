@@ -690,6 +690,13 @@
     <Compile Include="Agent\main_index.aspx.designer.cs">
       <DependentUpon>main_index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agent\PayFeeList.aspx.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agent\PayFeeList.aspx.designer.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agent\Pay\BalanceDetail.aspx.cs">
       <DependentUpon>BalanceDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -855,6 +862,20 @@
     </Compile>
     <Compile Include="Enterprise\main_index.aspx.designer.cs">
       <DependentUpon>main_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\PayFeeList.aspx.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\PayFeeList.aspx.designer.cs">
+      <DependentUpon>PayFeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\PayInfo.aspx.cs">
+      <DependentUpon>PayInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\PayInfo.aspx.designer.cs">
+      <DependentUpon>PayInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Enterprise\Pay\BalanceDetail.aspx.cs">
       <DependentUpon>BalanceDetail.aspx</DependentUpon>
@@ -1051,6 +1072,7 @@
     <Content Include="Agent\Logout.aspx" />
     <Content Include="Agent\main.htm" />
     <Content Include="Agent\main_index.aspx" />
+    <Content Include="Agent\PayFeeList.aspx" />
     <Content Include="Agent\Pay\BalanceDetail.aspx" />
     <Content Include="Agent\Pay\EnterpriseAdd.aspx" />
     <Content Include="Agent\Pay\EnterpriseList.aspx" />
@@ -1463,6 +1485,8 @@
     <Content Include="Enterprise\Logout.aspx" />
     <Content Include="Enterprise\main.htm" />
     <Content Include="Enterprise\main_index.aspx" />
+    <Content Include="Enterprise\PayFeeList.aspx" />
+    <Content Include="Enterprise\PayInfo.aspx" />
     <Content Include="Enterprise\Pay\BalanceDetail.aspx" />
     <Content Include="Enterprise\Pay\OrderList.aspx" />
     <Content Include="Enterprise\Pay\WithdrawAdd.aspx" />

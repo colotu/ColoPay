@@ -15,10 +15,7 @@ namespace ColoPay.WebApi
             // 使api返回为json 
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
         }
-        /// <summary>
-        /// 是否开启自动连接
-        /// </summary>
-        public static bool IsAutoConn => YSWL.Common.ConfigHelper.GetConfigBool("AutoConnection");
+
 
     }
 }

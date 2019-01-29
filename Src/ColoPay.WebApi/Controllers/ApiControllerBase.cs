@@ -6,7 +6,7 @@ using ColoPay.WebApi.Models;
 
 namespace ColoPay.WebApi.Controllers
 {
-    [JsonCallback]
+ 
     public class ApiControllerBase : ApiController
     {
 

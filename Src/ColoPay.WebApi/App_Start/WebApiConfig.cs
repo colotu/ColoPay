@@ -20,7 +20,7 @@ namespace ColoPay.WebApi
             //注册全局异常处理
             config.Filters.Add(new WebApiErrorHandlerAttribute());
             //跨域处理
-            config.MessageHandlers.Add(new CrossDomainHandler());
+           // config.MessageHandlers.Add(new CrossDomainHandler());
         }
     }
 }
