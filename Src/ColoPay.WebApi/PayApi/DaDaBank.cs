@@ -14,7 +14,7 @@ namespace ColoPay.WebApi.PayApi
     {
         private const string gatewayUrl = "http://39.108.126.141/pay/unifiedorder";
         private const string AppId = "115443746068290615";
-        private const string notify = "dapay/notify";
+        private const string notify = "/dapay/notify";
         private const string returnurl = "";
         private const string apikey = "1b39478bf2aef372cc066fa59be728a7";
         private const string sign_type = "MD5";
