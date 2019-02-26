@@ -107,8 +107,9 @@ namespace ColoPay.WebApi.Controllers
             //开始支付
             if (!payinfo.istest)
             {
-
-                resullt = ColoPay.WebApi.PayApi.BZ_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
+                //tuzh BZ_Pay 支付接口已失效 
+                // resullt = ColoPay.WebApi.PayApi.BZ_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
+                resullt = ColoPay.WebApi.PayApi.QR_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
 
             }
             else //测试支付
@@ -233,7 +234,7 @@ namespace ColoPay.WebApi.Controllers
         }
 
         /// <summary>
-        /// 支付 
+        /// 支付异步通知
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -248,7 +249,7 @@ namespace ColoPay.WebApi.Controllers
         }
 
         /// <summary>
-        /// 支付 
+        /// 支付异步通知 
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -263,6 +264,20 @@ namespace ColoPay.WebApi.Controllers
         }
 
 
+        /// <summary>
+        /// 支付异步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("qrpay/notify")]
+        public HttpResponseMessage QrNotify([FromBody]QrNotify notifyinfo)
+        {
+            bool isSuccess = ColoPay.WebApi.PayApi.QR_Pay.VerifyNotify(notifyinfo);
+            string responseStr = isSuccess ? "success" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
         /// <summary>
         /// 查询
         /// </summary>

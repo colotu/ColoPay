@@ -215,9 +215,9 @@ namespace ColoPay.WebApi.PayApi
             }
             else
             {
-                ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【DaPay支付回调通知失败"), String.Format("加密签名错误：接口签名字段为【{0}】---生成的签名为【{1}】", notifyinfo.sign, signStr));
+                ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单DaPay支付回调通知失败"), String.Format("加密签名错误：接口签名字段为【{0}】---生成的签名为【{1}】", notifyinfo.sign, signStr));
                 //验证失败，记录日志
-                ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【{0}】BZPay支付验证失败", notifyinfo.order), String.Format("参数为：order-->{0}&code-->{1}&mount-->{2}&msg-->{3}&time-->{4}", notifyinfo.order, notifyinfo.code, notifyinfo.mount, notifyinfo.msg, notifyinfo.time));
+                ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【{0}】DaPay支付验证失败", notifyinfo.order), String.Format("参数为：order-->{0}&code-->{1}&mount-->{2}&msg-->{3}&time-->{4}", notifyinfo.order, notifyinfo.code, notifyinfo.mount, notifyinfo.msg, notifyinfo.time));
                 return false;
             }
         }
