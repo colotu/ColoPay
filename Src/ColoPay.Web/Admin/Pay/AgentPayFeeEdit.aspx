@@ -29,11 +29,11 @@
                     <table cellspacing="0" cellpadding="3" width="100%" border="0">
                         <tr>
                             <td class="td_class">
-                                <asp:Literal ID="Literal2" runat="server" Text="费率" />：
+                                <asp:Literal ID="Literal2" runat="server" Text="手续费率" />：
                             </td>
                             <td height="25">
-                                <asp:TextBox ID="txtPayFree" TabIndex="1" runat="server" Width="200px" MaxLength="20"></asp:TextBox>
-                                （默认密码：小数，例如;0.006）
+                                <asp:TextBox ID="txtPayFree" TabIndex="1" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                                    %（小数，例如;0.5，则代表手续费为0.5%）
                             </td>
                         </tr>
                         <tr>
