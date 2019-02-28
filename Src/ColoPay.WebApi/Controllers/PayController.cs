@@ -248,6 +248,10 @@ namespace ColoPay.WebApi.Controllers
             return responseMessage;
         }
 
+
+
+       
+
         /// <summary>
         /// 支付异步通知 
         /// </summary>
@@ -271,6 +275,21 @@ namespace ColoPay.WebApi.Controllers
         [HttpPost]
         [Route("qrpay/notify")]
         public HttpResponseMessage QrNotify([FromBody]QrNotify notifyinfo)
+        {
+            bool isSuccess = ColoPay.WebApi.PayApi.QR_Pay.VerifyNotify(notifyinfo);
+            string responseStr = isSuccess ? "success" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+
+        /// <summary>
+        /// 支付同步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("qrpay/return")]
+        public HttpResponseMessage QrReturn([FromBody]QrNotify notifyinfo)
         {
             bool isSuccess = ColoPay.WebApi.PayApi.QR_Pay.VerifyNotify(notifyinfo);
             string responseStr = isSuccess ? "success" : "fail";

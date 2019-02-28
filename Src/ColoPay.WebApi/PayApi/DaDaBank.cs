@@ -28,7 +28,7 @@ namespace ColoPay.WebApi.PayApi
         /// <param name="paymentGateway"></param>
         /// <param name="isCode"></param>
         /// <param name="remark"></param>
-        public static string PayRequest(string orderCode, int amount, string bankcode, string remark = "")
+        public static string PayRequest(string orderCode, decimal amount, string bankcode, string remark = "")
         {
             //-------记录请求参数
             YSWL.Log.LogHelper.AddInfoLog("DaDaBank-->PayRequest", String.Format("参数为：orderCode-->{0},amount-->{1},bankcode-->{2},remark-->{3}", orderCode, amount, bankcode, remark));
