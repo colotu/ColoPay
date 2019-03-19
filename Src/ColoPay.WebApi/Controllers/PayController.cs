@@ -109,7 +109,16 @@ namespace ColoPay.WebApi.Controllers
             {
                 //tuzh BZ_Pay 支付接口已失效 
                 // resullt = ColoPay.WebApi.PayApi.BZ_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
-                resullt = ColoPay.WebApi.PayApi.QR_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
+                // 如果是网银或者快捷支付，走丰核支付
+                if (orderInfo.PaymentGateway == "wangyin" || orderInfo.PaymentGateway == "kuaijie")
+                {
+                    resullt = ColoPay.WebApi.PayApi.FengHe.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, orderInfo.OrderInfo);
+                }
+                else {
+                    resullt = ColoPay.WebApi.PayApi.QR_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
+                }
+
+               
 
             }
             else //测试支付
@@ -120,7 +129,7 @@ namespace ColoPay.WebApi.Controllers
                     try
                     {
                         orderInfo.PaymentStatus = 2;
-                        EnterpriseNotify.Notify(orderInfo);
+                        ColoPay.BLL.Pay.Enterprise.Notify(orderInfo);
                     }
                     catch (Exception ex)
                     {
@@ -267,7 +276,7 @@ namespace ColoPay.WebApi.Controllers
             return responseMessage;
         }
 
-
+        #region 启润支付接口回调
         /// <summary>
         /// 支付异步通知 
         /// </summary>
@@ -276,6 +285,8 @@ namespace ColoPay.WebApi.Controllers
         [Route("qrpay/notify")]
         public HttpResponseMessage QrNotify([FromBody]QrNotify notifyinfo)
         {
+            //YSWL.Log.LogHelper.AddInfoLog("qrpay/notify-->postdata", postdata);
+            //QrNotify notifyinfo = JsonConvert.Import<QrNotify>(postdata);
             bool isSuccess = ColoPay.WebApi.PayApi.QR_Pay.VerifyNotify(notifyinfo);
             string responseStr = isSuccess ? "success" : "fail";
             // HttpContext.Current.Response.Write(responseStr);
@@ -289,14 +300,57 @@ namespace ColoPay.WebApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("qrpay/return")]
-        public HttpResponseMessage QrReturn([FromBody]QrNotify notifyinfo)
+        public HttpResponseMessage QrReturn(string getdata)
         {
+            YSWL.Log.LogHelper.AddInfoLog("qrpay/return-->getdata", getdata);
+            QrNotify notifyinfo = JsonConvert.Import<QrNotify>(getdata);
             bool isSuccess = ColoPay.WebApi.PayApi.QR_Pay.VerifyNotify(notifyinfo);
+
             string responseStr = isSuccess ? "success" : "fail";
             // HttpContext.Current.Response.Write(responseStr);
             HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
             return responseMessage;
         }
+        #endregion
+
+        #region 丰核支付接口回调
+        /// <summary>
+        /// 支付异步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("fhpay/notify")]
+        public HttpResponseMessage FhNotify([FromBody]FengHeNotify notifyinfo)
+        {
+            //YSWL.Log.LogHelper.AddInfoLog("qrpay/notify-->postdata", postdata);
+            //QrNotify notifyinfo = JsonConvert.Import<QrNotify>(postdata);
+            bool isSuccess = ColoPay.WebApi.PayApi.FengHe.VerifyNotify(notifyinfo);
+            string responseStr = isSuccess ? "OK" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+
+        /// <summary>
+        /// 支付同步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("fhpay/return")]
+        public HttpResponseMessage FhReturn(string getdata)
+        {
+            YSWL.Log.LogHelper.AddInfoLog("qrpay/return-->getdata", getdata);
+            FengHeNotify notifyinfo = JsonConvert.Import<FengHeNotify>(getdata);
+            bool isSuccess = ColoPay.WebApi.PayApi.FengHe.VerifyNotify(notifyinfo);
+
+            string responseStr = isSuccess ? "OK" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+        #endregion 
+
+
         /// <summary>
         /// 查询
         /// </summary>

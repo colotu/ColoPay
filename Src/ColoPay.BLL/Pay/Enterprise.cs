@@ -4,6 +4,10 @@ using System.Data;
 using System.Collections.Generic;
 using YSWL.Common;
 using ColoPay.Model.Pay;
+using System.Net;
+using System.Text;
+using System.Globalization;
+
 namespace ColoPay.BLL.Pay
 {
 	/// <summary>
@@ -227,6 +231,55 @@ namespace ColoPay.BLL.Pay
         { 
             return dal.GetEnterpriseInfo(appid, secrit);
         }
+
+
+        #region  异步通知
+        public static void Notify(ColoPay.Model.Pay.Order orderInfo)
+        {
+
+            var request = (HttpWebRequest)WebRequest.Create(orderInfo.AppNotifyUrl);
+            StringBuilder builder = new StringBuilder();
+            builder.Append(CreateField("appid", orderInfo.AppId));
+            builder.Append(CreateField("secrit", orderInfo.AppSecrit));
+            builder.Append(CreateField("order_no", orderInfo.EnterOrder));
+            builder.Append(CreateField("amount", orderInfo.Amount.ToString()));
+            builder.Append(CreateField("sdorder_no", orderInfo.OrderCode));
+            builder.Append(CreateField("paytype", orderInfo.PaymentGateway));
+            builder.Append(CreateField("status", orderInfo.PaymentStatus.ToString()));
+            string postData = builder.ToString().Substring(1);
+            var data = Encoding.UTF8.GetBytes(postData);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = data.Length;
+            using (var stream = request.GetRequestStream())
+            {
+                stream.Write(data, 0, data.Length);
+            }
+            var response = (HttpWebResponse)request.GetResponse();
+            string responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+
+            if (responseString == "success")//如果是返回成功，则说明已经异步通知了，需要更新本地的订单状态
+            {
+                ColoPay.BLL.Pay.Order orderBll = new ColoPay.BLL.Pay.Order();
+                //更新同步状态
+                orderBll.HasNotify(orderInfo.OrderId);
+            }
+            return;
+        }
+
+        public static string CreateField(string name, string strValue, int get_code = 0)
+        {
+            if (get_code == 1)
+            {
+                return string.Format(CultureInfo.InvariantCulture, "&{0}={1}", new object[] { name, strValue });
+            }
+            else
+            {
+                return string.Format(CultureInfo.InvariantCulture, "<input type=\"hidden\" id=\"{0}\" name=\"{0}\" value=\"{1}\">", new object[] { name, strValue });
+            }
+        }
+
+        #endregion
 
     }
 }

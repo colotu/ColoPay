@@ -144,7 +144,17 @@
                         <%#  Eval("OrderInfo") %>
                     </ItemTemplate>
                 </asp:TemplateField>
-
+                   <asp:TemplateField ControlStyle-Width="160" HeaderText="订单操作" ItemStyle-HorizontalAlign="Center">
+                    <ItemTemplate>
+                            
+                      <span class="operate" >
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Pay"
+                            Style="display: none; border: 1px transparent solid; padding-left: 5px; padding-right: 5px;
+                            margin-right: 5px; padding-top: 2px; padding-bottom: 2px;" CommandArgument='<%Eval("OrderCode")%>'
+                            OnClientClick='return confirm($(this).attr("ConfirmText"))' ConfirmText="您确定要将订单设置为已支付吗？请在支付网站方确认用户已支付."
+                            Text="确认支付" class="PayAction"  ></asp:LinkButton>
+                           </span> 
+                    </ItemTemplate>
 
            
             </Columns>

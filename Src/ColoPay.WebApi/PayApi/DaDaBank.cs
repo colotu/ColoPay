@@ -189,14 +189,14 @@ namespace ColoPay.WebApi.PayApi
                     }
                     if (orderInfo.PaymentStatus == 2)
                     {
-                        return false;
+                        return true;
                     }
                     bool isSuccess = orderBll.CompleteOrder(orderInfo);
                     if (isSuccess)//成功之后需要回调商家回调地址
                     {
                         try
                         {
-                            EnterpriseNotify.Notify(orderInfo);
+                            ColoPay.BLL.Pay.Enterprise.Notify(orderInfo);
                         }
                         catch (Exception ex)
                         {

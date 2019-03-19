@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using YSWL.Common;
 
 namespace ColoPay.Web.Admin.Pay
 {
@@ -175,6 +176,57 @@ namespace ColoPay.Web.Admin.Pay
             }
         }
 
+
+        protected void gridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+          
+            if (e.CommandName == "Success")
+            {
+                //object[] arg = e.CommandArgument.ToString().Split(',');  //注意是单引号
+                //long orderId = Common.Globals.SafeLong(arg[0].ToString(), 0);
+                //string orderCode = arg[1].ToString();
+                //OrderInfo orderInfo = orderBll.GetModelInfo(orderId);
+                //if (!(orderInfo.OrderStatus == (int)YSWL.MALL.Model.Shop.Order.EnumHelper.OrderStatus.Handling && orderInfo.ShippingStatus == (int)YSWL.MALL.Model.Shop.Order.EnumHelper.ShippingStatus.Shipped))
+                //{
+                //    MessageBox.ShowFailTipScript(this, "当前订单的状态已改变,您已不能修改,稍后为您刷新页面...", "$('[id$=btnSearch]').click(); ");
+                //    return;
+                //}
+                //if (BLL.Shop.Order.OrderManage.CompleteOrder(orderInfo, CurrentUser))
+                //{
+                //    MessageBox.ShowSuccessTip(this, "操作成功！");
+                //}
+                //else
+                //{
+                //    MessageBox.ShowSuccessTip(this, "操作失败，请稍候再试！");
+                //}
+
+            }
+            if (e.CommandName == "Pay")
+            {
+                string orderCode = e.CommandArgument.ToString();
+                ColoPay.Model.Pay.Order orderInfo = orderBll.GetModel(orderCode);
+                bool isSuccess = true;
+                if (orderInfo.PaymentStatus < 2)
+                {
+                    isSuccess = orderBll.CompleteOrder(orderInfo);
+                } 
+                if (isSuccess)//成功之后需要回调商家回调地址
+                {
+                    try
+                    {
+                        ColoPay.BLL.Pay.Enterprise.Notify(orderInfo);
+                    }
+                    catch (Exception ex)
+                    {
+                        ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【{0}】支付回调通知失败：{1}", orderInfo.OrderCode, ex.Message), ex.StackTrace); 
+                    }
+                } 
+                MessageBox.ShowSuccessTip(this, "操作成功！");
+            }
+            gridView.OnBind();
+
+        }
+
         private string GetSelIDlist()
         {
             string idlist = "";
@@ -232,6 +284,8 @@ namespace ColoPay.Web.Admin.Pay
             return Model == null ? "平台" : Model.Name;
         }
         #endregion
-        
+
+
+     
     }
 }
