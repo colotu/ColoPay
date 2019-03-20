@@ -79,7 +79,9 @@ namespace ColoPay.Web.Admin.Pay
             }
 
             User newUser = new User();
+#pragma warning disable CS0219 // 变量“strErr”已被赋值，但从未使用过它的值
             string strErr = "";
+#pragma warning restore CS0219 // 变量“strErr”已被赋值，但从未使用过它的值
             //if (newUser.HasUserByUserName(txtUserName.Text))
             //{
             //    strErr += Resources.Site.TooltipUserExist;

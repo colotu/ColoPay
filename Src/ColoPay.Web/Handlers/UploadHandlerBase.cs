@@ -136,7 +136,9 @@ namespace ColoPay.Web.Handlers
                     int filelength = file.ContentLength;
                     byte[] buffer = new byte[filelength];
                     file.InputStream.Read(buffer, 0, filelength);
+#pragma warning disable CS0219 // 变量“ImageUrl”已被赋值，但从未使用过它的值
                     string ImageUrl = "";
+#pragma warning restore CS0219 // 变量“ImageUrl”已被赋值，但从未使用过它的值
                   
                 }
                 //调用子类实现

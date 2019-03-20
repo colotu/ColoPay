@@ -164,10 +164,12 @@ namespace ColoPay.Web.Controls
             }
         }
 
+#pragma warning disable CS0649 // 从未对字段“AjaxRegion._hfValue”赋值，字段将一直保持其默认值 null
         /// <summary>
         /// 选择的城市或区域的值 - 已过时 请使用SelectedValue
         /// </summary>
         private string _hfValue;
+#pragma warning restore CS0649 // 从未对字段“AjaxRegion._hfValue”赋值，字段将一直保持其默认值 null
         /// <summary>
         /// 选择的城市或区域的值 - 已过时 请使用SelectedValue
         /// </summary>

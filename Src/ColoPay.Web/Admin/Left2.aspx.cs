@@ -17,7 +17,9 @@ namespace ColoPay.Web.Admin
         public string strMenuTree = "";
         public string NodeName = "";
         bool MenuExpanded = Globals.SafeBool(BLL.SysManage.ConfigSystem.GetValueByCache("MenuExpanded"), false);
+#pragma warning disable CS0649 // 从未对字段“Left2.TreeListofLang”赋值，字段将一直保持其默认值 null
         Hashtable TreeListofLang;
+#pragma warning restore CS0649 // 从未对字段“Left2.TreeListofLang”赋值，字段将一直保持其默认值 null
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)

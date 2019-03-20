@@ -82,7 +82,9 @@ namespace ColoPay.Web.Handlers.Pay
                 basePath = string.Format("/{0}/", area);
             }
             //向网关写入请求发起源的Area
+#pragma warning disable CS0612 // “SendPaymentHandlerBase<Order>.GatewayDatas”已过时
             this.GatewayDatas.Add(area);
+#pragma warning restore CS0612 // “SendPaymentHandlerBase<Order>.GatewayDatas”已过时
 
             #region 支付宝银联
 
@@ -100,7 +102,9 @@ namespace ColoPay.Web.Handlers.Pay
                 if (!string.IsNullOrWhiteSpace(bankCode))
                 {
                     //向网关写入用户选择的银行编码
+#pragma warning disable CS0612 // “SendPaymentHandlerBase<Order>.GatewayDatas”已过时
                     this.GatewayDatas.Add(bankCode);
+#pragma warning restore CS0612 // “SendPaymentHandlerBase<Order>.GatewayDatas”已过时
                 }
 
             }

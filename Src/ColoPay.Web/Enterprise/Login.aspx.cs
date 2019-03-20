@@ -23,7 +23,9 @@ namespace ColoPay.Web.Enterprise
                 {
                     return;
                 }
+#pragma warning disable CS0219 // 变量“currentUser”已被赋值，但从未使用过它的值
                 User currentUser = null;
+#pragma warning restore CS0219 // 变量“currentUser”已被赋值，但从未使用过它的值
 
                 Page.Title = MvcApplication.SiteName + "-系统登录";
 

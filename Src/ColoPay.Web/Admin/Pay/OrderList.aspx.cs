@@ -22,13 +22,10 @@ namespace ColoPay.Web.Admin.Pay
                 BindEnterprise();
             }
         }
-
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             gridView.OnBind();
         }
-
-
 
         #region 绑定菜单树
         private void BindEnterprise()
@@ -84,8 +81,6 @@ namespace ColoPay.Web.Admin.Pay
 
         public void BindData()
         {
-
-
             StringBuilder strWhere = new StringBuilder();
             int agentId = YSWL.Common.Globals.SafeInt(this.ddlAgent.SelectedValue, 0);
             int enterpriseID = YSWL.Common.Globals.SafeInt(this.ddlEnterprise.SelectedValue, 0);
@@ -180,27 +175,6 @@ namespace ColoPay.Web.Admin.Pay
         protected void gridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
           
-            if (e.CommandName == "Success")
-            {
-                //object[] arg = e.CommandArgument.ToString().Split(',');  //注意是单引号
-                //long orderId = Common.Globals.SafeLong(arg[0].ToString(), 0);
-                //string orderCode = arg[1].ToString();
-                //OrderInfo orderInfo = orderBll.GetModelInfo(orderId);
-                //if (!(orderInfo.OrderStatus == (int)YSWL.MALL.Model.Shop.Order.EnumHelper.OrderStatus.Handling && orderInfo.ShippingStatus == (int)YSWL.MALL.Model.Shop.Order.EnumHelper.ShippingStatus.Shipped))
-                //{
-                //    MessageBox.ShowFailTipScript(this, "当前订单的状态已改变,您已不能修改,稍后为您刷新页面...", "$('[id$=btnSearch]').click(); ");
-                //    return;
-                //}
-                //if (BLL.Shop.Order.OrderManage.CompleteOrder(orderInfo, CurrentUser))
-                //{
-                //    MessageBox.ShowSuccessTip(this, "操作成功！");
-                //}
-                //else
-                //{
-                //    MessageBox.ShowSuccessTip(this, "操作失败，请稍候再试！");
-                //}
-
-            }
             if (e.CommandName == "Pay")
             {
                 string orderCode = e.CommandArgument.ToString();
@@ -222,6 +196,40 @@ namespace ColoPay.Web.Admin.Pay
                     }
                 } 
                 MessageBox.ShowSuccessTip(this, "操作成功！");
+            }
+
+            if (e.CommandName == "Notify")
+            {
+                string orderCode = e.CommandArgument.ToString();
+                ColoPay.Model.Pay.Order orderInfo = orderBll.GetModel(orderCode);
+                bool isSuccess = true;
+                string responseStr = "";
+                if (orderInfo.PaymentStatus < 2)
+                {
+                    isSuccess = orderBll.CompleteOrder(orderInfo);
+                }
+                if (isSuccess)//成功之后需要回调商家回调地址
+                {
+                    try
+                    {
+                        responseStr= ColoPay.BLL.Pay.Enterprise.Notify(orderInfo);
+                    }
+                    catch (Exception ex)
+                    {
+                        responseStr = ex.Message;
+                        ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【{0}】支付回调通知失败：{1}", orderInfo.OrderCode, ex.Message), ex.StackTrace);
+                    }
+                }
+                if (responseStr == "success")
+                {
+                    MessageBox.ShowSuccessTip(this, "操作成功！");
+                }
+                else
+                {
+                    responseStr = "回调通知失败，" + responseStr;
+                    MessageBox.ShowFailTip(this, responseStr);
+                }
+               
             }
             gridView.OnBind();
 
@@ -286,6 +294,26 @@ namespace ColoPay.Web.Admin.Pay
         #endregion
 
 
-     
+        #region 获取订单状态
+        protected string GetPayStatus(object paytarget,object ordertarget)
+        {
+            int paystatus = YSWL.Common.Globals.SafeInt(paytarget, 0);
+            int orderstatus = YSWL.Common.Globals.SafeInt(ordertarget, 0);
+            if (paystatus == 0)
+            {
+                return "<span  style = 'color:red;' > 未支付 </span >";
+            }
+            if (paystatus == 2 && orderstatus == 1)
+            {
+                return "<span  style = 'color:#EE9A00;' > 已支付，通知未成功 </span >";
+            }
+            if (paystatus == 2 && orderstatus == 2)
+            {
+                return "<span  style = 'color:green;' > 已支付，通知成功 </span >";
+            }
+            return "<span  style = 'color:red;' > 未知 </span >";
+            //  return enterpriseModel == null ? "未知" : enterpriseModel.Name;
+        }
+        #endregion
     }
 }

@@ -922,6 +922,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Handlers\API\HandlerBase.cs">
       <SubType>Component</SubType>
     </Compile>
