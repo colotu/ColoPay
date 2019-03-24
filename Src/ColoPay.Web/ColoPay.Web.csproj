@@ -350,20 +350,6 @@
       <DependentUpon>msgbox.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Left.aspx.cs">
-      <DependentUpon>Left.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Left.aspx.designer.cs">
-      <DependentUpon>Left.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Left2.aspx.cs">
-      <DependentUpon>Left2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Left2.aspx.designer.cs">
-      <DependentUpon>Left2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Left3_dlb.aspx.cs">
       <DependentUpon>Left3_dlb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,13 +377,6 @@
     </Compile>
     <Compile Include="Admin\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Main2.aspx.cs">
-      <DependentUpon>Main2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Main2.aspx.designer.cs">
-      <DependentUpon>Main2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\main_index_dlb.aspx.cs">
       <DependentUpon>main_index_dlb.aspx</DependentUpon>
@@ -504,13 +483,6 @@
     <Compile Include="Admin\Pay\WithdrawList.aspx.designer.cs">
       <DependentUpon>WithdrawList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SyncUserInfo.aspx.cs">
-      <DependentUpon>SyncUserInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\SyncUserInfo.aspx.designer.cs">
-      <DependentUpon>SyncUserInfo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\SysManage\AreaList.aspx.cs">
       <DependentUpon>AreaList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -549,13 +521,6 @@
     </Compile>
     <Compile Include="Admin\Payment\PaymentModes.aspx.designer.cs">
       <DependentUpon>PaymentModes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\QuickLinks.aspx.cs">
-      <DependentUpon>QuickLinks.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\QuickLinks.aspx.designer.cs">
-      <DependentUpon>QuickLinks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Members\ActivityUser\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
@@ -647,20 +612,6 @@
     </Compile>
     <Compile Include="Admin\SysManage\UserLog.aspx.designer.cs">
       <DependentUpon>UserLog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Top.aspx.cs">
-      <DependentUpon>Top.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Top.aspx.designer.cs">
-      <DependentUpon>Top.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Top2.aspx.cs">
-      <DependentUpon>Top2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Top2.aspx.designer.cs">
-      <DependentUpon>Top2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Agent\Left.aspx.cs">
       <DependentUpon>Left.aspx</DependentUpon>
@@ -953,7 +904,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Content Include="404.html" />
+    <Content Include="Admin\css\dinghuo_xc.css" />
+    <Content Include="Admin\css\main_index.css" />
     <Content Include="Admin\css\productstyle.css" />
+    <Content Include="Admin\css\reset.css" />
+    <Content Include="Admin\css\reset_dinghuo_xc.css" />
     <Content Include="Admin\css\style-left-dlb.css" />
     <Content Include="Admin\css\style-left.css" />
     <Content Include="Admin\css\tags.css" />
@@ -1048,7 +1003,6 @@
     <Content Include="Admin\js\Select2-3.4.6\select2_locale_zh-CN.js" />
     <Content Include="Admin\js\Shop\Shipping\UpdateShipType.js" />
     <Content Include="Admin\js\Shop\httptostatic.js" />
-    <Content Include="Admin\Left2.aspx" />
     <Content Include="Admin\Left3_dlb.aspx" />
     <Content Include="Admin\main_index_dlb.aspx" />
     <Content Include="Admin\main_wc.aspx" />
@@ -1064,7 +1018,6 @@
     <Content Include="Admin\Pay\PayFeeList.aspx" />
     <Content Include="Admin\Pay\showEnterInfo.aspx" />
     <Content Include="Admin\Pay\WithdrawList.aspx" />
-    <Content Include="Admin\SyncUserInfo.aspx" />
     <Content Include="Admin\SysManage\AreaList.aspx" />
     <Content Include="Admin\SysManage\SysConfig.aspx" />
     <Content Include="Admin\Top3.aspx" />
@@ -2527,18 +2480,14 @@
     <Content Include="Admin\js\validate\validate_normal.gif" />
     <Content Include="Admin\js\validate\validate_success.gif" />
     <Content Include="Admin\js\validate\validate_waring.gif" />
-    <Content Include="Admin\Left.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\Logout.aspx" />
     <Content Include="Admin\Main.aspx" />
     <Content Include="Admin\Main.htm" />
-    <Content Include="Admin\Main2.aspx" />
     <Content Include="Admin\Payment\AddPaymentMode.aspx" />
     <Content Include="Admin\Payment\EditPaymentMode.aspx" />
     <Content Include="Admin\Payment\PaymentModes.aspx" />
-    <Content Include="Admin\QuickLinks.aspx" />
     <Content Include="Admin\Style.css" />
-    <Content Include="Admin\swich.html" />
     <Content Include="Admin\SysManage\add.aspx" />
     <Content Include="Admin\SysManage\AddPI.aspx" />
     <Content Include="Admin\SysManage\ClearCache.aspx" />
@@ -2551,8 +2500,6 @@
     <Content Include="Admin\SysManage\TreeFavorite.aspx" />
     <Content Include="Admin\SysManage\Treelist.aspx" />
     <Content Include="Admin\SysManage\UserLog.aspx" />
-    <Content Include="Admin\Top.aspx" />
-    <Content Include="Admin\Top2.aspx" />
     <Content Include="App_GlobalResources\Shop\Shop.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Shop1.designer.cs</LastGenOutput>

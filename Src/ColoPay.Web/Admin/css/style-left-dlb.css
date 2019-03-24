@@ -324,3 +324,11 @@ ol {
 
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 /* @media (min-width: @screen-lg-min) { ... }*/
+.menu_li {
+
+}
+
+    .menu_li :hover {
+        background: #1face3 !important;
+    }
+    

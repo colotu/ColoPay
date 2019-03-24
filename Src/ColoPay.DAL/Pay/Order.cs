@@ -599,7 +599,7 @@ namespace ColoPay.DAL.Pay
         public bool HasNotify(int orderId)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("update Pay_Order set "); 
+            strSql.Append("update Pay_Order set ");
             strSql.Append("OrderStatus=2 ");
             strSql.Append(" where OrderId=@OrderId");
             SqlParameter[] parameters = {
@@ -616,6 +616,112 @@ namespace ColoPay.DAL.Pay
                 return false;
             }
         }
+
+
+        public int GetOrderCount(string startTime, string endTime)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) FROM Pay_Order  ");
+            strSql.Append(" where PaymentStatus=2  ");
+            if (!String.IsNullOrWhiteSpace(startTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime>='{0}' ", startTime));
+            }
+
+            if (!String.IsNullOrWhiteSpace(endTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime<='{0}' ", endTime));
+            }
+
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+
+
+
+        public decimal GetOrderAmount(string startTime, string endTime)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select Sum(Amount) FROM Pay_Order  ");
+            strSql.Append(" where PaymentStatus=2  ");
+            if (!String.IsNullOrWhiteSpace(startTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime>='{0}' ", startTime));
+            }
+
+            if (!String.IsNullOrWhiteSpace(endTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime<='{0}' ", endTime));
+            }
+
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToDecimal(obj);
+            }
+        }
+
+
+        public decimal GetOrderFee(string startTime, string endTime)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select Sum(PaymentFee) FROM Pay_Order  ");
+            strSql.Append(" where PaymentStatus=2  ");
+            if (!String.IsNullOrWhiteSpace(startTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime>='{0}' ", startTime));
+            }
+
+            if (!String.IsNullOrWhiteSpace(endTime))
+            {
+                strSql.Append(String.Format(" and CreatedTime<='{0}' ", endTime));
+            }
+
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToDecimal(obj);
+            }
+        }
+
+
+        public DataSet OrderStat(string startTime, string endTime)
+        {
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@startTime",SqlDbType.VarChar,20),
+                new SqlParameter("@endTime",SqlDbType.VarChar,20)
+            };
+            parameters[0].Value = startTime;
+            parameters[1].Value = endTime;
+
+            string strSql = @"select CONVERT(varchar(12),CreatedTime,23) Date, count(1) as Count,sum(Amount) as Total,sum(PaymentFee) as TotalFee  from dbo.Pay_Order 
+where PaymentStatus=2 and  CreatedTime between @startTime and @endTime group by CONVERT(varchar(12), CreatedTime, 23)";
+            return DbHelperSQL.Query(strSql.ToString(), parameters);
+        }
+
+
+        public DataSet GetOrderTop(int top)
+        {
+            string strSql =String.Format(@"select top {0} EnterOrder,EnterpriseID,SUM(Amount) TotalAmount,SUM(PaymentFee) TotalFee from Pay_Order where PaymentStatus=2 group by EnterOrder,EnterpriseID", top) ;
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+
         #endregion  ExtensionMethod
     }
 }

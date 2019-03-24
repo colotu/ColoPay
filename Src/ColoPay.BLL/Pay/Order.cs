@@ -212,6 +212,32 @@ namespace ColoPay.BLL.Pay
         {
             return dal.HasNotify(orderId);
         }
+
+        public int GetOrderCount(string startTime ,string endTime )
+        {
+            return dal.GetOrderCount(startTime, endTime);
+        }
+
+        public Decimal GetOrderAmount(string startTime, string endTime)
+        {
+            return dal.GetOrderAmount(startTime, endTime);
+        }
+
+
+        public decimal GetOrderFee(string startTime, string endTime)
+        {
+            return dal.GetOrderFee(startTime, endTime);
+        }
+
+        public DataSet OrderStat(string startTime, string endTime)
+        {
+            return dal.OrderStat(startTime, endTime);
+        }
+
+        public DataSet GetOrderTop(int top)
+        {
+            return dal.GetOrderTop(top);
+        }
         #endregion  ExtensionMethod
     }
 }

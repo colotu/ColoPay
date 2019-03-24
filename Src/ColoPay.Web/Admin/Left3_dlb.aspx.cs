@@ -48,7 +48,8 @@ namespace ColoPay.Web.Admin
                     }
                     else
                     {
-                        strtemp.AppendFormat("<li><a  src=\"{0}\" href=\"javascript:;\" target=\"mainFrame\">{1}</a></li>", item.Url, item.TreeText);
+                       // strtemp.AppendFormat("<li><a  src=\"{0}\" href=\"javascript:;\" target=\"mainFrame\">{1}</a></li>", item.Url, item.TreeText);
+                        strtemp.AppendFormat("<li  class='menu_li'><a  src=\"{0}\" href=\"javascript:;\"  target=\"mainFrame\"><span class=\"title\">{1}</span></a></li>", item.Url, item.TreeText);
                     }
 
                 }

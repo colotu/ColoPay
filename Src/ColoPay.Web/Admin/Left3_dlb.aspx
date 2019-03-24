@@ -23,24 +23,7 @@
                 <!-- END SIDEBAR TOGGLER BUTTON -->
             </li>    
         <%=strMenuTree%>
-				<%--<li class="start active open">
-					<a href="javascript:;">
-					<img class="menu1" src="img/navbar_r.png" alt="right">
-					<span class="title">管理中心</span>
-					</a>
-					<ul class="sub-menu">
-						<li class="active">
-							<a href="index.html">
-							企业信息</a>
-						</li>
-						<li>
-							<a href="index_2.html">
-							企业认证</a>
-						</li>
-						
-					</ul>
-				</li> --%>
- 
+			 
 			</ul>
     </div>
 </div>

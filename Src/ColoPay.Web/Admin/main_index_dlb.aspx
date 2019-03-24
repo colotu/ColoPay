@@ -8,6 +8,10 @@
     <link href="/admin/css/admin.css" rel="stylesheet" type="text/css" />
     <link href="/admin/js/easyui/easyui.css" rel="stylesheet" type="text/css" />
     <script src="/admin/js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+    <link href="css/reset_index.css" rel="stylesheet" />
+    <link href="css/main_index.css" rel="stylesheet" />
+    <script src="/Scripts/Highcharts/highcharts.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery/maticsoft.jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         function addTab(title, url) {
             if ($('#tabs').tabs('exists', title)) {
@@ -24,7 +28,7 @@
                 }
             } else {
                 var index = $('#tabs').find(".tabs").find("li").length;
-                if (index == 20) {
+                if (index == 10) {
                     alert("开启的菜单太多，请先关闭部分菜单！");
                     return;
                 }
@@ -147,6 +151,11 @@
             });
         }
 
+        function wcfClick() {
+            //addTab(title, href);
+            $("#btnWcf").click();
+        }
+
         $(function () {
             tabCloseEven();
             $('#tabIndex').find('a').click(function () {
@@ -158,80 +167,156 @@
         });
 
     </script>
+    
 </head>
 <body class="easyui-layout">
     <form id="form1" runat="server">
         <div region="center" id="mainPanle">
             <div id="tabs" class="easyui-tabs" fit="true" border="false">
                 <div title="我的桌面">
-                    <div id="tabIndex" style="overflow: scroll; overflow-x: hidden; overflow-y: hidden">
-                        <%--<div class="admincenter">
-                        <div class="admintitle">
-                            <div class="sj">
-                                <img src="images/zao.gif" width="34" height="25" /></div>
-                            <span><strong style="font-size: 14px;">
-                                <%=CurrentUserName%>
-                                <%=GetDateTime%></strong> <a src="Accounts/userinfo.aspx" href="javascript:;" target="mainFrame">
-                                    账号设置</a></span></div>
-                    </div>--%>
-                        <div class="main_main">
-                            <div class="sj">
-                                <img src="images/icon5.gif" width="22" height="20" />
+                    <div id="tabIndex" style="overflow: scroll; overflow-x: hidden;  height: 100%; width: 100%;">
+                        <div class="saas_oms_wrap">
+                            <div class="saas_oms_content1">
+                                <div class="saas_oms_item mr">
+                                    <div class="saas_oms_text">
+                                        <table class="item_table">
+                                            <tr>
+                                                <td class="tc">
+                                                    <img src="images/oms_dingdan.png" alt="">
+                                                    <asp:Label ID="lblTime" runat="server" class="time" Enabled="False"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <h3 class="color_orange">今日订单</h3>
+                                                    <span class="color_orange" style="font-Size: 22px;">&nbsp;<asp:Label ID="lblOrderToDay" runat="server" Text=""></asp:Label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <table class="table_text">
+                                                        <tr>
+                                                            <td>昨日订单</td>
+                                                            <td><asp:Label ID="lblOrderYest" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>七日订单</td>
+                                                            <td><asp:Label ID="lblOrderWeek" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>本月订单</td>
+                                                            <td><asp:Label ID="lblOrderMon" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="saas_oms_item mr">
+                                    <div class="saas_oms_text">
+                                        <table class="item_table">
+                                            <tr>
+                                                <td class="tc">
+                                                    <img src="images/oms_xiaoshoue.png" alt="">
+                                                </td>
+                                                <td>
+                                                    <h3 class="color_orange">今日交易额</h3>
+                                                    <span class="color_orange" style="font-Size: 22px;">&nbsp;<asp:Label ID="lblSaleToDay" runat="server" Text=""></asp:Label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <table class="table_text">
+                                                        <tr>
+                                                            <td>昨日交易额</td>
+                                                            <td><asp:Label ID="lblSaleYest" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>七日交易额</td>
+                                                            <td><asp:Label ID="lblSaleWeek" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>本月交易额</td>
+                                                            <td><asp:Label ID="lblSaleMon" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="saas_oms_item">
+                                    <div class="saas_oms_text">
+                                        <table class="item_table">
+                                            <tr>
+                                                <td class="tc">
+                                                    <img src="images/oms_xiaoshoue.png" alt="">
+                                                </td>
+                                                <td>
+                                                    <h3 class="color_orange">今日佣金</h3>
+                                                     <span class="color_orange" style="font-Size: 22px;">&nbsp;<asp:Label ID="lblFeeToDay" runat="server" Text=""></asp:Label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <table class="table_text">
+                                                        <tr>
+                                                            <td>昨日佣金</td>
+                                                            <td><asp:Label ID="lblFeeYest" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>七日佣金</td>
+                                                            <td><asp:Label ID="lblFeeWeek" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>本月佣金</td>
+                                                            <td><asp:Label ID="lblFeeMon" runat="server" Text=""></asp:Label></td>
+                                                        </tr>
+                                                      
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="main_time">您最后一次登录的时间：<asp:Literal ID="LitLastLoginTime" runat="server"></asp:Literal>
-                                (不是您登录的？<a href="javascript:;" src="Logout.aspx" target="mainFrame">请点这里</a>)</span>
-                        </div>
-                        <div class="main_line">
-                        </div>
-                        <div class="main_iconmenu" style="line-height: normal">
                             
-                        </div>
-                        <div class="main_tj" style="display: none">
-                            <a src="sysmanage/treefavorite.aspx" href="javascript:;" target="mainFrame">新增新的快捷功能</a>
-                        </div>
-                        <div class="admintitle adminxia" style="margin-top: 10px">
-                            <div class="sj" style="margin-right: 20px;">
-                                <img src="images/icon6.gif" width="21" height="28" />
+                            <div class="saas_oms_content2">
+                                <div class="saas_title">
+                                    <h2 class="color_grey saas_title_h2">业务简报</h2>
+                                </div>
+                                <div class="saas_oms_chart" id="orderCount">
+
+                                </div>
                             </div>
-                            <strong>系统管理</strong>
-                        </div>
-                        <div class="main_bottomzi">
-                            <%-- <ul>
-                            <li>您可以随时查看用户的查询日志记录</li>
-                            <li><a src="SNS/SearchWord/SearchLog.aspx" href="javascript:;">查看查询记录</a></li></ul>--%>
-                            <ul>
-                                <li>您可以快速清除缓存，及时更新缓存数据</li>
-                                <li><a src="sysManage/ClearCache.aspx" href="javascript:;">清除缓存数据</a></li>
-                            </ul>
-                        </div>
-                        <div class="main_line_1">
-                        </div>
-                        <div class="main_3">
-                            <div class="sj">
-                                <img src="images/icon7.gif" width="15" height="15" />
+
+                            <div class="saas_oms_content2">
+                               
+                                <div class="saas_title">
+                                    <h2 class="color_grey saas_title_h2">交易额排行榜</h2>
+                                </div>
+                                <div class="saas_oms_chart" id="orderTop">
+
+                                </div>
                             </div>
-                            <div class="mainzileft">
-                                个人资料
-                            </div>
-                        </div>
-                        <div class="main_xiaocaidan">
-                            <ul>
-                                <li><a src="Accounts/userinfo.aspx" href="javascript:;">登录信息</a></li>
-                                <li><a src="Accounts/userpass.aspx" href="javascript:;">修改密码</a></li>
-                                <li><a src="Members/SiteMessages/List.aspx" href="javascript:;">信息中心</a></li>
-                                <%-- <li><a src="sysmanage/treefavorite.aspx?TreeType=0" href="javascript:;">定制菜单</a></li>--%>
-                            </ul>
-                        </div>
-                        <div class="main_main" style="display: none;">
-                            <span class="main_time">域名：<asp:Literal ID="litServerDomain" runat="server"></asp:Literal></span>
-                        </div>
-                     
-                        <div class="main_line_1">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+          <asp:HiddenField ID="createdDate" runat="server" />
+          <asp:HiddenField ID="amount" runat="server" />
+          <asp:HiddenField ID="amountFee" runat="server" />
+
+          <asp:HiddenField ID="enterOrder" runat="server" />
+        <asp:HiddenField ID="enterAmount" runat="server" />
+        <asp:HiddenField ID="enterFee" runat="server" />
     </form>
     <div id="mm" class="easyui-menu" style="width: 120px;">
         <div id="mm-tabupdate">
@@ -251,3 +336,161 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            //走势图
+            var hfCategoryVal = $("[id$='createdDate']").val();
+            if (hfCategoryVal.length <= 0) {
+                return;
+            }
+            //hfCategoryVal = hfCategoryVal;
+            var categories = hfCategoryVal.split(','); 
+            var dayAmount = [];
+              var dayFee = [];
+
+            var datavalue = $("[id$='amount']").val().split(',');
+            for (var i = 0; i < datavalue.length; i++) {
+                var item = parseFloat(datavalue[i]);
+                dayAmount.push(item);
+            }
+
+            var dataFee = $("[id$='amountFee']").val().split(',');
+            for (var i = 0; i < dataFee.length; i++) {
+                var item = parseFloat(dataFee[i]);
+                dayFee.push(item);
+            }
+
+
+
+            $('#orderCount').highcharts({
+                chart: {
+                    type: 'line'
+                },
+                title: {
+                    text: '交易额/佣金统计'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: categories
+                },
+                yAxis: {
+                    title: {
+                        text: '金额'
+                    },
+                    min:0
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.x + '：</b>' + this.y + '元';
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true
+                    }
+                },
+                series: [{
+                    name: '交易额',
+                    data: dayAmount
+                },
+                    {
+                    name: '佣金',
+                    data: dayFee
+                }
+                ]
+            });
+
+            $("#priceCount text:last").hide();
+            $("#priceCount span:last").hide();
+
+            //if ($('#priceCount .highcharts-tracker rect').length > 0) {
+            //    if (parseInt($('#priceCount .highcharts-tracker rect').eq(0).attr('width')) > 25) {
+            //        $('#priceCount .highcharts-tracker rect').css('width', '25px');
+            //    }
+            //}
+
+            //控制线条宽度   最高为25  
+            var rec_s = $('#priceCount .highcharts-tracker rect');
+            if (rec_s.length > 0) {
+                var rect_width = parseInt(rec_s.eq(0).attr('width'));
+                var x_ = (rect_width - 25) / 2;//计算新的X轴位置
+                if (rect_width > 25) {
+                    for (var i = 0; i < rec_s.length; i++) {
+                        rec_s.eq(i).css('width', '25px').attr('x', parseFloat(rec_s.eq(i).attr('x')) + x_);
+                    }
+                }
+            }
+
+            //排行版
+            var hfEnterOrderVal = $("[id$='enterOrder']").val();
+            if (hfEnterOrderVal.length <= 0) {
+                return;
+            }
+            //hfCategoryVal = hfCategoryVal;
+            var enterOrder = hfEnterOrderVal.split(','); 
+            var enterAmount = [];
+            var enterFee = [];
+
+            var amountvalue = $("[id$='enterAmount']").val().split(',');
+            for (var i = 0; i < amountvalue.length; i++) {
+                var item = parseFloat(amountvalue[i]);
+                enterAmount.push(item);
+            }
+
+            var dataEnterFee = $("[id$='enterFee']").val().split(',');
+            for (var i = 0; i < dataEnterFee.length; i++) {
+                var item = parseFloat(dataEnterFee[i]);
+                enterFee.push(item);
+            }
+
+             $('#orderTop').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: '交易额排行榜'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: enterOrder
+                },
+                yAxis: {
+                    title: {
+                        text: '商家名称'
+                    },
+                    min:0
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.x + '：</b>' + this.y + '元';
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true
+                    }
+                },
+                series: [{
+                    name: '交易额',
+                    data: enterAmount
+                },
+                    {
+                    name: '佣金',
+                    data: enterFee
+                }
+                ]
+            });
+
+        });
+    </script>

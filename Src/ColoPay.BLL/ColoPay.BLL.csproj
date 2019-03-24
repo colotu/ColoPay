@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateManage.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Pay\Agent.cs" />
     <Compile Include="Pay\AgentPayFee.cs" />
     <Compile Include="Pay\BalanceDetail.cs" />

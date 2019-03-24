@@ -112,7 +112,9 @@ namespace ColoPay.BLL.SysManage
         /// <returns></returns>
         public static string GetValueByCache(string Keyname)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             object cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (cache != null)
             {
                 return cache.ToString();
@@ -124,7 +126,9 @@ namespace ColoPay.BLL.SysManage
 
         public static int GetCacheTimeByCache(string Keyname)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             object cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (!string.IsNullOrWhiteSpace(cache?.ToString()))
             {
                 return Globals.SafeInt(cache, 30);
@@ -142,7 +146,9 @@ namespace ColoPay.BLL.SysManage
         /// <returns></returns>
         public static string GetValueByCache(string Keyname, ApplicationKeyType KeyType)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             string cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (cache != null)
             {
                 return cache;
@@ -160,7 +166,9 @@ namespace ColoPay.BLL.SysManage
         /// <remarks>Default -1</remarks>
         public static int GetIntValueByCache(string Keyname)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             dynamic cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (cache != null)
             {
                 return Globals.SafeInt(cache, -1);
@@ -178,7 +186,9 @@ namespace ColoPay.BLL.SysManage
         /// <remarks>Default false</remarks>
         public static bool GetBoolValueByCache(string Keyname)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             dynamic cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (cache != null)
             {
                 return Globals.SafeBool(cache, false);
@@ -196,7 +206,9 @@ namespace ColoPay.BLL.SysManage
         /// <remarks>Default -1</remarks>
         public static decimal GetDecimalValueByCache(string Keyname)
         {
+#pragma warning disable CS0612 // “DataCacheCore.GetCache(string)”已过时
             dynamic cache = dataCache.GetCache(Keyname);
+#pragma warning restore CS0612 // “DataCacheCore.GetCache(string)”已过时
             if (cache != null)
             {
                 return Globals.SafeDecimal(cache, decimal.MinusOne);

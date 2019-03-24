@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Pay\Agent.cs" />
     <Compile Include="Pay\AgentPayFee.cs" />
     <Compile Include="Pay\BalanceDetail.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Pay\EnterprisePayFee.cs" />
     <Compile Include="Pay\Order.cs" />
     <Compile Include="Pay\OrderInfo.cs" />
+    <Compile Include="Pay\OrderStat.cs" />
     <Compile Include="Pay\PaymentTypes.cs" />
     <Compile Include="Pay\Withdraw.cs" />
     <Compile Include="SysManage\ApplicationKeyType.cs" />

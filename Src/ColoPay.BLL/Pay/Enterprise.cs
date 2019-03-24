@@ -234,7 +234,7 @@ namespace ColoPay.BLL.Pay
 
 
         #region  异步通知
-        public static void Notify(ColoPay.Model.Pay.Order orderInfo)
+        public static string Notify(ColoPay.Model.Pay.Order orderInfo)
         {
 
             var request = (HttpWebRequest)WebRequest.Create(orderInfo.AppNotifyUrl);
@@ -264,7 +264,7 @@ namespace ColoPay.BLL.Pay
                 //更新同步状态
                 orderBll.HasNotify(orderInfo.OrderId);
             }
-            return;
+            return responseString;
         }
 
         public static string CreateField(string name, string strValue, int get_code = 0)
