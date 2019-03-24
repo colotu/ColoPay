@@ -1,0 +1,153 @@
+.color_orange{
+	color: #FF9F22;
+	font-size: 16px;
+}
+.bg_blue{
+	background-color: #DEF4FD;
+}
+.saas_oms_item{
+	padding: 12px 0;
+	background-color: #fff;
+	width: 33%;
+	float: left;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.saas_oms_text{
+	position: relative;
+}
+.item_table{
+	margin: 0 auto;
+	width: 80%;
+}
+.item_table h3{
+	position: absolute;
+	top: 0;
+}
+.tc{
+	text-align: center;
+}
+.mr{
+	margin-right: 0.2%;
+}
+.saas_oms_content2{
+	width: 100%;
+	clear: both;
+	border:1px solid #ccc;
+}
+.saas_title{
+	width: 100%;
+	background-color: #e6e6e6;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+.saas_title2{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+}
+.saas_oms_title{
+	width: 100%;
+	background-color: #e6e6e6;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+.saas_title_h2{
+	font-size: 16px;
+	margin-left: 25px;
+}
+.color_grey{
+	color: #666;
+	font-size: 16px;
+}
+.saas_oms_content1{
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.content2_radio{
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+.table_text{
+	font-size: 14px;
+	color: #666;
+}
+/*总仓*/
+.zongcang_item_table{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #e6e6e6;
+}
+.zongcang_item_table th,
+.zongcang_item_table td{
+	padding: 5px;
+}
+.br{
+	border-right: 1px solid #e6e6e6;
+}
+.zongcang_item_table th{
+	background-color: #dedede;
+	border: 1px solid #dedede;
+}
+.saas_fencang_item{
+	padding: 10px 0;
+}
+.item2{
+	width: 49%;
+	float: left;
+	border: 1px solid #ccc;
+}
+.saas_zongcang_item{
+	width: 49%;
+	float: left;
+	border: 1px solid #ccc;
+}
+.saas_zongcang_content1{
+	display: block;
+}
+.saas_chart{
+	margin-left: 25px;
+	padding: 10px 0;
+}
+.saas_zongcang_content2{
+	overflow: hidden;
+}
+.saas_zongcang_content3{
+	clear: both;
+}
+/*分仓首页*/
+.saas_fencang_content2{
+	overflow: hidden;
+}
+.saas_fencang_content1{
+	overflow: hidden;
+}
+.saas_fencang_content3{
+	overflow: hidden;
+	border:1px solid #ccc;
+}
+.item_wrap{
+	margin-top: 20px;
+	text-align: center;
+	float: left;
+	width: 33.333%;
+}
+.table_text td{
+	padding-right: 20px;
+}
+
+.time{
+    position: relative;
+    bottom: 27px;
+    right: 51px;
+    z-index: 99;
+    color: white;
+    font-family: 微软雅黑;
+    font-size: 16px;
+}
