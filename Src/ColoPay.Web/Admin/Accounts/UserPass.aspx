@@ -1,4 +1,4 @@
-﻿<%@ Page Title="<%$ Resources:Site, ptUserInfo%>" Language="C#" MasterPageFile="~/Admin/Basic.Master" AutoEventWireup="true" CodeBehind="UserPass.aspx.cs" Inherits="ColoPay.Web.Admin.Accounts.UserPass" %>
+﻿    <%@ Page Title="<%$ Resources:Site, ptUserInfo%>" Language="C#" MasterPageFile="~/Admin/Basic.Master" AutoEventWireup="true" CodeBehind="UserPass.aspx.cs" Inherits="ColoPay.Web.Admin.Accounts.UserPass" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -81,6 +81,8 @@
                             <td height="25">
                                 <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:Site, btnEditText%>"
                                     OnClick="btnSave_Click" class="adminsubmit_short"></asp:Button>
+                                   <asp:Button ID="btnPass" runat="server" Text="修改密码"
+                                    OnClick="btnPass_Click" class="adminsubmit"></asp:Button>
                             </td>
                         </tr>
                 </table>

@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a  src="Accounts/userinfo.aspx" href="javascript:;" target="mainFrame" >
+                    <a  src="UserPass.aspx" href="javascript:;" target="mainFrame" >
                         <img src="/admin/img/personal.png" alt="personal"><%=username%>
                     </a>
                    &nbsp;&nbsp;

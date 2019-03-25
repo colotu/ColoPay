@@ -44,5 +44,10 @@ namespace ColoPay.Web.Admin.Accounts
         {
             Response.Redirect("UserModify.aspx");
         }
+
+        protected void btnPass_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserPass.aspx");
+        }
     }
 }
