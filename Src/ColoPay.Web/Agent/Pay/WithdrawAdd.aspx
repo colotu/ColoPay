@@ -31,6 +31,16 @@
                                 <asp:TextBox ID="txtAmount" TabIndex="1" runat="server" Width="200px" MaxLength="20"></asp:TextBox>
                             </td>
                         </tr>
+
+                         <tr>
+                            <td class="td_class">
+                                <asp:Literal ID="Literal3" runat="server" Text="提现人" />：
+                            </td>
+                            <td height="25">
+                                <asp:TextBox ID="txtUserName" TabIndex="1" runat="server" Width="200px" MaxLength="20"></asp:TextBox>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td class="td_class">
                                 <asp:Literal ID="Literal5" runat="server" Text="提现银行" />：

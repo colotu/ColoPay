@@ -25,161 +25,170 @@ namespace ColoPay.Model.Pay
 	{
 		public Withdraw()
 		{}
-		#region Model
-		private int _withdrawid;
-		private string _withdrawcode;
-		private int _enterpriseid;
-		private int _agentid=0;
-		private int _type=0;
-		private decimal _amount;
-		private string _withdrawbank;
-		private string _withdrawinfo;
-		private string _withdrawnum;
-		private int _status;
-		private DateTime _createddate;
-		private int _createduserid;
-		private DateTime? _auditdate;
-		private int _audituserid;
-		private DateTime? _paydate;
-		private int _payuserid;
-		private string _remark;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int WithdrawId
-		{
-			set{ _withdrawid=value;}
-			get{return _withdrawid;}
-		}
-		/// <summary>
-		/// 提现Code
-		/// </summary>
-		public string WithdrawCode
-		{
-			set{ _withdrawcode=value;}
-			get{return _withdrawcode;}
-		}
-		/// <summary>
-		/// 企业ID
-		/// </summary>
-		public int EnterpriseID
-		{
-			set{ _enterpriseid=value;}
-			get{return _enterpriseid;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public int AgentId
-		{
-			set{ _agentid=value;}
-			get{return _agentid;}
-		}
-		/// <summary>
-		/// 提现类型 0：商家提现 1：代理商提现
-		/// </summary>
-		public int Type
-		{
-			set{ _type=value;}
-			get{return _type;}
-		}
-		/// <summary>
-		/// 提现金额
-		/// </summary>
-		public decimal Amount
-		{
-			set{ _amount=value;}
-			get{return _amount;}
-		}
-		/// <summary>
-		/// 提现银行
-		/// </summary>
-		public string WithdrawBank
-		{
-			set{ _withdrawbank=value;}
-			get{return _withdrawbank;}
-		}
-		/// <summary>
-		/// 提现开户行信息
-		/// </summary>
-		public string WithdrawInfo
-		{
-			set{ _withdrawinfo=value;}
-			get{return _withdrawinfo;}
-		}
-		/// <summary>
-		/// 提现开户行账号
-		/// </summary>
-		public string WithdrawNum
-		{
-			set{ _withdrawnum=value;}
-			get{return _withdrawnum;}
-		}
-		/// <summary>
-		/// 状态 0：提交  1：审核 2：已打款
-		/// </summary>
-		public int Status
-		{
-			set{ _status=value;}
-			get{return _status;}
-		}
-		/// <summary>
-		/// 创建时间
-		/// </summary>
-		public DateTime CreatedDate
-		{
-			set{ _createddate=value;}
-			get{return _createddate;}
-		}
-		/// <summary>
-		/// 创建人
-		/// </summary>
-		public int CreatedUserId
-		{
-			set{ _createduserid=value;}
-			get{return _createduserid;}
-		}
-		/// <summary>
-		/// 审核时间
-		/// </summary>
-		public DateTime? AuditDate
-		{
-			set{ _auditdate=value;}
-			get{return _auditdate;}
-		}
-		/// <summary>
-		/// 审核人员
-		/// </summary>
-		public int AuditUserId
-		{
-			set{ _audituserid=value;}
-			get{return _audituserid;}
-		}
-		/// <summary>
-		/// 付款时间
-		/// </summary>
-		public DateTime? PayDate
-		{
-			set{ _paydate=value;}
-			get{return _paydate;}
-		}
-		/// <summary>
-		/// 付款人员
-		/// </summary>
-		public int PayUserId
-		{
-			set{ _payuserid=value;}
-			get{return _payuserid;}
-		}
-		/// <summary>
-		/// 备注
-		/// </summary>
-		public string Remark
-		{
-			set{ _remark=value;}
-			get{return _remark;}
-		}
-		#endregion Model
+        #region Model
+        private int _withdrawid;
+        private string _withdrawcode;
+        private int _enterpriseid;
+        private int _agentid = 0;
+        private int _type = 0;
+        private string _username = "";
+        private decimal _amount;
+        private string _withdrawbank;
+        private string _withdrawinfo;
+        private string _withdrawnum;
+        private int _status;
+        private DateTime _createddate;
+        private int _createduserid;
+        private DateTime? _auditdate;
+        private int _audituserid;
+        private DateTime? _paydate;
+        private int _payuserid;
+        private string _remark;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int WithdrawId
+        {
+            set { _withdrawid = value; }
+            get { return _withdrawid; }
+        }
+        /// <summary>
+        /// 提现Code
+        /// </summary>
+        public string WithdrawCode
+        {
+            set { _withdrawcode = value; }
+            get { return _withdrawcode; }
+        }
+        /// <summary>
+        /// 企业ID
+        /// </summary>
+        public int EnterpriseID
+        {
+            set { _enterpriseid = value; }
+            get { return _enterpriseid; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int AgentId
+        {
+            set { _agentid = value; }
+            get { return _agentid; }
+        }
+        /// <summary>
+        /// 提现类型 0：商家提现 1：代理商提现
+        /// </summary>
+        public int Type
+        {
+            set { _type = value; }
+            get { return _type; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string UserName
+        {
+            set { _username = value; }
+            get { return _username; }
+        }
+        /// <summary>
+        /// 提现金额
+        /// </summary>
+        public decimal Amount
+        {
+            set { _amount = value; }
+            get { return _amount; }
+        }
+        /// <summary>
+        /// 提现银行
+        /// </summary>
+        public string WithdrawBank
+        {
+            set { _withdrawbank = value; }
+            get { return _withdrawbank; }
+        }
+        /// <summary>
+        /// 提现开户行信息
+        /// </summary>
+        public string WithdrawInfo
+        {
+            set { _withdrawinfo = value; }
+            get { return _withdrawinfo; }
+        }
+        /// <summary>
+        /// 提现开户行账号
+        /// </summary>
+        public string WithdrawNum
+        {
+            set { _withdrawnum = value; }
+            get { return _withdrawnum; }
+        }
+        /// <summary>
+        /// 状态 0：提交  1：审核 2：已打款
+        /// </summary>
+        public int Status
+        {
+            set { _status = value; }
+            get { return _status; }
+        }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreatedDate
+        {
+            set { _createddate = value; }
+            get { return _createddate; }
+        }
+        /// <summary>
+        /// 创建人
+        /// </summary>
+        public int CreatedUserId
+        {
+            set { _createduserid = value; }
+            get { return _createduserid; }
+        }
+        /// <summary>
+        /// 审核时间
+        /// </summary>
+        public DateTime? AuditDate
+        {
+            set { _auditdate = value; }
+            get { return _auditdate; }
+        }
+        /// <summary>
+        /// 审核人员
+        /// </summary>
+        public int AuditUserId
+        {
+            set { _audituserid = value; }
+            get { return _audituserid; }
+        }
+        /// <summary>
+        /// 付款时间
+        /// </summary>
+        public DateTime? PayDate
+        {
+            set { _paydate = value; }
+            get { return _paydate; }
+        }
+        /// <summary>
+        /// 付款人员
+        /// </summary>
+        public int PayUserId
+        {
+            set { _payuserid = value; }
+            get { return _payuserid; }
+        }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark
+        {
+            set { _remark = value; }
+            get { return _remark; }
+        }
+        #endregion Model
 
     }
 }

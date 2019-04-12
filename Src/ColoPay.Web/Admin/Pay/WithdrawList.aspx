@@ -118,6 +118,12 @@
                     </ItemTemplate>
                 </asp:TemplateField>
 
+                <asp:TemplateField ControlStyle-Width="100" HeaderText="提现人"
+                    ItemStyle-HorizontalAlign="Center" ItemStyle-Width="100">
+                    <ItemTemplate>
+                        <%#  Eval("UserName") %>
+                    </ItemTemplate>
+                </asp:TemplateField>
 
                 <asp:TemplateField ControlStyle-Width="100" HeaderText="提现银行"
                     ItemStyle-HorizontalAlign="Left" ItemStyle-Width="150">

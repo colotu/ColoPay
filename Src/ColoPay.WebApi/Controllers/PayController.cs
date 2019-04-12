@@ -325,7 +325,7 @@ namespace ColoPay.WebApi.Controllers
             //YSWL.Log.LogHelper.AddInfoLog("qrpay/notify-->postdata", postdata);
             //QrNotify notifyinfo = JsonConvert.Import<QrNotify>(postdata);
             bool isSuccess = ColoPay.WebApi.PayApi.FengHe.VerifyNotify(notifyinfo);
-            string responseStr = isSuccess ? "OK" : "fail";
+            string responseStr = isSuccess ? "ok" : "fail";
             // HttpContext.Current.Response.Write(responseStr);
             HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
             return responseMessage;
@@ -343,7 +343,7 @@ namespace ColoPay.WebApi.Controllers
             FengHeNotify notifyinfo = JsonConvert.Import<FengHeNotify>(getdata);
             bool isSuccess = ColoPay.WebApi.PayApi.FengHe.VerifyNotify(notifyinfo);
 
-            string responseStr = isSuccess ? "OK" : "fail";
+            string responseStr = isSuccess ? "ok" : "fail";
             // HttpContext.Current.Response.Write(responseStr);
             HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
             return responseMessage;

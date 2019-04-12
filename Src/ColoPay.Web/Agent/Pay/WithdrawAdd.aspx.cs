@@ -32,6 +32,7 @@ namespace ColoPay.Web.Agent.Pay
             string withdrawBank = this.txtWithdrawBank.Text;
             string withdrawInfo = this.txtWithdrawInfo.Text;
             string withdrawNum = this.txtWithdrawNum.Text;
+            string userName= this.txtUserName.Text;
 
             if (amount > agentModel.Balance)
             {
@@ -49,6 +50,7 @@ namespace ColoPay.Web.Agent.Pay
             model.Amount = amount;
             model.CreatedDate = DateTime.Now;
             model.CreatedUserId = currentUser.UserID;
+            model.UserName = userName;
             model.EnterpriseID = 0;
             model.Type = 1;
             model.WithdrawBank = withdrawBank;

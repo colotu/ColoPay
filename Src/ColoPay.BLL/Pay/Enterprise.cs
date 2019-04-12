@@ -267,7 +267,7 @@ namespace ColoPay.BLL.Pay
             return responseString;
         }
 
-        public static string CreateField(string name, string strValue, int get_code = 0)
+        public static string CreateField(string name, string strValue, int get_code = 1)
         {
             if (get_code == 1)
             {

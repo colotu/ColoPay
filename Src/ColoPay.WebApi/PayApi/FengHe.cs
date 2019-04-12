@@ -128,7 +128,7 @@ namespace ColoPay.WebApi.PayApi
             }
             else
             {
-                YSWL.Log.LogHelper.AddInfoLog(String.Format("订单【{0}】FengHe支付验证失败", notifyinfo.orderid), String.Format("参数为：memberid-->{0}&returncode-->{1}&orderid-->{2}&amount-->{3}&datetime-->{4}&transaction_id-->{5}&attach-->{6}&sign--->{7}", notifyinfo.memberid, notifyinfo.returncode, notifyinfo.orderid, notifyinfo.amount, notifyinfo.datetime, notifyinfo.transaction_id, notifyinfo.attach, notifyinfo.sign));
+                YSWL.Log.LogHelper.AddErrorLog(String.Format("订单【{0}】FengHe支付验证失败", notifyinfo.orderid), String.Format("参数为：memberid-->{0}&returncode-->{1}&orderid-->{2}&amount-->{3}&datetime-->{4}&transaction_id-->{5}&attach-->{6}&sign--->{7}", notifyinfo.memberid, notifyinfo.returncode, notifyinfo.orderid, notifyinfo.amount, notifyinfo.datetime, notifyinfo.transaction_id, notifyinfo.attach, notifyinfo.sign));
                 //验证失败，记录日志
                 ColoPay.BLL.SysManage.LogHelp.AddErrorLog(String.Format("订单【{0}】FengHe支付验证失败", notifyinfo.orderid), String.Format("参数为：memberid-->{0}&returncode-->{1}&orderid-->{2}&amount-->{3}&datetime-->{4}&transaction_id-->{5}&attach-->{6}&sign--->{7}", notifyinfo.memberid, notifyinfo.returncode, notifyinfo.orderid, notifyinfo.amount, notifyinfo.datetime, notifyinfo.transaction_id, notifyinfo.attach, notifyinfo.sign));
                 return false;

@@ -190,7 +190,7 @@ namespace ColoPay.BLL.Pay
         #region  ExtensionMethod
         public bool Audit(int withdrawId, int status, int userId)
         {
-           
+            status = status + 1;
                 return dal.Audit(withdrawId, status, userId);
              
          

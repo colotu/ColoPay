@@ -30,6 +30,8 @@ namespace ColoPay.WebApi.PayApi
         /// <param name="remark"></param>
         public static string PayRequest(string orderCode, decimal amount, string paymentGateway, int get_code, string remark = "")
         {
+            //启润支付，全部是POST跳转，不需要返回二维码
+            get_code = 0;
             //-------记录请求参数
             YSWL.Log.LogHelper.AddInfoLog("QR_Pay-->PayRequest", String.Format("参数为：orderCode-->{0},amount-->{1},paymentGateway-->{2},remark-->{3},get_code-->{4}", orderCode, amount, paymentGateway, remark,get_code));
 

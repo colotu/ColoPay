@@ -718,7 +718,9 @@ where PaymentStatus=2 and  CreatedTime between @startTime and @endTime group by 
 
         public DataSet GetOrderTop(int top)
         {
-            string strSql =String.Format(@"select top {0} EnterOrder,EnterpriseID,SUM(Amount) TotalAmount,SUM(PaymentFee) TotalFee from Pay_Order where PaymentStatus=2 group by EnterOrder,EnterpriseID", top) ;
+            string strSql =String.Format(@"select top {0} * from 
+(select  EnterOrder,EnterpriseID,SUM(Amount) TotalAmount,SUM(PaymentFee) TotalFee from Pay_Order where PaymentStatus=2  group by EnterOrder,EnterpriseID) t
+ order by TotalAmount Desc", top) ;
             return DbHelperSQL.Query(strSql.ToString());
         }
 
