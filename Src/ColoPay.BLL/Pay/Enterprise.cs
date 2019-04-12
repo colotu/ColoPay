@@ -236,7 +236,8 @@ namespace ColoPay.BLL.Pay
         #region  异步通知
         public static string Notify(ColoPay.Model.Pay.Order orderInfo)
         {
-
+            //进行异步通知了，说明是已经支付成功了。
+            orderInfo.PaymentStatus = 2;
             var request = (HttpWebRequest)WebRequest.Create(orderInfo.AppNotifyUrl);
             StringBuilder builder = new StringBuilder();
             builder.Append(CreateField("appid", orderInfo.AppId));
