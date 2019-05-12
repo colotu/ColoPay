@@ -91,5 +91,12 @@ namespace ColoPay.WebApi.Common
             HttpContext.Current.Response.End();
         }
 
+        public static void Redirect(string Url)
+        {
+            string s = "<script language='javascript'>window.location='"+ Url + "'</script>";
+            HttpContext.Current.Response.Write(s);
+            HttpContext.Current.Response.End();
+        }
+
     }
 }

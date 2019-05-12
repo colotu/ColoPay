@@ -167,10 +167,14 @@
     <Compile Include="Models\FailResult.cs" />
     <Compile Include="Models\BZNotify.cs" />
     <Compile Include="Models\FengHeNotify.cs" />
+    <Compile Include="Models\MidoPayNotify.cs" />
     <Compile Include="Models\PayInfo.cs" />
     <Compile Include="Models\QrNotify.cs" />
     <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Models\ResponseResult.cs" />
+    <Compile Include="Models\YiYuanNotify.cs" />
+    <Compile Include="PayApi\MidoPay.cs" />
+    <Compile Include="PayApi\YiYuan.cs" />
     <Compile Include="PayApi\BZ_Pay.cs" />
     <Compile Include="PayApi\DaDaBank.cs" />
     <Compile Include="PayApi\FengHe.cs" />

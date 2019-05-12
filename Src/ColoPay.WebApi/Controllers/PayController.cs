@@ -62,7 +62,7 @@ namespace ColoPay.WebApi.Controllers
                 orderInfo.CreatedTime = DateTime.Now;
                 orderInfo.EnterOrder = payinfo.order_no;
                 orderInfo.EnterpriseID = CurrEnterprise.EnterpriseID;
-                orderInfo.OrderCode = "P" + CurrEnterprise.EnterpriseID + "_" + DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                orderInfo.OrderCode =  DateTime.Now.ToString("yyyyMMddHHmmssfff")+ CurrEnterprise.EnterpriseID;
                 //获取支付方式
                 ColoPay.Model.Pay.PaymentTypes typeInfo = typeBll.GetPaymentInfo(payinfo.paytype);
                 if (typeInfo == null)
@@ -105,20 +105,31 @@ namespace ColoPay.WebApi.Controllers
             string resullt = "";
             //BZ 支付金额必须要为整数，有点扯淡
             //开始支付
+         
             if (!payinfo.istest)
             {
                 //tuzh BZ_Pay 支付接口已失效 
                 // resullt = ColoPay.WebApi.PayApi.BZ_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
                 // 如果是网银或者快捷支付，走丰核支付
-                if (orderInfo.PaymentGateway == "wangyin" || orderInfo.PaymentGateway == "kuaijie")
+                YSWL.Log.LogHelper.AddInfoLog("支付网关","PaymentGateway--->"+orderInfo.PaymentGateway);
+                switch (orderInfo.PaymentGateway)
                 {
-                    resullt = ColoPay.WebApi.PayApi.FengHe.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, orderInfo.OrderInfo);
-                }
-                else {
-                    resullt = ColoPay.WebApi.PayApi.QR_Pay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.get_code, orderInfo.OrderInfo);
-                }
-
-               
+                    case "wangyin":
+                    case "kuaijie":
+                        resullt = ColoPay.WebApi.PayApi.FengHe.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, orderInfo.OrderInfo);
+                        break;
+                    case "onlinekj":
+                        resullt = ColoPay.WebApi.PayApi.YiYuan.PayRequest(orderInfo.OrderCode, payinfo.amount, payinfo.bankcard,payinfo.moblie,payinfo.idcard,payinfo.realname,payinfo.remark);
+                        break;
+                    case "wx":
+                    case "ali":
+                    case "aliwap":
+                        resullt = ColoPay.WebApi.PayApi.MidoPay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.bankcard,payinfo.title,payinfo.product, orderInfo.Remark);
+                        break;
+                    default:
+                        resullt = ColoPay.WebApi.PayApi.MidoPay.PayRequest(orderInfo.OrderCode, payinfo.amount, orderInfo.PaymentGateway, payinfo.bankcard, payinfo.title, payinfo.product, orderInfo.Remark);
+                        break;
+                } 
 
             }
             else //测试支付
@@ -344,6 +355,89 @@ namespace ColoPay.WebApi.Controllers
             bool isSuccess = ColoPay.WebApi.PayApi.FengHe.VerifyNotify(notifyinfo);
 
             string responseStr = isSuccess ? "ok" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+        #endregion 
+
+        #region 7YiYuan支付接口回调
+        /// <summary>
+        /// 支付异步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("yypay/notify")]
+        public HttpResponseMessage YYNotify()
+        {
+            //YSWL.Log.LogHelper.AddInfoLog("qrpay/notify-->postdata", postdata);
+            //QrNotify notifyinfo = JsonConvert.Import<QrNotify>(postdata);
+            YiYuanNotify notifyinfo = new YiYuanNotify();
+            //获取参数
+            notifyinfo.ddbz = HttpContext.Current.Request.Form["ddbz"];
+            notifyinfo.ddh = HttpContext.Current.Request.Form["ddh"];
+            notifyinfo.ddmc = HttpContext.Current.Request.Form["ddmc"];
+            notifyinfo.je = HttpContext.Current.Request.Form["je"];
+            notifyinfo.shid = Convert.ToInt32(HttpContext.Current.Request.Form["shid"]);
+            notifyinfo.sign = HttpContext.Current.Request.Form["sign"];
+            notifyinfo.status = HttpContext.Current.Request.Form["status"];
+            notifyinfo.tbtz = HttpContext.Current.Request.Form["tbtz"];
+            notifyinfo.ybtz = HttpContext.Current.Request.Form["ybtz"];
+            notifyinfo.zftd = HttpContext.Current.Request.Form["zftd"];
+
+            bool isSuccess = ColoPay.WebApi.PayApi.YiYuan.VerifyNotify(notifyinfo);
+            string responseStr = isSuccess ? "success" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+
+        /// <summary>
+        /// 支付同步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("yypay/return")]
+        public HttpResponseMessage YYReturn()
+        {
+            //YSWL.Log.LogHelper.AddInfoLog("yypay/return-->getdata", getdata);
+         
+            string responseStr = "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+        #endregion
+
+        #region MidoPay支付接口回调
+        /// <summary>
+        /// 支付异步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("midopay/notify")]
+        public HttpResponseMessage MidoPayNotify([FromBody]MidoPayNotify notifyinfo)
+        {
+            //YSWL.Log.LogHelper.AddInfoLog("qrpay/notify-->postdata", postdata);
+            //QrNotify notifyinfo = JsonConvert.Import<QrNotify>(postdata);
+            bool isSuccess = ColoPay.WebApi.PayApi.MidoPay.VerifyNotify(notifyinfo);
+            string responseStr = isSuccess ? "ok" : "fail";
+            // HttpContext.Current.Response.Write(responseStr);
+            HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
+            return responseMessage;
+        }
+
+        /// <summary>
+        /// 支付同步通知 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("midopay/return")]
+        public HttpResponseMessage MidoPayReturn()
+        {
+            //YSWL.Log.LogHelper.AddInfoLog("yypay/return-->getdata", getdata);
+
+            string responseStr = "fail";
             // HttpContext.Current.Response.Write(responseStr);
             HttpResponseMessage responseMessage = new HttpResponseMessage { Content = new StringContent(responseStr, Encoding.GetEncoding("UTF-8"), "text/plain") };
             return responseMessage;

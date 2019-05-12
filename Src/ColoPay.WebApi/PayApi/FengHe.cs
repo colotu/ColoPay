@@ -96,7 +96,7 @@ namespace ColoPay.WebApi.PayApi
                 if (notifyinfo.returncode == "00")
                 {
                     ColoPay.BLL.Pay.Order orderBll = new BLL.Pay.Order();
-                    ColoPay.Model.Pay.Order orderInfo = orderBll.GetModel(notifyinfo.transaction_id);
+                    ColoPay.Model.Pay.Order orderInfo = orderBll.GetModel(notifyinfo.orderid);
                     if (orderInfo == null)
                     {
                         return false;

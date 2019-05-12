@@ -18,7 +18,7 @@ namespace ColoPay.WebApi
                 defaults: new { id = RouteParameter.Optional }
             );
             //注册全局异常处理
-            config.Filters.Add(new WebApiErrorHandlerAttribute());
+           // config.Filters.Add(new WebApiErrorHandlerAttribute());
             //跨域处理
            // config.MessageHandlers.Add(new CrossDomainHandler());
         }
